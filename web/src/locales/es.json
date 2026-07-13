@@ -3,7 +3,26 @@
   "common": {
     "bpm": "lpm",
     "home": "Inicio",
-    "backHome": "Volver al inicio"
+    "backHome": "Volver al inicio",
+    "privacy": "Política de privacidad"
+  },
+  "privacy": {
+    "title": "Política de privacidad",
+    "updated": "Última actualización: 13 de julio de 2026",
+    "overviewTitle": "Resumen",
+    "overview": "Compartir pulso te permite transmitir lecturas de frecuencia cardíaca desde un reloj Garmin a una página web que puede abrir cualquiera con el enlace. Esta política explica qué datos tratamos para esa función.",
+    "dataTitle": "Datos que tratamos",
+    "data": "Al crear una sesión de compartición desde la app del reloj, almacenamos un identificador de sesión aleatorio, un secreto de sesión que usa el reloj para subir lecturas, valores de frecuencia cardíaca (latidos por minuto) y marcas de tiempo de esas lecturas. No te pedimos crear una cuenta ni recogemos tu nombre, correo electrónico ni credenciales de Garmin a través de este servicio.",
+    "sharingTitle": "Quién puede ver tus datos",
+    "sharing": "Un enlace de sesión (o código QR) basta para ver la frecuencia cardíaca en vivo de esa sesión. Cualquiera con el enlace puede abrir el visor web. No compartas el enlace si no quieres que otras personas vean tus lecturas. El secreto de sesión permanece en el reloj y no lo necesitan quienes solo miran.",
+    "cookiesTitle": "Cookies e idioma",
+    "cookies": "Podemos guardar una cookie pequeña de idioma para mostrar el sitio en inglés o español según la preferencia de idioma del navegador. No usamos cookies de publicidad ni de seguimiento.",
+    "retentionTitle": "Conservación",
+    "retention": "Los datos de sesión se conservan para que el visor en vivo y el gráfico de historial funcionen mientras compartes. Las sesiones pueden eliminarse o caducar con el tiempo. Detén la app del reloj y deja de compartir el enlace cuando ya no quieras que las lecturas estén disponibles.",
+    "thirdPartyTitle": "Proveedores",
+    "thirdParty": "El sitio web y la API se alojan en Vercel. Los datos de sesión se almacenan en Google Firebase Firestore. Esos proveedores tratan los datos solo en la medida necesaria para operar el servicio.",
+    "contactTitle": "Contacto",
+    "contact": "Si tienes preguntas sobre esta política o quieres que se elimine una sesión, abre un issue en el repositorio del proyecto o contacta al publicador indicado en la ficha de Connect IQ Store."
   },
   "landing": {
     "tagline": "Comparte tu frecuencia cardíaca en vivo desde tu Garmin con quien tenga el enlace.",
@@ -26,9 +45,21 @@
     "lastUpdated": "Última actualización {{time}}",
     "waitingFirstReading": "Esperando la primera lectura del reloj",
     "chartTitle": "Frecuencia cardíaca en el tiempo",
-    "chartDescription": "Se actualiza automáticamente mientras la app del reloj está en ejecución.",
+    "chartDescription": "Mostrando la última hora. Se actualiza automáticamente mientras la app del reloj está en ejecución.",
+    "chartDescriptionAll": "Mostrando todas las lecturas. Se actualiza automáticamente mientras la app del reloj está en ejecución.",
+    "showAll": "Mostrar todo",
     "loadingReadings": "Cargando lecturas...",
     "noReadings": "Sin lecturas aún. Abre la app en el reloj para empezar a compartir.",
-    "tooltipBpm": "Frecuencia cardíaca"
+    "tooltipBpm": "Frecuencia cardíaca",
+    "bands": {
+      "hibernating": "Hibernando — casi un árbol",
+      "zen": "Modo zen — atleta de sofá",
+      "vibing": "Solo vibes",
+      "warming": "Calentando motores",
+      "working": "Esfuerzo honesto",
+      "cooking": "Cocinando de verdad",
+      "melting": "Sistemas sobrecalentados",
+      "orbit": "Saliendo de la atmósfera"
+    }
   }
 }

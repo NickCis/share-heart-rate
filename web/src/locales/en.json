@@ -3,7 +3,26 @@
   "common": {
     "bpm": "bpm",
     "home": "Home",
-    "backHome": "Back home"
+    "backHome": "Back home",
+    "privacy": "Privacy policy"
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "updated": "Last updated: July 13, 2026",
+    "overviewTitle": "Overview",
+    "overview": "Share Heart Rate lets you stream heart rate readings from a Garmin watch to a web page that anyone with the link can open. This policy explains what data we process for that feature.",
+    "dataTitle": "Data we process",
+    "data": "When you create a sharing session from the watch app, we store a random session identifier, a session secret used by the watch to upload readings, heart rate values (beats per minute), and timestamps for those readings. We do not ask you to create an account, and we do not collect your name, email address, or Garmin account credentials through this service.",
+    "sharingTitle": "Who can see your data",
+    "sharing": "A session link (or QR code) is enough to view that session’s live heart rate. Anyone who has the link can open the web viewer. Do not share the link if you do not want others to see your readings. The session secret stays on the watch and is not required by viewers.",
+    "cookiesTitle": "Cookies and locale",
+    "cookies": "We may store a small locale cookie so the website can show English or Spanish based on your browser language preference. We do not use advertising or tracking cookies.",
+    "retentionTitle": "Retention",
+    "retention": "Session data is kept so the live viewer and history chart can work while you are sharing. Sessions may be deleted or expire over time. Stop the watch app and stop sharing the link when you no longer want readings to be available.",
+    "thirdPartyTitle": "Service providers",
+    "thirdParty": "The website and API are hosted on Vercel. Heart rate session data is stored in Google Firebase Firestore. Those providers process data only as needed to run the service.",
+    "contactTitle": "Contact",
+    "contact": "If you have questions about this policy or want a session removed, open an issue in the project repository or contact the app publisher listed on the Connect IQ Store listing."
   },
   "landing": {
     "tagline": "Stream live heart rate from your Garmin watch to anyone with a link.",
@@ -26,9 +45,21 @@
     "lastUpdated": "Last updated {{time}}",
     "waitingFirstReading": "Waiting for first reading from the watch",
     "chartTitle": "Heart rate over time",
-    "chartDescription": "Updates automatically while the watch app is running.",
+    "chartDescription": "Showing the last hour. Updates automatically while the watch app is running.",
+    "chartDescriptionAll": "Showing all readings. Updates automatically while the watch app is running.",
+    "showAll": "Show all",
     "loadingReadings": "Loading readings...",
     "noReadings": "No readings yet. Open the app on your watch to start sharing.",
-    "tooltipBpm": "Heart rate"
+    "tooltipBpm": "Heart rate",
+    "bands": {
+      "hibernating": "Hibernating — barely upright",
+      "zen": "Zen mode — couch athlete",
+      "vibing": "Just vibing",
+      "warming": "Warming the engines",
+      "working": "Honest effort",
+      "cooking": "Properly cooking",
+      "melting": "Systems overheating",
+      "orbit": "Leaving the atmosphere"
+    }
   }
 }

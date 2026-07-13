@@ -61,6 +61,12 @@ export function LandingPage() {
           {t("landing.viewExample")}
         </Link>
       </p>
+
+      <p className="text-center text-xs text-muted-foreground">
+        <Link className="hover:underline" to="/privacy">
+          {t("common.privacy")}
+        </Link>
+      </p>
     </div>
   );
 }
