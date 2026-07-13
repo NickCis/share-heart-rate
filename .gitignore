@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.firebase/
+.vercel/
+*.log
+.env
+.env.local
+web/dist/
+garmin/*.prg
+garmin/*.iq
+garmin/*-settings.json
+garmin/private_key.der
+.DS_Store
+.vercel
+service-account.json

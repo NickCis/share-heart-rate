@@ -1,0 +1,461 @@
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
+import Toybox.Graphics;
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+import Toybox.Lang;
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc"; @line = 5; @symbol_classdef = [HeartView,5,6,15]; @symbol_extends<0> = [WatchUi,5,24,31]; @symbol_extends<1> = [View,5,32,36]; ]
+class HeartView extends WatchUi.View {
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc"; @line = 6; @position = 6; @symbol_vardef = [_controller,6,6,17]; @symbol_type<0> = [AppController,6,21,34]; ]
+    var _controller as AppController;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc"; @line = 8; @symbol_functiondef = [initialize,8,11,21]; @symbol_param<0> = [controller,8,22,32]; @symbol_param<0>_type<0> = [AppController,8,36,49]; ]
+    function initialize(controller as AppController) as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_8_51_11_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 9 4 ]
+        symbol [ View %tmp.2 9 4 8 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 9 9 19 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 10 4 ]
+        %tmp.4 = lgetv %controller;
+        symbol [ controller %tmp.4 10 18 28 ];
+        symbol [ _controller ? 10 4 15 ];
+        putv self :_controller %tmp.4;
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_8_51_11_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc"; @line = 13; @symbol_functiondef = [onShow,13,11,17]; ]
+    function onShow() as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_13_28_15_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 14 4 ]
+        symbol [ WatchUi %tmp.1 14 4 11 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.2 14 12 25 ];
+        %tmp.2 = getv function %tmp.1 :requestUpdate;
+        invoke %tmp.1 %tmp.2();
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_13_28_15_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc"; @line = 17; @symbol_functiondef = [onUpdate,17,11,19]; @symbol_param<0> = [dc,17,20,22]; @symbol_param<0>_type<0> = [Graphics,17,26,34]; @symbol_param<0>_type<1> = [Dc,17,35,37]; ]
+    function onUpdate(dc as Graphics.Dc) as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_17_47_49_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 18 4 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 18 4 6 ];
+        symbol [ setColor %tmp.2 18 7 15 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 18 16 24 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.4 18 25 36 ];
+        %tmp.4 = getv %tmp.3 :COLOR_WHITE;
+        symbol [ Graphics %tmp.5 18 38 46 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 18 47 58 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 19 4 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 19 4 6 ];
+        symbol [ clear %tmp.8 19 7 12 ];
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 20 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_17_47_49_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_17_47_49_2_stop" ]
+        %w.1 = local;
+        symbol [ w %w.1 20 8 9 ];
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 20 12 14 ];
+        symbol [ getWidth %tmp.10 20 15 23 ];
+        %tmp.10 = getv function %tmp.9 :getWidth;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        lputv %w.1 %tmp.11;
+        symbol [ w %w.1 20 8 9 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 21 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_17_47_49_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_17_47_49_2_stop" ]
+        %h.2 = local;
+        symbol [ h %h.2 21 8 9 ];
+        %tmp.12 = lgetv %dc;
+        symbol [ dc %tmp.12 21 12 14 ];
+        symbol [ getHeight %tmp.13 21 15 24 ];
+        %tmp.13 = getv function %tmp.12 :getHeight;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        lputv %h.2 %tmp.14;
+        symbol [ h %h.2 21 8 9 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 22 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_17_47_49_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_17_47_49_2_stop" ]
+        %cx.3 = local;
+        symbol [ cx %cx.3 22 8 10 ];
+        %tmp.15 = lgetv %w.1;
+        symbol [ w %tmp.15 22 13 14 ];
+        %tmp.16 = 2;
+        %tmp.17 = div %tmp.15 %tmp.16;
+        lputv %cx.3 %tmp.17;
+        symbol [ cx %cx.3 22 8 10 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 24 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_24_4_28_4_if_stmt:
+        symbol [ UiState %tmp.19 24 8 15 ];
+        %tmp.19 = getv ? :UiState;
+        symbol [ error %tmp.20 24 16 21 ];
+        %tmp.20 = getv %tmp.19 :error;
+        %tmp.21 = null;
+        %tmp.22 = ne %tmp.20 %tmp.21;
+        bf %tmp.22 @_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_24_4_28_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_24_4_28_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_24_31_28_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 25 6 ]
+        %tmp.23 = lgetv %dc;
+        symbol [ dc %tmp.23 25 6 8 ];
+        symbol [ setColor %tmp.24 25 9 17 ];
+        %tmp.24 = getv function %tmp.23 :setColor;
+        symbol [ Graphics %tmp.25 25 18 26 ];
+        %tmp.25 = getm $.Toybox.Graphics;
+        symbol [ COLOR_RED %tmp.26 25 27 36 ];
+        %tmp.26 = getv %tmp.25 :COLOR_RED;
+        symbol [ Graphics %tmp.27 25 38 46 ];
+        %tmp.27 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.28 25 47 64 ];
+        %tmp.28 = getv %tmp.27 :COLOR_TRANSPARENT;
+        invoke %tmp.23 %tmp.24(%tmp.26, %tmp.28);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 26 6 ]
+        %tmp.29 = lgetv %dc;
+        symbol [ dc %tmp.29 26 6 8 ];
+        symbol [ drawText %tmp.30 26 9 17 ];
+        %tmp.30 = getv function %tmp.29 :drawText;
+        %tmp.31 = lgetv %cx.3;
+        symbol [ cx %tmp.31 26 18 20 ];
+        %tmp.32 = lgetv %h.2;
+        symbol [ h %tmp.32 26 22 23 ];
+        %tmp.33 = 2;
+        %tmp.34 = div %tmp.32 %tmp.33;
+        symbol [ Graphics %tmp.35 26 29 37 ];
+        %tmp.35 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.36 26 38 48 ];
+        %tmp.36 = getv %tmp.35 :FONT_SMALL;
+        symbol [ UiState %tmp.38 26 50 57 ];
+        %tmp.38 = getv ? :UiState;
+        symbol [ error %tmp.39 26 58 63 ];
+        %tmp.39 = getv %tmp.38 :error;
+        symbol [ Graphics %tmp.40 26 65 73 ];
+        %tmp.40 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.41 26 74 93 ];
+        %tmp.41 = getv %tmp.40 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.42 26 96 104 ];
+        %tmp.42 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.43 26 105 125 ];
+        %tmp.43 = getv %tmp.42 :TEXT_JUSTIFY_VCENTER;
+        %tmp.44 = bitor %tmp.41 %tmp.43;
+        invoke %tmp.29 %tmp.30(%tmp.31, %tmp.34, %tmp.36, %tmp.39, %tmp.44);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 27 6 ]
+        ret ?;
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_24_31_28_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_24_4_28_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_24_4_28_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 30 4 ]
+        %tmp.45 = lgetv %dc;
+        symbol [ dc %tmp.45 30 4 6 ];
+        symbol [ setColor %tmp.46 30 7 15 ];
+        %tmp.46 = getv function %tmp.45 :setColor;
+        symbol [ Graphics %tmp.47 30 16 24 ];
+        %tmp.47 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.48 30 25 38 ];
+        %tmp.48 = getv %tmp.47 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.49 30 40 48 ];
+        %tmp.49 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.50 30 49 66 ];
+        %tmp.50 = getv %tmp.49 :COLOR_TRANSPARENT;
+        invoke %tmp.45 %tmp.46(%tmp.48, %tmp.50);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 31 4 ]
+        %tmp.51 = lgetv %dc;
+        symbol [ dc %tmp.51 31 4 6 ];
+        symbol [ drawText %tmp.52 31 7 15 ];
+        %tmp.52 = getv function %tmp.51 :drawText;
+        %tmp.53 = lgetv %cx.3;
+        symbol [ cx %tmp.53 31 16 18 ];
+        %tmp.54 = 30;
+        symbol [ Graphics %tmp.55 31 24 32 ];
+        %tmp.55 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.56 31 33 43 ];
+        %tmp.56 = getv %tmp.55 :FONT_SMALL;
+        symbol [ L10n %tmp.58 31 45 49 ];
+        %tmp.58 = getv ? :L10n;
+        symbol [ t %tmp.59 31 50 51 ];
+        %tmp.59 = getv function %tmp.58 :t;
+        symbol [ Rez %tmp.61 31 52 55 ];
+        %tmp.61 = getv ? :Rez;
+        symbol [ Strings %tmp.62 31 56 63 ];
+        %tmp.62 = getv %tmp.61 :Strings;
+        symbol [ HeartTitle %tmp.63 31 64 74 ];
+        %tmp.63 = getv %tmp.62 :HeartTitle;
+        %tmp.64 = invoke %tmp.58 %tmp.59(%tmp.63);
+        symbol [ Graphics %tmp.65 31 77 85 ];
+        %tmp.65 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.66 31 86 105 ];
+        %tmp.66 = getv %tmp.65 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.51 %tmp.52(%tmp.53, %tmp.54, %tmp.56, %tmp.64, %tmp.66);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 33 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_17_47_49_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_17_47_49_2_stop" ]
+        %bpm.4 = local;
+        symbol [ bpm %bpm.4 33 8 11 ];
+        symbol [ SessionStore %tmp.68 33 14 26 ];
+        %tmp.68 = getv ? :SessionStore;
+        symbol [ getLastBpm %tmp.69 33 27 37 ];
+        %tmp.69 = getv function %tmp.68 :getLastBpm;
+        %tmp.70 = invoke %tmp.68 %tmp.69();
+        lputv %bpm.4 %tmp.70;
+        symbol [ bpm %bpm.4 33 8 11 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 34 4 ]
+        %tmp.71 = lgetv %dc;
+        symbol [ dc %tmp.71 34 4 6 ];
+        symbol [ setColor %tmp.72 34 7 15 ];
+        %tmp.72 = getv function %tmp.71 :setColor;
+        symbol [ Graphics %tmp.73 34 16 24 ];
+        %tmp.73 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.74 34 25 36 ];
+        %tmp.74 = getv %tmp.73 :COLOR_WHITE;
+        symbol [ Graphics %tmp.75 34 38 46 ];
+        %tmp.75 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.76 34 47 64 ];
+        %tmp.76 = getv %tmp.75 :COLOR_TRANSPARENT;
+        invoke %tmp.71 %tmp.72(%tmp.74, %tmp.76);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 35 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_35_4_41_4_if_stmt:
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_35_8_35_29_begin:
+        %tmp.77 = lgetv %bpm.4;
+        symbol [ bpm %tmp.77 35 8 11 ];
+        %tmp.78 = null;
+        %tmp.79 = ne %tmp.77 %tmp.78;
+        bf %tmp.79 @_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_35_4_41_4_if_else_false;
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_35_23_35_29_true:
+        %tmp.80 = lgetv %bpm.4;
+        symbol [ bpm %tmp.80 35 23 26 ];
+        %tmp.81 = as %tmp.80 { (!Null) };
+        %tmp.82 = 0;
+        %tmp.83 = gt %tmp.81 %tmp.82;
+        push %tmp.83;
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_35_23_35_29_end:
+        %tmp.84 = phi [%tmp.79 @_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_35_8_35_29_begin] [%tmp.83 @_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_35_23_35_29_true] [%tmp.84 @_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_35_23_35_29_end];
+        bf %tmp.84 @_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_35_4_41_4_if_else_false;
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_35_4_41_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_35_32_39_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 36 6 ]
+        %tmp.85 = lgetv %dc;
+        symbol [ dc %tmp.85 36 6 8 ];
+        symbol [ drawText %tmp.86 36 9 17 ];
+        %tmp.86 = getv function %tmp.85 :drawText;
+        %tmp.87 = lgetv %cx.3;
+        symbol [ cx %tmp.87 36 18 20 ];
+        %tmp.88 = lgetv %h.2;
+        symbol [ h %tmp.88 36 22 23 ];
+        %tmp.89 = 2;
+        %tmp.90 = div %tmp.88 %tmp.89;
+        %tmp.91 = 10;
+        %tmp.92 = sub %tmp.90 %tmp.91;
+        symbol [ Graphics %tmp.93 36 34 42 ];
+        %tmp.93 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_HOT %tmp.94 36 43 58 ];
+        %tmp.94 = getv %tmp.93 :FONT_NUMBER_HOT;
+        %tmp.95 = lgetv %bpm.4;
+        symbol [ bpm %tmp.95 36 60 63 ];
+        %tmp.96 = as %tmp.95 { (!Null) };
+        symbol [ toString %tmp.97 36 64 72 ];
+        %tmp.97 = getv function %tmp.96 :toString;
+        %tmp.98 = invoke %tmp.96 %tmp.97();
+        symbol [ Graphics %tmp.99 36 76 84 ];
+        %tmp.99 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.100 36 85 104 ];
+        %tmp.100 = getv %tmp.99 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.101 36 107 115 ];
+        %tmp.101 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.102 36 116 136 ];
+        %tmp.102 = getv %tmp.101 :TEXT_JUSTIFY_VCENTER;
+        %tmp.103 = bitor %tmp.100 %tmp.102;
+        invoke %tmp.85 %tmp.86(%tmp.87, %tmp.92, %tmp.94, %tmp.98, %tmp.103);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 37 6 ]
+        %tmp.104 = lgetv %dc;
+        symbol [ dc %tmp.104 37 6 8 ];
+        symbol [ setColor %tmp.105 37 9 17 ];
+        %tmp.105 = getv function %tmp.104 :setColor;
+        symbol [ Graphics %tmp.106 37 18 26 ];
+        %tmp.106 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.107 37 27 40 ];
+        %tmp.107 = getv %tmp.106 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.108 37 42 50 ];
+        %tmp.108 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.109 37 51 68 ];
+        %tmp.109 = getv %tmp.108 :COLOR_TRANSPARENT;
+        invoke %tmp.104 %tmp.105(%tmp.107, %tmp.109);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 38 6 ]
+        %tmp.110 = lgetv %dc;
+        symbol [ dc %tmp.110 38 6 8 ];
+        symbol [ drawText %tmp.111 38 9 17 ];
+        %tmp.111 = getv function %tmp.110 :drawText;
+        %tmp.112 = lgetv %cx.3;
+        symbol [ cx %tmp.112 38 18 20 ];
+        %tmp.113 = lgetv %h.2;
+        symbol [ h %tmp.113 38 22 23 ];
+        %tmp.114 = 2;
+        %tmp.115 = div %tmp.113 %tmp.114;
+        %tmp.116 = 36;
+        %tmp.117 = add %tmp.115 %tmp.116;
+        symbol [ Graphics %tmp.118 38 34 42 ];
+        %tmp.118 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.119 38 43 53 ];
+        %tmp.119 = getv %tmp.118 :FONT_SMALL;
+        symbol [ L10n %tmp.121 38 55 59 ];
+        %tmp.121 = getv ? :L10n;
+        symbol [ t %tmp.122 38 60 61 ];
+        %tmp.122 = getv function %tmp.121 :t;
+        symbol [ Rez %tmp.124 38 62 65 ];
+        %tmp.124 = getv ? :Rez;
+        symbol [ Strings %tmp.125 38 66 73 ];
+        %tmp.125 = getv %tmp.124 :Strings;
+        symbol [ HeartBpmUnit %tmp.126 38 74 86 ];
+        %tmp.126 = getv %tmp.125 :HeartBpmUnit;
+        %tmp.127 = invoke %tmp.121 %tmp.122(%tmp.126);
+        symbol [ Graphics %tmp.128 38 89 97 ];
+        %tmp.128 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.129 38 98 117 ];
+        %tmp.129 = getv %tmp.128 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.110 %tmp.111(%tmp.112, %tmp.117, %tmp.119, %tmp.127, %tmp.129);
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_35_32_39_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_35_4_41_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_35_4_41_4_if_else_false:
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_39_11_41_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 40 6 ]
+        %tmp.130 = lgetv %dc;
+        symbol [ dc %tmp.130 40 6 8 ];
+        symbol [ drawText %tmp.131 40 9 17 ];
+        %tmp.131 = getv function %tmp.130 :drawText;
+        %tmp.132 = lgetv %cx.3;
+        symbol [ cx %tmp.132 40 18 20 ];
+        %tmp.133 = lgetv %h.2;
+        symbol [ h %tmp.133 40 22 23 ];
+        %tmp.134 = 2;
+        %tmp.135 = div %tmp.133 %tmp.134;
+        %tmp.136 = 6;
+        %tmp.137 = sub %tmp.135 %tmp.136;
+        symbol [ Graphics %tmp.138 40 33 41 ];
+        %tmp.138 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_MEDIUM %tmp.139 40 42 60 ];
+        %tmp.139 = getv %tmp.138 :FONT_NUMBER_MEDIUM;
+        symbol [ L10n %tmp.141 40 62 66 ];
+        %tmp.141 = getv ? :L10n;
+        symbol [ t %tmp.142 40 67 68 ];
+        %tmp.142 = getv function %tmp.141 :t;
+        symbol [ Rez %tmp.144 40 69 72 ];
+        %tmp.144 = getv ? :Rez;
+        symbol [ Strings %tmp.145 40 73 80 ];
+        %tmp.145 = getv %tmp.144 :Strings;
+        symbol [ HeartNone %tmp.146 40 81 90 ];
+        %tmp.146 = getv %tmp.145 :HeartNone;
+        %tmp.147 = invoke %tmp.141 %tmp.142(%tmp.146);
+        symbol [ Graphics %tmp.148 40 93 101 ];
+        %tmp.148 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.149 40 102 121 ];
+        %tmp.149 = getv %tmp.148 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.150 40 124 132 ];
+        %tmp.150 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.151 40 133 153 ];
+        %tmp.151 = getv %tmp.150 :TEXT_JUSTIFY_VCENTER;
+        %tmp.152 = bitor %tmp.149 %tmp.151;
+        invoke %tmp.130 %tmp.131(%tmp.132, %tmp.137, %tmp.139, %tmp.147, %tmp.152);
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_39_11_41_4_stop:
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_35_4_41_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 43 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_17_47_49_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_17_47_49_2_stop" ]
+        %status.5 = local;
+        symbol [ status %status.5 43 8 14 ];
+        symbol [ UiState %tmp.154 43 17 24 ];
+        %tmp.154 = getv ? :UiState;
+        symbol [ statusLine %tmp.155 43 25 35 ];
+        %tmp.155 = getv %tmp.154 :statusLine;
+        lputv %status.5 %tmp.155;
+        symbol [ status %status.5 43 8 14 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 44 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_44_4_46_4_if_stmt:
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_44_8_44_45_begin:
+        %tmp.156 = lgetv %status.5;
+        symbol [ status %tmp.156 44 8 14 ];
+        %tmp.157 = null;
+        %tmp.158 = eq %tmp.156 %tmp.157;
+        bt %tmp.158 @_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_44_4_46_4_if_true;
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_44_26_44_45_false:
+        %tmp.159 = lgetv %status.5;
+        symbol [ status %tmp.159 44 26 32 ];
+        %tmp.160 = as %tmp.159 { (!Null) };
+        symbol [ length %tmp.161 44 33 39 ];
+        %tmp.161 = getv function %tmp.160 :length;
+        %tmp.162 = invoke %tmp.160 %tmp.161();
+        %tmp.163 = 0;
+        %tmp.164 = eq %tmp.162 %tmp.163;
+        push %tmp.164;
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_44_26_44_45_end:
+        %tmp.165 = phi [%tmp.158 @_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_44_8_44_45_begin] [%tmp.164 @_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_44_26_44_45_false] [%tmp.165 @_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_44_26_44_45_end];
+        bf %tmp.165 @_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_44_4_46_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_44_4_46_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_44_48_46_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 45 6 ]
+        symbol [ L10n %tmp.167 45 15 19 ];
+        %tmp.167 = getv ? :L10n;
+        symbol [ t %tmp.168 45 20 21 ];
+        %tmp.168 = getv function %tmp.167 :t;
+        symbol [ Rez %tmp.170 45 22 25 ];
+        %tmp.170 = getv ? :Rez;
+        symbol [ Strings %tmp.171 45 26 33 ];
+        %tmp.171 = getv %tmp.170 :Strings;
+        symbol [ StatusSharing %tmp.172 45 34 47 ];
+        %tmp.172 = getv %tmp.171 :StatusSharing;
+        %tmp.173 = invoke %tmp.167 %tmp.168(%tmp.172);
+        lputv %status.5 %tmp.173;
+        symbol [ status %status.5 45 6 12 ];
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_44_48_46_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_44_4_46_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_44_4_46_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 47 4 ]
+        %tmp.174 = lgetv %dc;
+        symbol [ dc %tmp.174 47 4 6 ];
+        symbol [ setColor %tmp.175 47 7 15 ];
+        %tmp.175 = getv function %tmp.174 :setColor;
+        symbol [ Graphics %tmp.176 47 16 24 ];
+        %tmp.176 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.177 47 25 38 ];
+        %tmp.177 = getv %tmp.176 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.178 47 40 48 ];
+        %tmp.178 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.179 47 49 66 ];
+        %tmp.179 = getv %tmp.178 :COLOR_TRANSPARENT;
+        invoke %tmp.174 %tmp.175(%tmp.177, %tmp.179);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" 48 4 ]
+        %tmp.180 = lgetv %dc;
+        symbol [ dc %tmp.180 48 4 6 ];
+        symbol [ drawText %tmp.181 48 7 15 ];
+        %tmp.181 = getv function %tmp.180 :drawText;
+        %tmp.182 = lgetv %cx.3;
+        symbol [ cx %tmp.182 48 16 18 ];
+        %tmp.183 = lgetv %h.2;
+        symbol [ h %tmp.183 48 20 21 ];
+        %tmp.184 = 32;
+        %tmp.185 = sub %tmp.183 %tmp.184;
+        symbol [ Graphics %tmp.186 48 28 36 ];
+        %tmp.186 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.187 48 37 47 ];
+        %tmp.187 = getv %tmp.186 :FONT_XTINY;
+        %tmp.188 = lgetv %status.5;
+        symbol [ status %tmp.188 48 49 55 ];
+        symbol [ Graphics %tmp.189 48 57 65 ];
+        %tmp.189 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.190 48 66 85 ];
+        %tmp.190 = getv %tmp.189 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.180 %tmp.181(%tmp.182, %tmp.185, %tmp.187, %tmp.188, %tmp.190);
+_home_nickcis_repos_share_heart_rate_garmin_source_HeartView_mc_17_47_49_2_stop:
+    }
+}
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc"; @line = 1; ]
+<init> {
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+  <setting propertyKey="@Properties.baseUrl" title="@Strings.SettingBaseUrlTitle">
+    <settingConfig type="alphaNumeric" maxLength="128"/>
+  </setting>
+</settings>

@@ -1,0 +1,107 @@
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc"; @line = 3; @symbol_moduledef = [UiState,3,7,14]; ]
+module UiState {
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc"; @line = 3; ]
+    <init> {
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc"; @line = 4; @position = 6; @symbol_vardef = [loading,4,6,13]; @symbol_type<0> = [Boolean,4,17,24]; ]
+    var loading as Boolean = false;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc"; @line = 5; @position = 6; @symbol_vardef = [error,5,6,11]; @symbol_type<0> = [String,5,15,21]; ]
+    var error as String or Null = null;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc"; @line = 6; @position = 6; @symbol_vardef = [statusLine,6,6,16]; @symbol_type<0> = [String,6,20,26]; ]
+    var statusLine as String = "";
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc"; @line = 7; @position = 6; @symbol_vardef = [qrLoading,7,6,15]; @symbol_type<0> = [Boolean,7,19,26]; ]
+    var qrLoading as Boolean = false;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc"; @line = 8; @position = 6; @symbol_vardef = [qrError,8,6,13]; @symbol_type<0> = [String,8,17,23]; ]
+    var qrError as String or Null = null;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc"; @line = 10; @symbol_functiondef = [setLoading,10,11,21]; @symbol_param<0> = [on,10,22,24]; @symbol_param<0>_type<0> = [Boolean,10,28,35]; ]
+    function setLoading(on as Boolean) as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_10_45_15_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" 11 4 ]
+        %tmp.1 = lgetv %on;
+        symbol [ on %tmp.1 11 14 16 ];
+        symbol [ loading ? 11 4 11 ];
+        putv self :loading %tmp.1;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" 12 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_12_4_14_4_if_stmt:
+        %tmp.2 = lgetv %on;
+        symbol [ on %tmp.2 12 8 10 ];
+        bf %tmp.2 @_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_12_4_14_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_12_4_14_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_12_12_14_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" 13 6 ]
+        %tmp.3 = null;
+        symbol [ error ? 13 6 11 ];
+        putv self :error %tmp.3;
+_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_12_12_14_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_12_4_14_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_12_4_14_4_if_end:
+_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_10_45_15_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc"; @line = 17; @symbol_functiondef = [setError,17,11,19]; @symbol_param<0> = [msg,17,20,23]; @symbol_param<0>_type<0> = [String,17,27,33]; ]
+    function setError(msg as String or Null) as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_17_51_20_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" 18 4 ]
+        %tmp.1 = lgetv %msg;
+        symbol [ msg %tmp.1 18 12 15 ];
+        symbol [ error ? 18 4 9 ];
+        putv self :error %tmp.1;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" 19 4 ]
+        %tmp.2 = false;
+        symbol [ loading ? 19 4 11 ];
+        putv self :loading %tmp.2;
+_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_17_51_20_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc"; @line = 22; @symbol_functiondef = [setStatus,22,11,20]; @symbol_param<0> = [msg,22,21,24]; @symbol_param<0>_type<0> = [String,22,28,34]; ]
+    function setStatus(msg as String) as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_22_44_24_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" 23 4 ]
+        %tmp.1 = lgetv %msg;
+        symbol [ msg %tmp.1 23 17 20 ];
+        symbol [ statusLine ? 23 4 14 ];
+        putv self :statusLine %tmp.1;
+_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_22_44_24_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc"; @line = 26; @symbol_functiondef = [setQrLoading,26,11,23]; @symbol_param<0> = [on,26,24,26]; @symbol_param<0>_type<0> = [Boolean,26,30,37]; ]
+    function setQrLoading(on as Boolean) as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_26_47_31_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" 27 4 ]
+        %tmp.1 = lgetv %on;
+        symbol [ on %tmp.1 27 16 18 ];
+        symbol [ qrLoading ? 27 4 13 ];
+        putv self :qrLoading %tmp.1;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" 28 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_28_4_30_4_if_stmt:
+        %tmp.2 = lgetv %on;
+        symbol [ on %tmp.2 28 8 10 ];
+        bf %tmp.2 @_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_28_4_30_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_28_4_30_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_28_12_30_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" 29 6 ]
+        %tmp.3 = null;
+        symbol [ qrError ? 29 6 13 ];
+        putv self :qrError %tmp.3;
+_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_28_12_30_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_28_4_30_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_28_4_30_4_if_end:
+_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_26_47_31_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc"; @line = 33; @symbol_functiondef = [setQrError,33,11,21]; @symbol_param<0> = [msg,33,22,25]; @symbol_param<0>_type<0> = [String,33,29,35]; ]
+    function setQrError(msg as String or Null) as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_33_53_36_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" 34 4 ]
+        %tmp.1 = lgetv %msg;
+        symbol [ msg %tmp.1 34 14 17 ];
+        symbol [ qrError ? 34 4 11 ];
+        putv self :qrError %tmp.1;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" 35 4 ]
+        %tmp.2 = false;
+        symbol [ qrLoading ? 35 4 13 ];
+        putv self :qrLoading %tmp.2;
+_home_nickcis_repos_share_heart_rate_garmin_source_UiState_mc_33_53_36_2_stop:
+    }
+}
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc"; @line = 1; ]
+<init> {
+}

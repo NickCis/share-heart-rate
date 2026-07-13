@@ -1,0 +1,1806 @@
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Application,1,14,25]; ]
+import Toybox.Application;
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Communications,2,14,28]; ]
+import Toybox.Communications;
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Graphics,3,14,22]; ]
+import Toybox.Graphics;
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Lang,4,14,18]; ]
+import Toybox.Lang;
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [Sensor,5,14,20]; ]
+import Toybox.Sensor;
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 6; @symbol_importdef<0> = [Toybox,6,7,13]; @symbol_importdef<1> = [System,6,14,20]; ]
+import Toybox.System;
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 7; @symbol_importdef<0> = [Toybox,7,7,13]; @symbol_importdef<1> = [Timer,7,14,19]; ]
+import Toybox.Timer;
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 8; @symbol_importdef<0> = [Toybox,8,7,13]; @symbol_importdef<1> = [WatchUi,8,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 10; @symbol_classdef = [AppController,10,6,19]; @symbol_extends<0> = [WatchUi,10,28,35]; @symbol_extends<1> = [BehaviorDelegate,10,36,52]; ]
+class AppController extends WatchUi.BehaviorDelegate {
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 10; ]
+    <init> {
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 20 6 ]
+        symbol [ OP_NONE %tmp.2 20 22 29 ];
+        %tmp.2 = getv ? :OP_NONE;
+        putv self :_op %tmp.2;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 21 6 ]
+        symbol [ SCREEN_QR %tmp.4 21 26 35 ];
+        %tmp.4 = getv ? :SCREEN_QR;
+        putv self :_screen %tmp.4;
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 10; ]
+    static
+    <init> {
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 11; @position = 8; @symbol_constdef = [OP_NONE,11,8,15]; ]
+    const OP_NONE = 0;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 12; @position = 8; @symbol_constdef = [OP_CREATE_SESSION,12,8,25]; ]
+    const OP_CREATE_SESSION = 1;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 13; @position = 8; @symbol_constdef = [OP_POST_HEART,13,8,21]; ]
+    const OP_POST_HEART = 2;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 15; @position = 8; @symbol_constdef = [HEART_INTERVAL_MS,15,8,25]; ]
+    const HEART_INTERVAL_MS = 30000;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 16; @position = 8; @symbol_constdef = [SCREEN_QR,16,8,17]; ]
+    const SCREEN_QR = 0;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 17; @position = 8; @symbol_constdef = [SCREEN_HEART,17,8,20]; ]
+    const SCREEN_HEART = 1;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 18; @position = 8; @symbol_constdef = [SCREEN_LINK,18,8,19]; ]
+    const SCREEN_LINK = 2;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 20; @position = 6; @symbol_vardef = [_op,20,6,9]; @symbol_type<0> = [Number,20,13,19]; ]
+    var _op as Number;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 21; @position = 6; @symbol_vardef = [_screen,21,6,13]; @symbol_type<0> = [Number,21,17,23]; ]
+    var _screen as Number;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 22; @position = 6; @symbol_vardef = [_heartTimer,22,6,17]; @symbol_type<0> = [Timer,22,21,26]; @symbol_type<1> = [Timer,22,27,32]; ]
+    var _heartTimer as Timer.Timer or Null = null;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 23; @position = 6; @symbol_vardef = [_lastHttpUrl,23,6,18]; @symbol_type<0> = [String,23,22,28]; ]
+    var _lastHttpUrl as String = "";
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 24; @position = 6; @symbol_vardef = [_qrView,24,6,13]; @symbol_type<0> = [QrView,24,17,23]; ]
+    var _qrView as QrView or Null = null;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 25; @position = 6; @symbol_vardef = [_heartView,25,6,16]; @symbol_type<0> = [HeartView,25,20,29]; ]
+    var _heartView as HeartView or Null = null;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 26; @position = 6; @symbol_vardef = [_linkView,26,6,15]; @symbol_type<0> = [LinkView,26,19,27]; ]
+    var _linkView as LinkView or Null = null;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 27; @position = 6; @symbol_vardef = [_qrBitmap,27,6,15]; @symbol_type<0> = [WatchUi,27,19,26]; @symbol_type<1> = [BitmapResource,27,27,41]; @symbol_type<2> = [Graphics,27,45,53]; @symbol_type<3> = [BitmapReference,27,54,69]; ]
+    var _qrBitmap as WatchUi.BitmapResource or Graphics.BitmapReference or Null = null;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 28; @position = 6; @symbol_vardef = [_qrSize,28,6,13]; @symbol_type<0> = [Number,28,17,23]; ]
+    var _qrSize as Number = 160;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 30; @symbol_functiondef = [getInitialView,30,11,25]; @symbol_return<0> = [QrView,30,31,37]; ]
+    function getInitialView() as QrView {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_30_38_32_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 31 4 ]
+        symbol [ _qrView %tmp.2 31 11 18 ];
+        %tmp.2 = getv ? :_qrView;
+        ret %tmp.2;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_30_38_32_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 34; @symbol_functiondef = [initialize,34,11,21]; ]
+    function initialize() as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_34_24_42_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 35 4 ]
+        symbol [ BehaviorDelegate %tmp.2 35 4 20 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 35 21 31 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 36 4 ]
+        symbol [ QrView %tmp.7 36 18 24 ];
+        %tmp.7 = getv ? :QrView;
+        %tmp.8 = self;
+        symbol [ self %tmp.8 36 25 29 ];
+        %tmp.4 = newc %tmp.7 (%tmp.8);
+        symbol [ _qrView ? 36 4 11 ];
+        putv self :_qrView %tmp.4;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 37 4 ]
+        symbol [ HeartView %tmp.12 37 21 30 ];
+        %tmp.12 = getv ? :HeartView;
+        %tmp.13 = self;
+        symbol [ self %tmp.13 37 31 35 ];
+        %tmp.9 = newc %tmp.12 (%tmp.13);
+        symbol [ _heartView ? 37 4 14 ];
+        putv self :_heartView %tmp.9;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 38 4 ]
+        symbol [ LinkView %tmp.17 38 20 28 ];
+        %tmp.17 = getv ? :LinkView;
+        %tmp.18 = self;
+        symbol [ self %tmp.18 38 29 33 ];
+        %tmp.14 = newc %tmp.17 (%tmp.18);
+        symbol [ _linkView ? 38 4 13 ];
+        putv self :_linkView %tmp.14;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 39 4 ]
+        symbol [ UiState %tmp.20 39 4 11 ];
+        %tmp.20 = getv ? :UiState;
+        symbol [ setStatus %tmp.21 39 12 21 ];
+        %tmp.21 = getv function %tmp.20 :setStatus;
+        symbol [ L10n %tmp.23 39 22 26 ];
+        %tmp.23 = getv ? :L10n;
+        symbol [ t %tmp.24 39 27 28 ];
+        %tmp.24 = getv function %tmp.23 :t;
+        symbol [ Rez %tmp.26 39 29 32 ];
+        %tmp.26 = getv ? :Rez;
+        symbol [ Strings %tmp.27 39 33 40 ];
+        %tmp.27 = getv %tmp.26 :Strings;
+        symbol [ StatusSharing %tmp.28 39 41 54 ];
+        %tmp.28 = getv %tmp.27 :StatusSharing;
+        %tmp.29 = invoke %tmp.23 %tmp.24(%tmp.28);
+        invoke %tmp.20 %tmp.21(%tmp.29);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 40 4 ]
+        %tmp.30 = self;
+        symbol [ ensureSession %tmp.31 40 4 17 ];
+        %tmp.31 = getv function %tmp.30 :ensureSession;
+        invoke %tmp.30 %tmp.31();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 41 4 ]
+        %tmp.32 = self;
+        symbol [ startHeartTimer %tmp.33 41 4 19 ];
+        %tmp.33 = getv function %tmp.32 :startHeartTimer;
+        invoke %tmp.32 %tmp.33();
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_34_24_42_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 44; @symbol_functiondef = [getQrBitmap,44,11,22]; @symbol_return<0> = [WatchUi,44,28,35]; @symbol_return<1> = [BitmapResource,44,36,50]; @symbol_return<2> = [Graphics,44,54,62]; @symbol_return<3> = [BitmapReference,44,63,78]; ]
+    function getQrBitmap() as WatchUi.BitmapResource or Graphics.BitmapReference or Null {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_44_87_46_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 45 4 ]
+        symbol [ _qrBitmap %tmp.2 45 11 20 ];
+        %tmp.2 = getv ? :_qrBitmap;
+        ret %tmp.2;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_44_87_46_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 48; @symbol_functiondef = [onQrShow,48,11,19]; ]
+    function onQrShow() as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_48_30_52_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 49 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_49_4_51_4_if_stmt:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_49_8_49_48_begin:
+        symbol [ _qrBitmap %tmp.2 49 8 17 ];
+        %tmp.2 = getv ? :_qrBitmap;
+        %tmp.3 = null;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_49_4_51_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_49_29_49_48_true:
+        symbol [ UiState %tmp.6 49 29 36 ];
+        %tmp.6 = getv ? :UiState;
+        symbol [ qrError %tmp.7 49 37 44 ];
+        %tmp.7 = getv %tmp.6 :qrError;
+        %tmp.8 = null;
+        %tmp.9 = eq %tmp.7 %tmp.8;
+        push %tmp.9;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_49_29_49_48_end:
+        %tmp.10 = phi [%tmp.4 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_49_8_49_48_begin] [%tmp.9 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_49_29_49_48_true] [%tmp.10 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_49_29_49_48_end];
+        bf %tmp.10 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_49_4_51_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_49_4_51_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_49_54_51_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 50 6 ]
+        %tmp.11 = self;
+        symbol [ loadQrImage %tmp.12 50 6 17 ];
+        %tmp.12 = getv function %tmp.11 :loadQrImage;
+        invoke %tmp.11 %tmp.12();
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_49_54_51_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_49_4_51_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_49_4_51_4_if_end:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_48_30_52_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 54; @symbol_functiondef = [onMenu,54,11,17]; @symbol_return<0> = [Boolean,54,23,30]; ]
+    function onMenu() as Boolean {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_54_31_57_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 55 4 ]
+        %tmp.1 = self;
+        symbol [ showMenu %tmp.2 55 4 12 ];
+        %tmp.2 = getv function %tmp.1 :showMenu;
+        invoke %tmp.1 %tmp.2();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 56 4 ]
+        %tmp.3 = true;
+        ret %tmp.3;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_54_31_57_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 59; @symbol_functiondef = [onSelect,59,11,19]; @symbol_return<0> = [Boolean,59,25,32]; ]
+    function onSelect() as Boolean {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_59_33_62_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 60 4 ]
+        %tmp.1 = self;
+        symbol [ showMenu %tmp.2 60 4 12 ];
+        %tmp.2 = getv function %tmp.1 :showMenu;
+        invoke %tmp.1 %tmp.2();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 61 4 ]
+        %tmp.3 = true;
+        ret %tmp.3;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_59_33_62_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 64; @symbol_functiondef = [onSwipe,64,11,18]; @symbol_param<0> = [swipeEvent,64,19,29]; @symbol_param<0>_type<0> = [WatchUi,64,33,40]; @symbol_param<0>_type<1> = [SwipeEvent,64,41,51]; @symbol_return<0> = [Boolean,64,56,63]; ]
+    function onSwipe(swipeEvent as WatchUi.SwipeEvent) as Boolean {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_64_64_75_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 65 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_64_64_75_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_64_64_75_2_stop" ]
+        %dir.1 = local;
+        symbol [ dir %dir.1 65 8 11 ];
+        %tmp.1 = lgetv %swipeEvent;
+        symbol [ swipeEvent %tmp.1 65 14 24 ];
+        symbol [ getDirection %tmp.2 65 25 37 ];
+        %tmp.2 = getv function %tmp.1 :getDirection;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %dir.1 %tmp.3;
+        symbol [ dir %dir.1 65 8 11 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 66 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_66_4_69_4_if_stmt:
+        %tmp.4 = lgetv %dir.1;
+        symbol [ dir %tmp.4 66 8 11 ];
+        symbol [ WatchUi %tmp.5 66 15 22 ];
+        %tmp.5 = getm $.Toybox.WatchUi;
+        symbol [ SWIPE_UP %tmp.6 66 23 31 ];
+        %tmp.6 = getv %tmp.5 :SWIPE_UP;
+        %tmp.7 = eq %tmp.4 %tmp.6;
+        bf %tmp.7 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_66_4_69_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_66_4_69_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_66_33_69_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 67 6 ]
+        %tmp.8 = self;
+        symbol [ showNextScreen %tmp.9 67 6 20 ];
+        %tmp.9 = getv function %tmp.8 :showNextScreen;
+        invoke %tmp.8 %tmp.9();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 68 6 ]
+        %tmp.10 = true;
+        ret %tmp.10;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_66_33_69_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_66_4_69_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_66_4_69_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 70 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_70_4_73_4_if_stmt:
+        %tmp.11 = lgetv %dir.1;
+        symbol [ dir %tmp.11 70 8 11 ];
+        symbol [ WatchUi %tmp.12 70 15 22 ];
+        %tmp.12 = getm $.Toybox.WatchUi;
+        symbol [ SWIPE_DOWN %tmp.13 70 23 33 ];
+        %tmp.13 = getv %tmp.12 :SWIPE_DOWN;
+        %tmp.14 = eq %tmp.11 %tmp.13;
+        bf %tmp.14 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_70_4_73_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_70_4_73_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_70_35_73_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 71 6 ]
+        %tmp.15 = self;
+        symbol [ showPreviousScreen %tmp.16 71 6 24 ];
+        %tmp.16 = getv function %tmp.15 :showPreviousScreen;
+        invoke %tmp.15 %tmp.16();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 72 6 ]
+        %tmp.17 = true;
+        ret %tmp.17;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_70_35_73_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_70_4_73_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_70_4_73_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 74 4 ]
+        %tmp.18 = false;
+        ret %tmp.18;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_64_64_75_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 77; @symbol_functiondef = [onNextPage,77,11,21]; @symbol_return<0> = [Boolean,77,27,34]; ]
+    function onNextPage() as Boolean {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_77_35_80_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 78 4 ]
+        %tmp.1 = self;
+        symbol [ showNextScreen %tmp.2 78 4 18 ];
+        %tmp.2 = getv function %tmp.1 :showNextScreen;
+        invoke %tmp.1 %tmp.2();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 79 4 ]
+        %tmp.3 = true;
+        ret %tmp.3;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_77_35_80_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 82; @symbol_functiondef = [onPreviousPage,82,11,25]; @symbol_return<0> = [Boolean,82,31,38]; ]
+    function onPreviousPage() as Boolean {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_82_39_85_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 83 4 ]
+        %tmp.1 = self;
+        symbol [ showPreviousScreen %tmp.2 83 4 22 ];
+        %tmp.2 = getv function %tmp.1 :showPreviousScreen;
+        invoke %tmp.1 %tmp.2();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 84 4 ]
+        %tmp.3 = true;
+        ret %tmp.3;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_82_39_85_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 87; @symbol_functiondef = [showNextScreen,87,11,25]; ]
+    function showNextScreen() as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_87_36_95_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 88 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_88_4_94_4_if_stmt:
+        symbol [ _screen %tmp.2 88 8 15 ];
+        %tmp.2 = getv ? :_screen;
+        symbol [ SCREEN_QR %tmp.4 88 19 28 ];
+        %tmp.4 = getv ? :SCREEN_QR;
+        %tmp.5 = eq %tmp.2 %tmp.4;
+        bf %tmp.5 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_88_4_94_4_if_false;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_88_4_94_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_88_30_90_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 89 6 ]
+        %tmp.6 = self;
+        symbol [ showHeartScreen %tmp.7 89 6 21 ];
+        %tmp.7 = getv function %tmp.6 :showHeartScreen;
+        invoke %tmp.6 %tmp.7();
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_88_30_90_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_88_4_94_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_88_4_94_4_if_false:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 90 11 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_90_11_94_4_if_stmt:
+        symbol [ _screen %tmp.9 90 15 22 ];
+        %tmp.9 = getv ? :_screen;
+        symbol [ SCREEN_HEART %tmp.11 90 26 38 ];
+        %tmp.11 = getv ? :SCREEN_HEART;
+        %tmp.12 = eq %tmp.9 %tmp.11;
+        bf %tmp.12 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_90_11_94_4_if_else_false;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_90_11_94_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_90_40_92_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 91 6 ]
+        %tmp.13 = self;
+        symbol [ showLinkScreen %tmp.14 91 6 20 ];
+        %tmp.14 = getv function %tmp.13 :showLinkScreen;
+        invoke %tmp.13 %tmp.14();
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_90_40_92_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_90_11_94_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_90_11_94_4_if_else_false:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_92_11_94_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 93 6 ]
+        %tmp.15 = self;
+        symbol [ showQrScreen %tmp.16 93 6 18 ];
+        %tmp.16 = getv function %tmp.15 :showQrScreen;
+        invoke %tmp.15 %tmp.16();
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_92_11_94_4_stop:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_90_11_94_4_if_end:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_88_4_94_4_if_end:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_87_36_95_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 97; @symbol_functiondef = [showPreviousScreen,97,11,29]; ]
+    function showPreviousScreen() as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_97_40_105_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 98 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_98_4_104_4_if_stmt:
+        symbol [ _screen %tmp.2 98 8 15 ];
+        %tmp.2 = getv ? :_screen;
+        symbol [ SCREEN_LINK %tmp.4 98 19 30 ];
+        %tmp.4 = getv ? :SCREEN_LINK;
+        %tmp.5 = eq %tmp.2 %tmp.4;
+        bf %tmp.5 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_98_4_104_4_if_false;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_98_4_104_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_98_32_100_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 99 6 ]
+        %tmp.6 = self;
+        symbol [ showHeartScreen %tmp.7 99 6 21 ];
+        %tmp.7 = getv function %tmp.6 :showHeartScreen;
+        invoke %tmp.6 %tmp.7();
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_98_32_100_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_98_4_104_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_98_4_104_4_if_false:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 100 11 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_100_11_104_4_if_stmt:
+        symbol [ _screen %tmp.9 100 15 22 ];
+        %tmp.9 = getv ? :_screen;
+        symbol [ SCREEN_HEART %tmp.11 100 26 38 ];
+        %tmp.11 = getv ? :SCREEN_HEART;
+        %tmp.12 = eq %tmp.9 %tmp.11;
+        bf %tmp.12 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_100_11_104_4_if_else_false;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_100_11_104_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_100_40_102_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 101 6 ]
+        %tmp.13 = self;
+        symbol [ showQrScreen %tmp.14 101 6 18 ];
+        %tmp.14 = getv function %tmp.13 :showQrScreen;
+        invoke %tmp.13 %tmp.14();
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_100_40_102_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_100_11_104_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_100_11_104_4_if_else_false:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_102_11_104_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 103 6 ]
+        %tmp.15 = self;
+        symbol [ showLinkScreen %tmp.16 103 6 20 ];
+        %tmp.16 = getv function %tmp.15 :showLinkScreen;
+        invoke %tmp.15 %tmp.16();
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_102_11_104_4_stop:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_100_11_104_4_if_end:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_98_4_104_4_if_end:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_97_40_105_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 107; @symbol_functiondef = [showMenu,107,11,19]; ]
+    function showMenu() as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_107_30_112_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 108 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_108_4_110_4_if_stmt:
+        symbol [ UiState %tmp.2 108 8 15 ];
+        %tmp.2 = getv ? :UiState;
+        symbol [ loading %tmp.3 108 16 23 ];
+        %tmp.3 = getv %tmp.2 :loading;
+        bf %tmp.3 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_108_4_110_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_108_4_110_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_108_25_110_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 109 6 ]
+        ret ?;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_108_25_110_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_108_4_110_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_108_4_110_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 111 4 ]
+        symbol [ WatchUi %tmp.4 111 4 11 ];
+        %tmp.4 = getm $.Toybox.WatchUi;
+        symbol [ pushView %tmp.5 111 12 20 ];
+        %tmp.5 = getv function %tmp.4 :pushView;
+        symbol [ AppMenu %tmp.9 111 25 32 ];
+        %tmp.9 = getv ? :AppMenu;
+        %tmp.6 = newc %tmp.9 ();
+        symbol [ AppMenuDelegate %tmp.13 111 40 55 ];
+        %tmp.13 = getv ? :AppMenuDelegate;
+        %tmp.14 = self;
+        symbol [ self %tmp.14 111 56 60 ];
+        %tmp.10 = newc %tmp.13 (%tmp.14);
+        symbol [ WatchUi %tmp.15 111 63 70 ];
+        %tmp.15 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_UP %tmp.16 111 71 79 ];
+        %tmp.16 = getv %tmp.15 :SLIDE_UP;
+        invoke %tmp.4 %tmp.5(%tmp.6, %tmp.10, %tmp.16);
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_107_30_112_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 114; @symbol_functiondef = [showLinkScreen,114,11,25]; ]
+    function showLinkScreen() as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_114_36_120_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 115 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_115_4_117_4_if_stmt:
+        symbol [ _screen %tmp.2 115 8 15 ];
+        %tmp.2 = getv ? :_screen;
+        symbol [ SCREEN_LINK %tmp.4 115 19 30 ];
+        %tmp.4 = getv ? :SCREEN_LINK;
+        %tmp.5 = eq %tmp.2 %tmp.4;
+        bf %tmp.5 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_115_4_117_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_115_4_117_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_115_32_117_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 116 6 ]
+        ret ?;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_115_32_117_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_115_4_117_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_115_4_117_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 118 4 ]
+        symbol [ SCREEN_LINK %tmp.7 118 14 25 ];
+        %tmp.7 = getv ? :SCREEN_LINK;
+        symbol [ _screen ? 118 4 11 ];
+        putv self :_screen %tmp.7;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 119 4 ]
+        symbol [ WatchUi %tmp.8 119 4 11 ];
+        %tmp.8 = getm $.Toybox.WatchUi;
+        symbol [ switchToView %tmp.9 119 12 24 ];
+        %tmp.9 = getv function %tmp.8 :switchToView;
+        symbol [ _linkView %tmp.11 119 25 34 ];
+        %tmp.11 = getv ? :_linkView;
+        %tmp.12 = self;
+        symbol [ self %tmp.12 119 36 40 ];
+        symbol [ WatchUi %tmp.13 119 42 49 ];
+        %tmp.13 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_UP %tmp.14 119 50 58 ];
+        %tmp.14 = getv %tmp.13 :SLIDE_UP;
+        invoke %tmp.8 %tmp.9(%tmp.11, %tmp.12, %tmp.14);
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_114_36_120_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 122; @symbol_functiondef = [showQrScreen,122,11,23]; ]
+    function showQrScreen() as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_122_34_128_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 123 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_123_4_125_4_if_stmt:
+        symbol [ _screen %tmp.2 123 8 15 ];
+        %tmp.2 = getv ? :_screen;
+        symbol [ SCREEN_QR %tmp.4 123 19 28 ];
+        %tmp.4 = getv ? :SCREEN_QR;
+        %tmp.5 = eq %tmp.2 %tmp.4;
+        bf %tmp.5 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_123_4_125_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_123_4_125_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_123_30_125_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 124 6 ]
+        ret ?;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_123_30_125_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_123_4_125_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_123_4_125_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 126 4 ]
+        symbol [ SCREEN_QR %tmp.7 126 14 23 ];
+        %tmp.7 = getv ? :SCREEN_QR;
+        symbol [ _screen ? 126 4 11 ];
+        putv self :_screen %tmp.7;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 127 4 ]
+        symbol [ WatchUi %tmp.8 127 4 11 ];
+        %tmp.8 = getm $.Toybox.WatchUi;
+        symbol [ switchToView %tmp.9 127 12 24 ];
+        %tmp.9 = getv function %tmp.8 :switchToView;
+        symbol [ _qrView %tmp.11 127 25 32 ];
+        %tmp.11 = getv ? :_qrView;
+        %tmp.12 = self;
+        symbol [ self %tmp.12 127 34 38 ];
+        symbol [ WatchUi %tmp.13 127 40 47 ];
+        %tmp.13 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.14 127 48 58 ];
+        %tmp.14 = getv %tmp.13 :SLIDE_DOWN;
+        invoke %tmp.8 %tmp.9(%tmp.11, %tmp.12, %tmp.14);
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_122_34_128_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 130; @symbol_functiondef = [showHeartScreen,130,11,26]; ]
+    function showHeartScreen() as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_130_37_136_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 131 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_131_4_133_4_if_stmt:
+        symbol [ _screen %tmp.2 131 8 15 ];
+        %tmp.2 = getv ? :_screen;
+        symbol [ SCREEN_HEART %tmp.4 131 19 31 ];
+        %tmp.4 = getv ? :SCREEN_HEART;
+        %tmp.5 = eq %tmp.2 %tmp.4;
+        bf %tmp.5 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_131_4_133_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_131_4_133_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_131_33_133_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 132 6 ]
+        ret ?;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_131_33_133_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_131_4_133_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_131_4_133_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 134 4 ]
+        symbol [ SCREEN_HEART %tmp.7 134 14 26 ];
+        %tmp.7 = getv ? :SCREEN_HEART;
+        symbol [ _screen ? 134 4 11 ];
+        putv self :_screen %tmp.7;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 135 4 ]
+        symbol [ WatchUi %tmp.8 135 4 11 ];
+        %tmp.8 = getm $.Toybox.WatchUi;
+        symbol [ switchToView %tmp.9 135 12 24 ];
+        %tmp.9 = getv function %tmp.8 :switchToView;
+        symbol [ _heartView %tmp.11 135 25 35 ];
+        %tmp.11 = getv ? :_heartView;
+        %tmp.12 = self;
+        symbol [ self %tmp.12 135 37 41 ];
+        symbol [ WatchUi %tmp.13 135 43 50 ];
+        %tmp.13 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_UP %tmp.14 135 51 59 ];
+        %tmp.14 = getv %tmp.13 :SLIDE_UP;
+        invoke %tmp.8 %tmp.9(%tmp.11, %tmp.12, %tmp.14);
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_130_37_136_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 138; @symbol_functiondef = [ensureSession,138,11,24]; ]
+    function ensureSession() as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_138_35_145_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 139 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_139_4_143_4_if_stmt:
+        symbol [ SessionStore %tmp.2 139 8 20 ];
+        %tmp.2 = getv ? :SessionStore;
+        symbol [ hasSession %tmp.3 139 21 31 ];
+        %tmp.3 = getv function %tmp.2 :hasSession;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        bf %tmp.4 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_139_4_143_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_139_4_143_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_139_35_143_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 140 6 ]
+        %tmp.5 = self;
+        symbol [ loadQrImage %tmp.6 140 6 17 ];
+        %tmp.6 = getv function %tmp.5 :loadQrImage;
+        invoke %tmp.5 %tmp.6();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 141 6 ]
+        %tmp.7 = self;
+        symbol [ postHeartRate %tmp.8 141 6 19 ];
+        %tmp.8 = getv function %tmp.7 :postHeartRate;
+        invoke %tmp.7 %tmp.8();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 142 6 ]
+        ret ?;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_139_35_143_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_139_4_143_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_139_4_143_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 144 4 ]
+        %tmp.9 = self;
+        symbol [ beginCreateSession %tmp.10 144 4 22 ];
+        %tmp.10 = getv function %tmp.9 :beginCreateSession;
+        invoke %tmp.9 %tmp.10();
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_138_35_145_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 147; @symbol_functiondef = [resetSession,147,11,23]; ]
+    function resetSession() as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_147_34_156_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 148 4 ]
+        %tmp.1 = self;
+        symbol [ stopHeartTimer %tmp.2 148 4 18 ];
+        %tmp.2 = getv function %tmp.1 :stopHeartTimer;
+        invoke %tmp.1 %tmp.2();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 149 4 ]
+        symbol [ SessionStore %tmp.4 149 4 16 ];
+        %tmp.4 = getv ? :SessionStore;
+        symbol [ clear %tmp.5 149 17 22 ];
+        %tmp.5 = getv function %tmp.4 :clear;
+        invoke %tmp.4 %tmp.5();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 150 4 ]
+        %tmp.6 = null;
+        symbol [ _qrBitmap ? 150 4 13 ];
+        putv self :_qrBitmap %tmp.6;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 151 4 ]
+        symbol [ UiState %tmp.8 151 4 11 ];
+        %tmp.8 = getv ? :UiState;
+        symbol [ setError %tmp.9 151 12 20 ];
+        %tmp.9 = getv function %tmp.8 :setError;
+        %tmp.10 = null;
+        invoke %tmp.8 %tmp.9(%tmp.10);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 152 4 ]
+        symbol [ UiState %tmp.12 152 4 11 ];
+        %tmp.12 = getv ? :UiState;
+        symbol [ setQrError %tmp.13 152 12 22 ];
+        %tmp.13 = getv function %tmp.12 :setQrError;
+        %tmp.14 = null;
+        invoke %tmp.12 %tmp.13(%tmp.14);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 153 4 ]
+        %tmp.15 = self;
+        symbol [ ensureSession %tmp.16 153 4 17 ];
+        %tmp.16 = getv function %tmp.15 :ensureSession;
+        invoke %tmp.15 %tmp.16();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 154 4 ]
+        %tmp.17 = self;
+        symbol [ startHeartTimer %tmp.18 154 4 19 ];
+        %tmp.18 = getv function %tmp.17 :startHeartTimer;
+        invoke %tmp.17 %tmp.18();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 155 4 ]
+        symbol [ WatchUi %tmp.19 155 4 11 ];
+        %tmp.19 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.20 155 12 25 ];
+        %tmp.20 = getv function %tmp.19 :requestUpdate;
+        invoke %tmp.19 %tmp.20();
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_147_34_156_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 158; @symbol_functiondef = [beginCreateSession,158,11,29]; ]
+    function beginCreateSession() as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_158_40_164_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 159 4 ]
+        symbol [ UiState %tmp.2 159 4 11 ];
+        %tmp.2 = getv ? :UiState;
+        symbol [ setLoading %tmp.3 159 12 22 ];
+        %tmp.3 = getv function %tmp.2 :setLoading;
+        %tmp.4 = true;
+        invoke %tmp.2 %tmp.3(%tmp.4);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 160 4 ]
+        symbol [ WatchUi %tmp.5 160 4 11 ];
+        %tmp.5 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.6 160 12 25 ];
+        %tmp.6 = getv function %tmp.5 :requestUpdate;
+        invoke %tmp.5 %tmp.6();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 161 4 ]
+        symbol [ OP_CREATE_SESSION %tmp.8 161 10 27 ];
+        %tmp.8 = getv ? :OP_CREATE_SESSION;
+        symbol [ _op ? 161 4 7 ];
+        putv self :_op %tmp.8;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 162 4 ]
+        symbol [ Config %tmp.10 162 19 25 ];
+        %tmp.10 = getv ? :Config;
+        symbol [ sessionCreateUrl %tmp.11 162 26 42 ];
+        %tmp.11 = getv function %tmp.10 :sessionCreateUrl;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        symbol [ _lastHttpUrl ? 162 4 16 ];
+        putv self :_lastHttpUrl %tmp.12;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 163 4 ]
+        symbol [ ApiClient %tmp.14 163 4 13 ];
+        %tmp.14 = getv ? :ApiClient;
+        symbol [ createSession %tmp.15 163 14 27 ];
+        %tmp.15 = getv function %tmp.14 :createSession;
+        %tmp.16 = self;
+        symbol [ method %tmp.17 163 28 34 ];
+        %tmp.17 = getv function %tmp.16 :method;
+        %tmp.19 = const :onHttpResponse;
+        symbol [ onHttpResponse %tmp.19 163 36 50 const ];
+        %tmp.20 = invoke %tmp.16 %tmp.17(%tmp.19);
+        invoke %tmp.14 %tmp.15(%tmp.20);
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_158_40_164_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 166; @symbol_functiondef = [startHeartTimer,166,11,26]; ]
+    function startHeartTimer() as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_166_37_170_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 167 4 ]
+        %tmp.1 = self;
+        symbol [ stopHeartTimer %tmp.2 167 4 18 ];
+        %tmp.2 = getv function %tmp.1 :stopHeartTimer;
+        invoke %tmp.1 %tmp.2();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 168 4 ]
+        symbol [ Timer %tmp.5 168 22 27 ];
+        %tmp.5 = getm $.Toybox.Timer;
+        symbol [ Timer %tmp.6 168 28 33 ];
+        %tmp.6 = getv function ? %tmp.5 :Timer;
+        %tmp.3 = newc %tmp.6 ();
+        symbol [ _heartTimer ? 168 4 15 ];
+        putv self :_heartTimer %tmp.3;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 169 4 ]
+        symbol [ _heartTimer %tmp.8 169 4 15 ];
+        %tmp.8 = getv ? :_heartTimer;
+        symbol [ start %tmp.9 169 16 21 ];
+        %tmp.9 = getv function %tmp.8 :start;
+        %tmp.10 = self;
+        symbol [ method %tmp.11 169 22 28 ];
+        %tmp.11 = getv function %tmp.10 :method;
+        %tmp.13 = const :onHeartTimer;
+        symbol [ onHeartTimer %tmp.13 169 30 42 const ];
+        %tmp.14 = invoke %tmp.10 %tmp.11(%tmp.13);
+        symbol [ HEART_INTERVAL_MS %tmp.16 169 45 62 ];
+        %tmp.16 = getv ? :HEART_INTERVAL_MS;
+        %tmp.17 = true;
+        invoke %tmp.8 %tmp.9(%tmp.14, %tmp.16, %tmp.17);
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_166_37_170_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 172; @symbol_functiondef = [stopHeartTimer,172,11,25]; ]
+    function stopHeartTimer() as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_172_36_177_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 173 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_173_4_176_4_if_stmt:
+        symbol [ _heartTimer %tmp.2 173 8 19 ];
+        %tmp.2 = getv ? :_heartTimer;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_173_4_176_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_173_4_176_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_173_29_176_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 174 6 ]
+        symbol [ _heartTimer %tmp.6 174 6 17 ];
+        %tmp.6 = getv ? :_heartTimer;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ stop %tmp.8 174 18 22 ];
+        %tmp.8 = getv function %tmp.7 :stop;
+        invoke %tmp.7 %tmp.8();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 175 6 ]
+        %tmp.9 = null;
+        symbol [ _heartTimer ? 175 6 17 ];
+        putv self :_heartTimer %tmp.9;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_173_29_176_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_173_4_176_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_173_4_176_4_if_end:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_172_36_177_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 179; @symbol_functiondef = [onHeartTimer,179,11,23]; ]
+    function onHeartTimer() as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_179_34_181_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 180 4 ]
+        %tmp.1 = self;
+        symbol [ postHeartRate %tmp.2 180 4 17 ];
+        %tmp.2 = getv function %tmp.1 :postHeartRate;
+        invoke %tmp.1 %tmp.2();
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_179_34_181_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 183; @symbol_functiondef = [postHeartRate,183,11,24]; ]
+    function postHeartRate() as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_183_35_203_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 184 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_184_4_186_4_if_stmt:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_184_8_184_34_begin:
+        symbol [ UiState %tmp.2 184 8 15 ];
+        %tmp.2 = getv ? :UiState;
+        symbol [ loading %tmp.3 184 16 23 ];
+        %tmp.3 = getv %tmp.2 :loading;
+        bt %tmp.3 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_184_4_186_4_if_true;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_184_27_184_34_false:
+        symbol [ _op %tmp.5 184 27 30 ];
+        %tmp.5 = getv ? :_op;
+        symbol [ OP_NONE %tmp.7 184 34 41 ];
+        %tmp.7 = getv ? :OP_NONE;
+        %tmp.8 = ne %tmp.5 %tmp.7;
+        push %tmp.8;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_184_27_184_34_end:
+        %tmp.9 = phi [%tmp.3 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_184_8_184_34_begin] [%tmp.8 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_184_27_184_34_false] [%tmp.9 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_184_27_184_34_end];
+        bf %tmp.9 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_184_4_186_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_184_4_186_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_184_43_186_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 185 6 ]
+        ret ?;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_184_43_186_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_184_4_186_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_184_4_186_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 187 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_183_35_203_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_183_35_203_2_stop" ]
+        %sessionId.1 = local;
+        symbol [ sessionId %sessionId.1 187 8 17 ];
+        symbol [ SessionStore %tmp.11 187 20 32 ];
+        %tmp.11 = getv ? :SessionStore;
+        symbol [ getSessionId %tmp.12 187 33 45 ];
+        %tmp.12 = getv function %tmp.11 :getSessionId;
+        %tmp.13 = invoke %tmp.11 %tmp.12();
+        lputv %sessionId.1 %tmp.13;
+        symbol [ sessionId %sessionId.1 187 8 17 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 188 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_183_35_203_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_183_35_203_2_stop" ]
+        %secret.2 = local;
+        symbol [ secret %secret.2 188 8 14 ];
+        symbol [ SessionStore %tmp.15 188 17 29 ];
+        %tmp.15 = getv ? :SessionStore;
+        symbol [ getSecret %tmp.16 188 30 39 ];
+        %tmp.16 = getv function %tmp.15 :getSecret;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        lputv %secret.2 %tmp.17;
+        symbol [ secret %secret.2 188 8 14 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 189 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_189_4_191_4_if_stmt:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_189_8_189_39_begin:
+        %tmp.18 = lgetv %sessionId.1;
+        symbol [ sessionId %tmp.18 189 8 17 ];
+        %tmp.19 = null;
+        %tmp.20 = eq %tmp.18 %tmp.19;
+        bt %tmp.20 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_189_4_191_4_if_true;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_189_29_189_39_false:
+        %tmp.21 = lgetv %secret.2;
+        symbol [ secret %tmp.21 189 29 35 ];
+        %tmp.22 = null;
+        %tmp.23 = eq %tmp.21 %tmp.22;
+        push %tmp.23;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_189_29_189_39_end:
+        %tmp.24 = phi [%tmp.20 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_189_8_189_39_begin] [%tmp.23 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_189_29_189_39_false] [%tmp.24 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_189_29_189_39_end];
+        bf %tmp.24 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_189_4_191_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_189_4_191_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_189_45_191_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 190 6 ]
+        ret ?;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_189_45_191_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_189_4_191_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_189_4_191_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 193 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_183_35_203_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_183_35_203_2_stop" ]
+        %bpm.3 = local;
+        symbol [ bpm %bpm.3 193 8 11 ];
+        %tmp.25 = self;
+        symbol [ readHeartRate %tmp.26 193 14 27 ];
+        %tmp.26 = getv function %tmp.25 :readHeartRate;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        lputv %bpm.3 %tmp.27;
+        symbol [ bpm %bpm.3 193 8 11 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 194 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_194_4_198_4_if_stmt:
+        %tmp.28 = lgetv %bpm.3;
+        symbol [ bpm %tmp.28 194 8 11 ];
+        %tmp.29 = null;
+        %tmp.30 = eq %tmp.28 %tmp.29;
+        bf %tmp.30 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_194_4_198_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_194_4_198_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_194_21_198_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 195 6 ]
+        symbol [ UiState %tmp.32 195 6 13 ];
+        %tmp.32 = getv ? :UiState;
+        symbol [ setStatus %tmp.33 195 14 23 ];
+        %tmp.33 = getv function %tmp.32 :setStatus;
+        symbol [ L10n %tmp.35 195 24 28 ];
+        %tmp.35 = getv ? :L10n;
+        symbol [ t %tmp.36 195 29 30 ];
+        %tmp.36 = getv function %tmp.35 :t;
+        symbol [ Rez %tmp.38 195 31 34 ];
+        %tmp.38 = getv ? :Rez;
+        symbol [ Strings %tmp.39 195 35 42 ];
+        %tmp.39 = getv %tmp.38 :Strings;
+        symbol [ ErrorNoHeartRate %tmp.40 195 43 59 ];
+        %tmp.40 = getv %tmp.39 :ErrorNoHeartRate;
+        %tmp.41 = invoke %tmp.35 %tmp.36(%tmp.40);
+        invoke %tmp.32 %tmp.33(%tmp.41);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 196 6 ]
+        symbol [ WatchUi %tmp.42 196 6 13 ];
+        %tmp.42 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.43 196 14 27 ];
+        %tmp.43 = getv function %tmp.42 :requestUpdate;
+        invoke %tmp.42 %tmp.43();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 197 6 ]
+        ret ?;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_194_21_198_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_194_4_198_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_194_4_198_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 200 4 ]
+        symbol [ OP_POST_HEART %tmp.45 200 10 23 ];
+        %tmp.45 = getv ? :OP_POST_HEART;
+        symbol [ _op ? 200 4 7 ];
+        putv self :_op %tmp.45;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 201 4 ]
+        symbol [ Config %tmp.47 201 19 25 ];
+        %tmp.47 = getv ? :Config;
+        symbol [ heartUrl %tmp.48 201 26 34 ];
+        %tmp.48 = getv function %tmp.47 :heartUrl;
+        %tmp.49 = lgetv %sessionId.1;
+        symbol [ sessionId %tmp.49 201 35 44 ];
+        %tmp.50 = invoke %tmp.47 %tmp.48(%tmp.49);
+        symbol [ _lastHttpUrl ? 201 4 16 ];
+        putv self :_lastHttpUrl %tmp.50;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 202 4 ]
+        symbol [ ApiClient %tmp.52 202 4 13 ];
+        %tmp.52 = getv ? :ApiClient;
+        symbol [ postHeart %tmp.53 202 14 23 ];
+        %tmp.53 = getv function %tmp.52 :postHeart;
+        %tmp.54 = lgetv %sessionId.1;
+        symbol [ sessionId %tmp.54 202 24 33 ];
+        %tmp.55 = lgetv %secret.2;
+        symbol [ secret %tmp.55 202 35 41 ];
+        %tmp.56 = lgetv %bpm.3;
+        symbol [ bpm %tmp.56 202 43 46 ];
+        %tmp.57 = self;
+        symbol [ method %tmp.58 202 48 54 ];
+        %tmp.58 = getv function %tmp.57 :method;
+        %tmp.60 = const :onHttpResponse;
+        symbol [ onHttpResponse %tmp.60 202 56 70 const ];
+        %tmp.61 = invoke %tmp.57 %tmp.58(%tmp.60);
+        invoke %tmp.52 %tmp.53(%tmp.54, %tmp.55, %tmp.56, %tmp.61);
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_183_35_203_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 205; @symbol_functiondef = [readHeartRate,205,11,24]; @symbol_return<0> = [Number,205,30,36]; ]
+    function readHeartRate() as Number or Null {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_205_45_217_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 206 4 ]
+        try @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_4_215_4_beginTry @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_4_215_4_endTry @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_4_215_4_catch @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_4_215_4_finally;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_4_215_4_beginTry:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_8_214_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 207 6 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_8_214_4_start" "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_8_214_4_stop" ]
+        %info.1 = local;
+        symbol [ info %info.1 207 10 14 ];
+        symbol [ Sensor %tmp.1 207 17 23 ];
+        %tmp.1 = getm $.Toybox.Sensor;
+        symbol [ getInfo %tmp.2 207 24 31 ];
+        %tmp.2 = getv function %tmp.1 :getInfo;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %info.1 %tmp.3;
+        symbol [ info %info.1 207 10 14 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 208 6 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_208_6_213_6_if_stmt:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_208_10_208_44_begin:
+        %tmp.4 = lgetv %info.1;
+        symbol [ info %tmp.4 208 10 14 ];
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_208_6_213_6_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_208_26_208_44_true:
+        %tmp.7 = lgetv %info.1;
+        symbol [ info %tmp.7 208 26 30 ];
+        %tmp.8 = as %tmp.7 { (!Null) };
+        symbol [ heartRate %tmp.9 208 31 40 ];
+        %tmp.9 = getv %tmp.8 :heartRate;
+        %tmp.10 = null;
+        %tmp.11 = ne %tmp.9 %tmp.10;
+        push %tmp.11;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_208_26_208_44_end:
+        %tmp.12 = phi [%tmp.6 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_208_10_208_44_begin] [%tmp.11 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_208_26_208_44_true] [%tmp.12 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_208_26_208_44_end];
+        bf %tmp.12 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_208_6_213_6_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_208_6_213_6_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_208_50_213_6_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 209 8 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_208_50_213_6_start" "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_208_50_213_6_stop" ]
+        %hr.2 = local;
+        symbol [ hr %hr.2 209 12 14 ];
+        %tmp.13 = lgetv %info.1;
+        symbol [ info %tmp.13 209 17 21 ];
+        %tmp.14 = as %tmp.13 { (!Null) };
+        symbol [ heartRate %tmp.15 209 22 31 ];
+        %tmp.15 = getv %tmp.14 :heartRate;
+        lputv %hr.2 %tmp.15;
+        symbol [ hr %hr.2 209 12 14 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 210 8 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_210_8_212_8_if_stmt:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_210_12_210_27_begin:
+        %tmp.16 = lgetv %hr.2;
+        symbol [ hr %tmp.16 210 12 14 ];
+        %tmp.17 = 0;
+        %tmp.18 = gt %tmp.16 %tmp.17;
+        bf %tmp.18 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_210_8_212_8_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_210_22_210_27_true:
+        %tmp.19 = lgetv %hr.2;
+        symbol [ hr %tmp.19 210 22 24 ];
+        %tmp.20 = 255;
+        %tmp.21 = lt %tmp.19 %tmp.20;
+        push %tmp.21;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_210_22_210_27_end:
+        %tmp.22 = phi [%tmp.18 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_210_12_210_27_begin] [%tmp.21 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_210_22_210_27_true] [%tmp.22 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_210_22_210_27_end];
+        bf %tmp.22 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_210_8_212_8_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_210_8_212_8_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_210_32_212_8_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 211 10 ]
+        %tmp.23 = lgetv %hr.2;
+        symbol [ hr %tmp.23 211 17 19 ];
+        jsr @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_4_215_4_finally;
+        ret %tmp.23;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_210_32_212_8_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_210_8_212_8_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_210_8_212_8_if_end:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_208_50_213_6_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_208_6_213_6_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_208_6_213_6_if_end:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_8_214_4_stop:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_4_215_4_endTry:
+        jsr @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_4_215_4_finally;
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_4_215_4_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_4_215_4_catch:
+        %tmp.24 = exception;
+        push %tmp.24;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 214 6 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_4_215_4_catch" "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_214_6_215_4_end" ]
+        %ex.3 = local;
+        symbol [ ex %ex.3 214 13 15 ];
+        %tmp.25 = dup %tmp.24;
+        lputv %ex.3 %tmp.25;
+        symbol [ ex %ex.3 214 13 15 ];
+        jsr @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_4_215_4_finally;
+        pop;
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_4_215_4_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_214_6_215_4_end:
+        try @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_4_215_4_catch @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_214_6_215_4_end @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_214_6_215_4_end @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_4_215_4_finally;
+        jsr @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_4_215_4_finally;
+        throw %tmp.24;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_4_215_4_finally:
+        jsrret;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_206_4_215_4_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 216 4 ]
+        %tmp.26 = null;
+        ret %tmp.26;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_205_45_217_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 219; @symbol_functiondef = [loadQrImage,219,11,22]; ]
+    function loadQrImage() as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_219_33_238_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 220 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_219_33_238_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_219_33_238_2_stop" ]
+        %sessionId.1 = local;
+        symbol [ sessionId %sessionId.1 220 8 17 ];
+        symbol [ SessionStore %tmp.2 220 20 32 ];
+        %tmp.2 = getv ? :SessionStore;
+        symbol [ getSessionId %tmp.3 220 33 45 ];
+        %tmp.3 = getv function %tmp.2 :getSessionId;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %sessionId.1 %tmp.4;
+        symbol [ sessionId %sessionId.1 220 8 17 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 221 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_221_4_223_4_if_stmt:
+        %tmp.5 = lgetv %sessionId.1;
+        symbol [ sessionId %tmp.5 221 8 17 ];
+        %tmp.6 = null;
+        %tmp.7 = eq %tmp.5 %tmp.6;
+        bf %tmp.7 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_221_4_223_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_221_4_223_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_221_27_223_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 222 6 ]
+        ret ?;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_221_27_223_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_221_4_223_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_221_4_223_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 224 4 ]
+        symbol [ UiState %tmp.9 224 4 11 ];
+        %tmp.9 = getv ? :UiState;
+        symbol [ setQrLoading %tmp.10 224 12 24 ];
+        %tmp.10 = getv function %tmp.9 :setQrLoading;
+        %tmp.11 = true;
+        invoke %tmp.9 %tmp.10(%tmp.11);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 225 4 ]
+        symbol [ WatchUi %tmp.12 225 4 11 ];
+        %tmp.12 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.13 225 12 25 ];
+        %tmp.13 = getv function %tmp.12 :requestUpdate;
+        invoke %tmp.12 %tmp.13();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 227 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_219_33_238_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_219_33_238_2_stop" ]
+        %size.2 = local;
+        symbol [ size %size.2 227 8 12 ];
+        symbol [ QrLayout %tmp.15 227 15 23 ];
+        %tmp.15 = getv ? :QrLayout;
+        symbol [ maxQrPixelSize %tmp.16 227 24 38 ];
+        %tmp.16 = getv function %tmp.15 :maxQrPixelSize;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        lputv %size.2 %tmp.17;
+        symbol [ size %size.2 227 8 12 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 228 4 ]
+        %tmp.18 = lgetv %size.2;
+        symbol [ size %tmp.18 228 14 18 ];
+        symbol [ _qrSize ? 228 4 11 ];
+        putv self :_qrSize %tmp.18;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 229 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_219_33_238_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_219_33_238_2_stop" ]
+        %url.3 = local;
+        symbol [ url %url.3 229 8 11 ];
+        symbol [ Config %tmp.20 229 14 20 ];
+        %tmp.20 = getv ? :Config;
+        symbol [ qrUrl %tmp.21 229 21 26 ];
+        %tmp.21 = getv function %tmp.20 :qrUrl;
+        %tmp.22 = lgetv %sessionId.1;
+        symbol [ sessionId %tmp.22 229 27 36 ];
+        %tmp.23 = lgetv %size.2;
+        symbol [ size %tmp.23 229 38 42 ];
+        %tmp.24 = invoke %tmp.20 %tmp.21(%tmp.22, %tmp.23);
+        lputv %url.3 %tmp.24;
+        symbol [ url %url.3 229 8 11 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 230 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_219_33_238_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_219_33_238_2_stop" ]
+        %options.4 = local;
+        symbol [ options %options.4 230 8 15 ];
+        %tmp.25 = newd 4;
+        %tmp.27 = const :palette;
+        symbol [ palette %tmp.27 231 7 14 const ];
+        %tmp.28 = newa 2;
+        symbol [ Graphics %tmp.29 231 19 27 ];
+        %tmp.29 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.30 231 28 39 ];
+        %tmp.30 = getv %tmp.29 :COLOR_WHITE;
+        %tmp.31 = dup %tmp.28;
+        %tmp.32 = aputv %tmp.31 0 %tmp.30;
+        symbol [ Graphics %tmp.33 231 41 49 ];
+        %tmp.33 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.34 231 50 61 ];
+        %tmp.34 = getv %tmp.33 :COLOR_BLACK;
+        %tmp.35 = dup %tmp.32;
+        %tmp.36 = aputv %tmp.35 1 %tmp.34;
+        %tmp.37 = dup %tmp.25;
+        %tmp.38 = aputv %tmp.37 %tmp.27 %tmp.36;
+        %tmp.40 = const :maxWidth;
+        symbol [ maxWidth %tmp.40 232 7 15 const ];
+        %tmp.41 = lgetv %size.2;
+        symbol [ size %tmp.41 232 19 23 ];
+        %tmp.42 = dup %tmp.38;
+        %tmp.43 = aputv %tmp.42 %tmp.40 %tmp.41;
+        %tmp.45 = const :maxHeight;
+        symbol [ maxHeight %tmp.45 233 7 16 const ];
+        %tmp.46 = lgetv %size.2;
+        symbol [ size %tmp.46 233 20 24 ];
+        %tmp.47 = dup %tmp.43;
+        %tmp.48 = aputv %tmp.47 %tmp.45 %tmp.46;
+        %tmp.50 = const :dithering;
+        symbol [ dithering %tmp.50 234 7 16 const ];
+        symbol [ Communications %tmp.51 234 20 34 ];
+        %tmp.51 = getm $.Toybox.Communications;
+        symbol [ IMAGE_DITHERING_NONE %tmp.52 234 35 55 ];
+        %tmp.52 = getv %tmp.51 :IMAGE_DITHERING_NONE;
+        %tmp.53 = dup %tmp.48;
+        %tmp.54 = aputv %tmp.53 %tmp.50 %tmp.52;
+        lputv %options.4 %tmp.54;
+        symbol [ options %options.4 230 8 15 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 236 4 ]
+        symbol [ HttpDebug %tmp.56 236 4 13 ];
+        %tmp.56 = getv ? :HttpDebug;
+        symbol [ logRequest %tmp.57 236 14 24 ];
+        %tmp.57 = getv function %tmp.56 :logRequest;
+        %tmp.58 = lgetv %url.3;
+        symbol [ url %tmp.58 236 25 28 ];
+        %tmp.59 = null;
+        %tmp.60 = null;
+        invoke %tmp.56 %tmp.57(%tmp.58, %tmp.59, %tmp.60);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 237 4 ]
+        symbol [ Communications %tmp.61 237 4 18 ];
+        %tmp.61 = getm $.Toybox.Communications;
+        symbol [ makeImageRequest %tmp.62 237 19 35 ];
+        %tmp.62 = getv function %tmp.61 :makeImageRequest;
+        %tmp.63 = lgetv %url.3;
+        symbol [ url %tmp.63 237 36 39 ];
+        %tmp.64 = null;
+        %tmp.65 = lgetv %options.4;
+        symbol [ options %tmp.65 237 47 54 ];
+        %tmp.66 = self;
+        symbol [ method %tmp.67 237 56 62 ];
+        %tmp.67 = getv function %tmp.66 :method;
+        %tmp.69 = const :onQrImageResponse;
+        symbol [ onQrImageResponse %tmp.69 237 64 81 const ];
+        %tmp.70 = invoke %tmp.66 %tmp.67(%tmp.69);
+        invoke %tmp.61 %tmp.62(%tmp.63, %tmp.64, %tmp.65, %tmp.70);
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_219_33_238_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 240; @symbol_functiondef = [onQrImageResponse,240,11,28]; @symbol_param<0> = [code,240,29,33]; @symbol_param<0>_type<0> = [Number,240,37,43]; @symbol_param<1> = [data,240,45,49]; @symbol_param<1>_type<0> = [WatchUi,240,53,60]; @symbol_param<1>_type<1> = [BitmapResource,240,61,75]; @symbol_param<1>_type<2> = [Graphics,240,79,87]; @symbol_param<1>_type<3> = [BitmapReference,240,88,103]; ]
+    function onQrImageResponse(code as Number, data as WatchUi.BitmapResource or Graphics.BitmapReference or Null) as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_240_121_252_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 241 4 ]
+        symbol [ HttpDebug %tmp.2 241 4 13 ];
+        %tmp.2 = getv ? :HttpDebug;
+        symbol [ logResponse %tmp.3 241 14 25 ];
+        %tmp.3 = getv function %tmp.2 :logResponse;
+        %tmp.4 = "qr.png";
+        %tmp.5 = lgetv %code;
+        symbol [ code %tmp.5 241 36 40 ];
+        %tmp.6 = lgetv %data;
+        symbol [ data %tmp.6 241 42 46 ];
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.5, %tmp.6);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 242 4 ]
+        symbol [ UiState %tmp.8 242 4 11 ];
+        %tmp.8 = getv ? :UiState;
+        symbol [ setQrLoading %tmp.9 242 12 24 ];
+        %tmp.9 = getv function %tmp.8 :setQrLoading;
+        %tmp.10 = false;
+        invoke %tmp.8 %tmp.9(%tmp.10);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 243 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_243_4_250_4_if_stmt:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_243_8_243_31_begin:
+        %tmp.11 = lgetv %code;
+        symbol [ code %tmp.11 243 8 12 ];
+        %tmp.12 = 200;
+        %tmp.13 = eq %tmp.11 %tmp.12;
+        bf %tmp.13 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_243_4_250_4_if_false;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_243_23_243_31_true:
+        %tmp.14 = lgetv %data;
+        symbol [ data %tmp.14 243 23 27 ];
+        %tmp.15 = null;
+        %tmp.16 = ne %tmp.14 %tmp.15;
+        push %tmp.16;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_243_23_243_31_end:
+        %tmp.17 = phi [%tmp.13 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_243_8_243_31_begin] [%tmp.16 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_243_23_243_31_true] [%tmp.17 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_243_23_243_31_end];
+        bf %tmp.17 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_243_4_250_4_if_false;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_243_4_250_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_243_37_246_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 244 6 ]
+        %tmp.18 = lgetv %data;
+        symbol [ data %tmp.18 244 18 22 ];
+        %tmp.19 = as %tmp.18 { (!Null) };
+        symbol [ _qrBitmap ? 244 6 15 ];
+        putv self :_qrBitmap %tmp.19;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 245 6 ]
+        symbol [ UiState %tmp.21 245 6 13 ];
+        %tmp.21 = getv ? :UiState;
+        symbol [ setQrError %tmp.22 245 14 24 ];
+        %tmp.22 = getv function %tmp.21 :setQrError;
+        %tmp.23 = null;
+        invoke %tmp.21 %tmp.22(%tmp.23);
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_243_37_246_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_243_4_250_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_243_4_250_4_if_false:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 246 11 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_246_11_250_4_if_stmt:
+        %tmp.24 = lgetv %code;
+        symbol [ code %tmp.24 246 15 19 ];
+        %tmp.25 = 0;
+        %tmp.26 = lt %tmp.24 %tmp.25;
+        bf %tmp.26 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_246_11_250_4_if_else_false;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_246_11_250_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_246_25_248_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 247 6 ]
+        symbol [ UiState %tmp.28 247 6 13 ];
+        %tmp.28 = getv ? :UiState;
+        symbol [ setQrError %tmp.29 247 14 24 ];
+        %tmp.29 = getv function %tmp.28 :setQrError;
+        symbol [ HttpDebug %tmp.31 247 25 34 ];
+        %tmp.31 = getv ? :HttpDebug;
+        symbol [ communicationsErrorLabel %tmp.32 247 35 59 ];
+        %tmp.32 = getv function %tmp.31 :communicationsErrorLabel;
+        %tmp.33 = lgetv %code;
+        symbol [ code %tmp.33 247 60 64 ];
+        %tmp.34 = invoke %tmp.31 %tmp.32(%tmp.33);
+        invoke %tmp.28 %tmp.29(%tmp.34);
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_246_25_248_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_246_11_250_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_246_11_250_4_if_else_false:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_248_11_250_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 249 6 ]
+        symbol [ UiState %tmp.36 249 6 13 ];
+        %tmp.36 = getv ? :UiState;
+        symbol [ setQrError %tmp.37 249 14 24 ];
+        %tmp.37 = getv function %tmp.36 :setQrError;
+        symbol [ L10n %tmp.39 249 25 29 ];
+        %tmp.39 = getv ? :L10n;
+        symbol [ tf %tmp.40 249 30 32 ];
+        %tmp.40 = getv function %tmp.39 :tf;
+        symbol [ Rez %tmp.42 249 33 36 ];
+        %tmp.42 = getv ? :Rez;
+        symbol [ Strings %tmp.43 249 37 44 ];
+        %tmp.43 = getv %tmp.42 :Strings;
+        symbol [ ErrorHttp %tmp.44 249 45 54 ];
+        %tmp.44 = getv %tmp.43 :ErrorHttp;
+        %tmp.45 = newa 1;
+        %tmp.46 = lgetv %code;
+        symbol [ code %tmp.46 249 57 61 ];
+        %tmp.47 = dup %tmp.45;
+        %tmp.48 = aputv %tmp.47 0 %tmp.46;
+        %tmp.49 = invoke %tmp.39 %tmp.40(%tmp.44, %tmp.48);
+        invoke %tmp.36 %tmp.37(%tmp.49);
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_248_11_250_4_stop:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_246_11_250_4_if_end:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_243_4_250_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 251 4 ]
+        symbol [ WatchUi %tmp.50 251 4 11 ];
+        %tmp.50 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.51 251 12 25 ];
+        %tmp.51 = getv function %tmp.50 :requestUpdate;
+        invoke %tmp.50 %tmp.51();
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_240_121_252_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 255; typecheck = false; @symbol_functiondef = [onHttpResponse,255,11,25]; @symbol_param<0> = [code,255,26,30]; @symbol_param<0>_type<0> = [Number,255,34,40]; @symbol_param<1> = [data,255,42,46]; @symbol_param<1>_type<0> = [Dictionary,255,50,60]; @symbol_param<1>_type<1> = [String,255,64,70]; ]
+    function onHttpResponse(code as Number, data as Dictionary or String or Null) as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_255_88_268_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 256 4 ]
+        symbol [ HttpDebug %tmp.2 256 4 13 ];
+        %tmp.2 = getv ? :HttpDebug;
+        symbol [ logResponse %tmp.3 256 14 25 ];
+        %tmp.3 = getv function %tmp.2 :logResponse;
+        symbol [ _lastHttpUrl %tmp.5 256 26 38 ];
+        %tmp.5 = getv ? :_lastHttpUrl;
+        %tmp.6 = lgetv %code;
+        symbol [ code %tmp.6 256 40 44 ];
+        %tmp.7 = lgetv %data;
+        symbol [ data %tmp.7 256 46 50 ];
+        invoke %tmp.2 %tmp.3(%tmp.5, %tmp.6, %tmp.7);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 257 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_255_88_268_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_255_88_268_2_stop" ]
+        %op.1 = local;
+        symbol [ op %op.1 257 8 10 ];
+        symbol [ _op %tmp.9 257 13 16 ];
+        %tmp.9 = getv ? :_op;
+        lputv %op.1 %tmp.9;
+        symbol [ op %op.1 257 8 10 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 258 4 ]
+        symbol [ OP_NONE %tmp.11 258 10 17 ];
+        %tmp.11 = getv ? :OP_NONE;
+        symbol [ _op ? 258 4 7 ];
+        putv self :_op %tmp.11;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 260 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_260_4_263_4_if_stmt:
+        %tmp.12 = lgetv %op.1;
+        symbol [ op %tmp.12 260 8 10 ];
+        symbol [ OP_CREATE_SESSION %tmp.14 260 14 31 ];
+        %tmp.14 = getv ? :OP_CREATE_SESSION;
+        %tmp.15 = eq %tmp.12 %tmp.14;
+        bf %tmp.15 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_260_4_263_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_260_4_263_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_260_33_263_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 261 6 ]
+        %tmp.16 = self;
+        symbol [ handleCreateSession %tmp.17 261 6 25 ];
+        %tmp.17 = getv function %tmp.16 :handleCreateSession;
+        %tmp.18 = lgetv %code;
+        symbol [ code %tmp.18 261 26 30 ];
+        %tmp.19 = lgetv %data;
+        symbol [ data %tmp.19 261 32 36 ];
+        invoke %tmp.16 %tmp.17(%tmp.18, %tmp.19);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 262 6 ]
+        ret ?;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_260_33_263_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_260_4_263_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_260_4_263_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 264 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_264_4_267_4_if_stmt:
+        %tmp.20 = lgetv %op.1;
+        symbol [ op %tmp.20 264 8 10 ];
+        symbol [ OP_POST_HEART %tmp.22 264 14 27 ];
+        %tmp.22 = getv ? :OP_POST_HEART;
+        %tmp.23 = eq %tmp.20 %tmp.22;
+        bf %tmp.23 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_264_4_267_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_264_4_267_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_264_29_267_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 265 6 ]
+        %tmp.24 = self;
+        symbol [ handlePostHeart %tmp.25 265 6 21 ];
+        %tmp.25 = getv function %tmp.24 :handlePostHeart;
+        %tmp.26 = lgetv %code;
+        symbol [ code %tmp.26 265 22 26 ];
+        %tmp.27 = lgetv %data;
+        symbol [ data %tmp.27 265 28 32 ];
+        invoke %tmp.24 %tmp.25(%tmp.26, %tmp.27);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 266 6 ]
+        ret ?;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_264_29_267_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_264_4_267_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_264_4_267_4_if_end:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_255_88_268_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 271; typecheck = false; @symbol_functiondef = [handleCreateSession,271,11,30]; @symbol_param<0> = [code,271,31,35]; @symbol_param<0>_type<0> = [Number,271,39,45]; @symbol_param<1> = [data,271,47,51]; @symbol_param<1>_type<0> = [Dictionary,271,55,65]; @symbol_param<1>_type<1> = [String,271,69,75]; ]
+    function handleCreateSession(code as Number, data as Dictionary or String or Null) as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_271_93_302_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 272 4 ]
+        symbol [ UiState %tmp.2 272 4 11 ];
+        %tmp.2 = getv ? :UiState;
+        symbol [ setLoading %tmp.3 272 12 22 ];
+        %tmp.3 = getv function %tmp.2 :setLoading;
+        %tmp.4 = false;
+        invoke %tmp.2 %tmp.3(%tmp.4);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 273 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_273_4_277_4_if_stmt:
+        %tmp.5 = lgetv %code;
+        symbol [ code %tmp.5 273 8 12 ];
+        %tmp.6 = 0;
+        %tmp.7 = lt %tmp.5 %tmp.6;
+        bf %tmp.7 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_273_4_277_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_273_4_277_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_273_18_277_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 274 6 ]
+        symbol [ UiState %tmp.9 274 6 13 ];
+        %tmp.9 = getv ? :UiState;
+        symbol [ setError %tmp.10 274 14 22 ];
+        %tmp.10 = getv function %tmp.9 :setError;
+        symbol [ HttpDebug %tmp.12 274 23 32 ];
+        %tmp.12 = getv ? :HttpDebug;
+        symbol [ communicationsErrorLabel %tmp.13 274 33 57 ];
+        %tmp.13 = getv function %tmp.12 :communicationsErrorLabel;
+        %tmp.14 = lgetv %code;
+        symbol [ code %tmp.14 274 58 62 ];
+        %tmp.15 = invoke %tmp.12 %tmp.13(%tmp.14);
+        invoke %tmp.9 %tmp.10(%tmp.15);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 275 6 ]
+        symbol [ WatchUi %tmp.16 275 6 13 ];
+        %tmp.16 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.17 275 14 27 ];
+        %tmp.17 = getv function %tmp.16 :requestUpdate;
+        invoke %tmp.16 %tmp.17();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 276 6 ]
+        ret ?;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_273_18_277_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_273_4_277_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_273_4_277_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 278 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_278_4_282_4_if_stmt:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_278_8_278_31_begin:
+        %tmp.18 = lgetv %code;
+        symbol [ code %tmp.18 278 8 12 ];
+        %tmp.19 = 201;
+        %tmp.20 = ne %tmp.18 %tmp.19;
+        bf %tmp.20 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_278_4_282_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_278_23_278_31_true:
+        %tmp.21 = lgetv %code;
+        symbol [ code %tmp.21 278 23 27 ];
+        %tmp.22 = 200;
+        %tmp.23 = ne %tmp.21 %tmp.22;
+        push %tmp.23;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_278_23_278_31_end:
+        %tmp.24 = phi [%tmp.20 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_278_8_278_31_begin] [%tmp.23 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_278_23_278_31_true] [%tmp.24 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_278_23_278_31_end];
+        bf %tmp.24 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_278_4_282_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_278_4_282_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_278_36_282_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 279 6 ]
+        symbol [ UiState %tmp.26 279 6 13 ];
+        %tmp.26 = getv ? :UiState;
+        symbol [ setError %tmp.27 279 14 22 ];
+        %tmp.27 = getv function %tmp.26 :setError;
+        symbol [ L10n %tmp.29 279 23 27 ];
+        %tmp.29 = getv ? :L10n;
+        symbol [ tf %tmp.30 279 28 30 ];
+        %tmp.30 = getv function %tmp.29 :tf;
+        symbol [ Rez %tmp.32 279 31 34 ];
+        %tmp.32 = getv ? :Rez;
+        symbol [ Strings %tmp.33 279 35 42 ];
+        %tmp.33 = getv %tmp.32 :Strings;
+        symbol [ ErrorHttp %tmp.34 279 43 52 ];
+        %tmp.34 = getv %tmp.33 :ErrorHttp;
+        %tmp.35 = newa 1;
+        %tmp.36 = lgetv %code;
+        symbol [ code %tmp.36 279 55 59 ];
+        %tmp.37 = dup %tmp.35;
+        %tmp.38 = aputv %tmp.37 0 %tmp.36;
+        %tmp.39 = invoke %tmp.29 %tmp.30(%tmp.34, %tmp.38);
+        invoke %tmp.26 %tmp.27(%tmp.39);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 280 6 ]
+        symbol [ WatchUi %tmp.40 280 6 13 ];
+        %tmp.40 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.41 280 14 27 ];
+        %tmp.41 = getv function %tmp.40 :requestUpdate;
+        invoke %tmp.40 %tmp.41();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 281 6 ]
+        ret ?;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_278_36_282_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_278_4_282_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_278_4_282_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 283 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_283_4_287_4_if_stmt:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_283_8_283_57_begin:
+        %tmp.42 = lgetv %data;
+        symbol [ data %tmp.42 283 8 12 ];
+        %tmp.43 = null;
+        %tmp.44 = eq %tmp.42 %tmp.43;
+        bt %tmp.44 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_283_4_287_4_if_true;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_283_24_283_57_false:
+        %tmp.45 = lgetv %data;
+        symbol [ data %tmp.45 283 26 30 ];
+        %tmp.46 = as %tmp.45 { (!Null) };
+        symbol [ Lang %tmp.47 283 42 46 ];
+        %tmp.47 = getm $.Toybox.Lang;
+        symbol [ Dictionary %tmp.48 283 47 57 ];
+        %tmp.48 = getv %tmp.47 :Dictionary;
+        %tmp.49 = isa %tmp.46 %tmp.48;
+        %tmp.50 = not %tmp.49;
+        push %tmp.50;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_283_24_283_57_end:
+        %tmp.51 = phi [%tmp.44 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_283_8_283_57_begin] [%tmp.50 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_283_24_283_57_false] [%tmp.51 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_283_24_283_57_end];
+        bf %tmp.51 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_283_4_287_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_283_4_287_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_283_60_287_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 284 6 ]
+        symbol [ UiState %tmp.53 284 6 13 ];
+        %tmp.53 = getv ? :UiState;
+        symbol [ setError %tmp.54 284 14 22 ];
+        %tmp.54 = getv function %tmp.53 :setError;
+        symbol [ L10n %tmp.56 284 23 27 ];
+        %tmp.56 = getv ? :L10n;
+        symbol [ t %tmp.57 284 28 29 ];
+        %tmp.57 = getv function %tmp.56 :t;
+        symbol [ Rez %tmp.59 284 30 33 ];
+        %tmp.59 = getv ? :Rez;
+        symbol [ Strings %tmp.60 284 34 41 ];
+        %tmp.60 = getv %tmp.59 :Strings;
+        symbol [ ErrorInvalidResponse %tmp.61 284 42 62 ];
+        %tmp.61 = getv %tmp.60 :ErrorInvalidResponse;
+        %tmp.62 = invoke %tmp.56 %tmp.57(%tmp.61);
+        invoke %tmp.53 %tmp.54(%tmp.62);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 285 6 ]
+        symbol [ WatchUi %tmp.63 285 6 13 ];
+        %tmp.63 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.64 285 14 27 ];
+        %tmp.64 = getv function %tmp.63 :requestUpdate;
+        invoke %tmp.63 %tmp.64();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 286 6 ]
+        ret ?;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_283_60_287_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_283_4_287_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_283_4_287_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 288 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_271_93_302_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_271_93_302_2_stop" ]
+        %dict.1 = local;
+        symbol [ dict %dict.1 288 8 12 ];
+        %tmp.65 = lgetv %data;
+        symbol [ data %tmp.65 288 15 19 ];
+        %tmp.66 = as %tmp.65 Lang.Dictionary;
+        symbol [ Lang %tmp.66 288 23 27 ];
+        symbol [ Dictionary %tmp.66 288 28 38 ];
+        lputv %dict.1 %tmp.66;
+        symbol [ dict %dict.1 288 8 12 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 289 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_271_93_302_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_271_93_302_2_stop" ]
+        %id.2 = local;
+        symbol [ id %id.2 289 8 10 ];
+        %tmp.67 = lgetv %dict.1;
+        symbol [ dict %tmp.67 289 13 17 ];
+        symbol [ get %tmp.68 289 18 21 ];
+        %tmp.68 = getv function %tmp.67 :get;
+        %tmp.69 = "id";
+        %tmp.70 = invoke %tmp.67 %tmp.68(%tmp.69);
+        lputv %id.2 %tmp.70;
+        symbol [ id %id.2 289 8 10 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 290 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_271_93_302_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_271_93_302_2_stop" ]
+        %secret.3 = local;
+        symbol [ secret %secret.3 290 8 14 ];
+        %tmp.71 = lgetv %dict.1;
+        symbol [ dict %tmp.71 290 17 21 ];
+        symbol [ get %tmp.72 290 22 25 ];
+        %tmp.72 = getv function %tmp.71 :get;
+        %tmp.73 = "secret";
+        %tmp.74 = invoke %tmp.71 %tmp.72(%tmp.73);
+        lputv %secret.3 %tmp.74;
+        symbol [ secret %secret.3 290 8 14 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 291 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_4_295_4_if_stmt:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_8_291_93_begin:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_8_291_62_begin:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_8_291_32_begin:
+        %tmp.75 = lgetv %id.2;
+        symbol [ id %tmp.75 291 8 10 ];
+        %tmp.76 = null;
+        %tmp.77 = eq %tmp.75 %tmp.76;
+        bt %tmp.77 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_4_295_4_if_true;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_22_291_32_false:
+        %tmp.78 = lgetv %secret.3;
+        symbol [ secret %tmp.78 291 22 28 ];
+        %tmp.79 = null;
+        %tmp.80 = eq %tmp.78 %tmp.79;
+        push %tmp.80;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_22_291_32_end:
+        %tmp.81 = phi [%tmp.77 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_8_291_32_begin] [%tmp.80 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_22_291_32_false] [%tmp.81 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_22_291_32_end];
+        bt %tmp.81 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_4_295_4_if_true;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_40_291_62_false:
+        %tmp.82 = lgetv %id.2;
+        symbol [ id %tmp.82 291 42 44 ];
+        %tmp.83 = as %tmp.82 { (!Null) };
+        symbol [ String %tmp.85 291 56 62 ];
+        %tmp.85 = getv ? :String;
+        %tmp.86 = isa %tmp.83 %tmp.85;
+        %tmp.87 = not %tmp.86;
+        push %tmp.87;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_40_291_62_end:
+        %tmp.88 = phi [%tmp.81 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_8_291_62_begin] [%tmp.87 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_40_291_62_false] [%tmp.88 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_40_291_62_end];
+        bt %tmp.88 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_4_295_4_if_true;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_67_291_93_false:
+        %tmp.89 = lgetv %secret.3;
+        symbol [ secret %tmp.89 291 69 75 ];
+        %tmp.90 = as %tmp.89 { (!Null) };
+        symbol [ String %tmp.92 291 87 93 ];
+        %tmp.92 = getv ? :String;
+        %tmp.93 = isa %tmp.90 %tmp.92;
+        %tmp.94 = not %tmp.93;
+        push %tmp.94;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_67_291_93_end:
+        %tmp.95 = phi [%tmp.88 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_8_291_93_begin] [%tmp.94 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_67_291_93_false] [%tmp.95 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_67_291_93_end];
+        bf %tmp.95 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_4_295_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_4_295_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_96_295_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 292 6 ]
+        symbol [ UiState %tmp.97 292 6 13 ];
+        %tmp.97 = getv ? :UiState;
+        symbol [ setError %tmp.98 292 14 22 ];
+        %tmp.98 = getv function %tmp.97 :setError;
+        symbol [ L10n %tmp.100 292 23 27 ];
+        %tmp.100 = getv ? :L10n;
+        symbol [ t %tmp.101 292 28 29 ];
+        %tmp.101 = getv function %tmp.100 :t;
+        symbol [ Rez %tmp.103 292 30 33 ];
+        %tmp.103 = getv ? :Rez;
+        symbol [ Strings %tmp.104 292 34 41 ];
+        %tmp.104 = getv %tmp.103 :Strings;
+        symbol [ ErrorInvalidResponse %tmp.105 292 42 62 ];
+        %tmp.105 = getv %tmp.104 :ErrorInvalidResponse;
+        %tmp.106 = invoke %tmp.100 %tmp.101(%tmp.105);
+        invoke %tmp.97 %tmp.98(%tmp.106);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 293 6 ]
+        symbol [ WatchUi %tmp.107 293 6 13 ];
+        %tmp.107 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.108 293 14 27 ];
+        %tmp.108 = getv function %tmp.107 :requestUpdate;
+        invoke %tmp.107 %tmp.108();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 294 6 ]
+        ret ?;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_96_295_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_4_295_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_291_4_295_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 296 4 ]
+        symbol [ SessionStore %tmp.110 296 4 16 ];
+        %tmp.110 = getv ? :SessionStore;
+        symbol [ saveSession %tmp.111 296 17 28 ];
+        %tmp.111 = getv function %tmp.110 :saveSession;
+        %tmp.112 = lgetv %id.2;
+        symbol [ id %tmp.112 296 29 31 ];
+        %tmp.113 = as %tmp.112 String;
+        symbol [ String %tmp.113 296 35 41 ];
+        %tmp.114 = lgetv %secret.3;
+        symbol [ secret %tmp.114 296 43 49 ];
+        %tmp.115 = as %tmp.114 String;
+        symbol [ String %tmp.115 296 53 59 ];
+        invoke %tmp.110 %tmp.111(%tmp.113, %tmp.115);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 297 4 ]
+        symbol [ UiState %tmp.117 297 4 11 ];
+        %tmp.117 = getv ? :UiState;
+        symbol [ setError %tmp.118 297 12 20 ];
+        %tmp.118 = getv function %tmp.117 :setError;
+        %tmp.119 = null;
+        invoke %tmp.117 %tmp.118(%tmp.119);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 298 4 ]
+        %tmp.120 = null;
+        symbol [ _qrBitmap ? 298 4 13 ];
+        putv self :_qrBitmap %tmp.120;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 299 4 ]
+        %tmp.121 = self;
+        symbol [ loadQrImage %tmp.122 299 4 15 ];
+        %tmp.122 = getv function %tmp.121 :loadQrImage;
+        invoke %tmp.121 %tmp.122();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 300 4 ]
+        %tmp.123 = self;
+        symbol [ postHeartRate %tmp.124 300 4 17 ];
+        %tmp.124 = getv function %tmp.123 :postHeartRate;
+        invoke %tmp.123 %tmp.124();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 301 4 ]
+        symbol [ WatchUi %tmp.125 301 4 11 ];
+        %tmp.125 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.126 301 12 25 ];
+        %tmp.126 = getv function %tmp.125 :requestUpdate;
+        invoke %tmp.125 %tmp.126();
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_271_93_302_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 305; typecheck = false; @symbol_functiondef = [handlePostHeart,305,11,26]; @symbol_param<0> = [code,305,27,31]; @symbol_param<0>_type<0> = [Number,305,35,41]; @symbol_param<1> = [data,305,43,47]; @symbol_param<1>_type<0> = [Dictionary,305,51,61]; @symbol_param<1>_type<1> = [String,305,65,71]; ]
+    function handlePostHeart(code as Number, data as Dictionary or String or Null) as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_305_89_323_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 306 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_306_4_310_4_if_stmt:
+        %tmp.1 = lgetv %code;
+        symbol [ code %tmp.1 306 8 12 ];
+        %tmp.2 = 0;
+        %tmp.3 = lt %tmp.1 %tmp.2;
+        bf %tmp.3 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_306_4_310_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_306_4_310_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_306_18_310_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 307 6 ]
+        symbol [ UiState %tmp.5 307 6 13 ];
+        %tmp.5 = getv ? :UiState;
+        symbol [ setError %tmp.6 307 14 22 ];
+        %tmp.6 = getv function %tmp.5 :setError;
+        symbol [ HttpDebug %tmp.8 307 23 32 ];
+        %tmp.8 = getv ? :HttpDebug;
+        symbol [ communicationsErrorLabel %tmp.9 307 33 57 ];
+        %tmp.9 = getv function %tmp.8 :communicationsErrorLabel;
+        %tmp.10 = lgetv %code;
+        symbol [ code %tmp.10 307 58 62 ];
+        %tmp.11 = invoke %tmp.8 %tmp.9(%tmp.10);
+        invoke %tmp.5 %tmp.6(%tmp.11);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 308 6 ]
+        symbol [ WatchUi %tmp.12 308 6 13 ];
+        %tmp.12 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.13 308 14 27 ];
+        %tmp.13 = getv function %tmp.12 :requestUpdate;
+        invoke %tmp.12 %tmp.13();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 309 6 ]
+        ret ?;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_306_18_310_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_306_4_310_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_306_4_310_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 311 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_311_4_315_4_if_stmt:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_311_8_311_31_begin:
+        %tmp.14 = lgetv %code;
+        symbol [ code %tmp.14 311 8 12 ];
+        %tmp.15 = 201;
+        %tmp.16 = ne %tmp.14 %tmp.15;
+        bf %tmp.16 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_311_4_315_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_311_23_311_31_true:
+        %tmp.17 = lgetv %code;
+        symbol [ code %tmp.17 311 23 27 ];
+        %tmp.18 = 200;
+        %tmp.19 = ne %tmp.17 %tmp.18;
+        push %tmp.19;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_311_23_311_31_end:
+        %tmp.20 = phi [%tmp.16 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_311_8_311_31_begin] [%tmp.19 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_311_23_311_31_true] [%tmp.20 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_311_23_311_31_end];
+        bf %tmp.20 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_311_4_315_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_311_4_315_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_311_36_315_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 312 6 ]
+        symbol [ UiState %tmp.22 312 6 13 ];
+        %tmp.22 = getv ? :UiState;
+        symbol [ setError %tmp.23 312 14 22 ];
+        %tmp.23 = getv function %tmp.22 :setError;
+        symbol [ L10n %tmp.25 312 23 27 ];
+        %tmp.25 = getv ? :L10n;
+        symbol [ tf %tmp.26 312 28 30 ];
+        %tmp.26 = getv function %tmp.25 :tf;
+        symbol [ Rez %tmp.28 312 31 34 ];
+        %tmp.28 = getv ? :Rez;
+        symbol [ Strings %tmp.29 312 35 42 ];
+        %tmp.29 = getv %tmp.28 :Strings;
+        symbol [ ErrorHttp %tmp.30 312 43 52 ];
+        %tmp.30 = getv %tmp.29 :ErrorHttp;
+        %tmp.31 = newa 1;
+        %tmp.32 = lgetv %code;
+        symbol [ code %tmp.32 312 55 59 ];
+        %tmp.33 = dup %tmp.31;
+        %tmp.34 = aputv %tmp.33 0 %tmp.32;
+        %tmp.35 = invoke %tmp.25 %tmp.26(%tmp.30, %tmp.34);
+        invoke %tmp.22 %tmp.23(%tmp.35);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 313 6 ]
+        symbol [ WatchUi %tmp.36 313 6 13 ];
+        %tmp.36 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.37 313 14 27 ];
+        %tmp.37 = getv function %tmp.36 :requestUpdate;
+        invoke %tmp.36 %tmp.37();
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 314 6 ]
+        ret ?;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_311_36_315_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_311_4_315_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_311_4_315_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 316 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_305_89_323_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_305_89_323_2_stop" ]
+        %bpm.1 = local;
+        symbol [ bpm %bpm.1 316 8 11 ];
+        %tmp.38 = self;
+        symbol [ readHeartRate %tmp.39 316 14 27 ];
+        %tmp.39 = getv function %tmp.38 :readHeartRate;
+        %tmp.40 = invoke %tmp.38 %tmp.39();
+        lputv %bpm.1 %tmp.40;
+        symbol [ bpm %bpm.1 316 8 11 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 317 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_317_4_319_4_if_stmt:
+        %tmp.41 = lgetv %bpm.1;
+        symbol [ bpm %tmp.41 317 8 11 ];
+        %tmp.42 = null;
+        %tmp.43 = ne %tmp.41 %tmp.42;
+        bf %tmp.43 @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_317_4_319_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_317_4_319_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_317_21_319_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 318 6 ]
+        symbol [ SessionStore %tmp.45 318 6 18 ];
+        %tmp.45 = getv ? :SessionStore;
+        symbol [ setLastBpm %tmp.46 318 19 29 ];
+        %tmp.46 = getv function %tmp.45 :setLastBpm;
+        %tmp.47 = lgetv %bpm.1;
+        symbol [ bpm %tmp.47 318 30 33 ];
+        %tmp.48 = as %tmp.47 { (!Null) };
+        invoke %tmp.45 %tmp.46(%tmp.48);
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_317_21_319_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_317_4_319_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_317_4_319_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 320 4 ]
+        symbol [ UiState %tmp.50 320 4 11 ];
+        %tmp.50 = getv ? :UiState;
+        symbol [ setError %tmp.51 320 12 20 ];
+        %tmp.51 = getv function %tmp.50 :setError;
+        %tmp.52 = null;
+        invoke %tmp.50 %tmp.51(%tmp.52);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 321 4 ]
+        symbol [ UiState %tmp.54 321 4 11 ];
+        %tmp.54 = getv ? :UiState;
+        symbol [ setStatus %tmp.55 321 12 21 ];
+        %tmp.55 = getv function %tmp.54 :setStatus;
+        symbol [ L10n %tmp.57 321 22 26 ];
+        %tmp.57 = getv ? :L10n;
+        symbol [ t %tmp.58 321 27 28 ];
+        %tmp.58 = getv function %tmp.57 :t;
+        symbol [ Rez %tmp.60 321 29 32 ];
+        %tmp.60 = getv ? :Rez;
+        symbol [ Strings %tmp.61 321 33 40 ];
+        %tmp.61 = getv %tmp.60 :Strings;
+        symbol [ StatusSharing %tmp.62 321 41 54 ];
+        %tmp.62 = getv %tmp.61 :StatusSharing;
+        %tmp.63 = invoke %tmp.57 %tmp.58(%tmp.62);
+        invoke %tmp.54 %tmp.55(%tmp.63);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" 322 4 ]
+        symbol [ WatchUi %tmp.64 322 4 11 ];
+        %tmp.64 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.65 322 12 25 ];
+        %tmp.65 = getv function %tmp.64 :requestUpdate;
+        invoke %tmp.64 %tmp.65();
+_home_nickcis_repos_share_heart_rate_garmin_source_AppController_mc_305_89_323_2_stop:
+    }
+}
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc"; @line = 1; ]
+<init> {
+}

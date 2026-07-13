@@ -1,0 +1,15 @@
+{
+  "buildCommand": "npm run build --prefix web",
+  "outputDirectory": "web/dist",
+  "installCommand": "npm install && npm install --prefix web",
+  "rewrites": [
+    {
+      "source": "/api/session/:id/qr.png",
+      "destination": "/api/session/:id/qr"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

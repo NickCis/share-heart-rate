@@ -1,0 +1,1315 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/home/nickcis/repos/share-heart-rate/garmin/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="1" lineNum="5" parent="globals/QrView" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppMenu.mc" id="2" lineNum="4" parent="globals/AppMenu" pc="268435472" symbol="&lt;init&gt;"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ShareHeartApp.mc" id="3" lineNum="22" parent="globals" pc="268435484" symbol="getApp"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ShareHeartApp.mc" id="3" lineNum="23" parent="globals" pc="268435494" symbol="getApp"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="4" lineNum="10" parent="globals/AppController" pc="268435505" symbol="&lt;init&gt;"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/gen/006-B3905-00/source/Rez.mcgen" id="5" lineNum="7" parent="globals/Rez" pc="268435517" symbol="&lt;init&gt;"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="6" lineNum="5" parent="globals/HeartView" pc="268435537" symbol="&lt;init&gt;"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ShareHeartApp.mc" id="7" lineNum="5" parent="globals/ShareHeartApp" pc="268435549" symbol="&lt;init&gt;"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="8" lineNum="5" parent="globals/LinkView" pc="268435561" symbol="&lt;init&gt;"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppMenu.mc" id="9" lineNum="11" parent="globals/AppMenuDelegate" pc="268435573" symbol="&lt;init&gt;"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/L10n.mc" id="10" lineNum="11" parent="globals/L10n" pc="268435585" symbol="tf"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/L10n.mc" id="10" lineNum="12" parent="globals/L10n" pc="268435595" symbol="tf"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/L10n.mc" id="11" lineNum="6" parent="globals/L10n" pc="268435620" symbol="t"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/L10n.mc" id="11" lineNum="7" parent="globals/L10n" pc="268435630" symbol="t"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="12" lineNum="13" parent="globals/QrView" pc="268435645" symbol="onShow"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="12" lineNum="14" parent="globals/QrView" pc="268435647" symbol="onShow"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="12" lineNum="15" parent="globals/QrView" pc="268435659" symbol="onShow"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="13" lineNum="8" parent="globals/QrView" pc="268435671" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="13" lineNum="9" parent="globals/QrView" pc="268435673" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="13" lineNum="10" parent="globals/QrView" pc="268435685" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="18" parent="globals/QrView" pc="268435695" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="19" parent="globals/QrView" pc="268435698" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="20" parent="globals/QrView" pc="268435714" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="21" parent="globals/QrView" pc="268435722" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="22" parent="globals/QrView" pc="268435731" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="23" parent="globals/QrView" pc="268435740" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="25" parent="globals/QrView" pc="268435747" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="26" parent="globals/QrView" pc="268435760" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="27" parent="globals/QrView" pc="268435777" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="28" parent="globals/QrView" pc="268435807" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="31" parent="globals/QrView" pc="268435811" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="32" parent="globals/QrView" pc="268435824" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="33" parent="globals/QrView" pc="268435841" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="34" parent="globals/QrView" pc="268435874" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="37" parent="globals/QrView" pc="268435878" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="38" parent="globals/QrView" pc="268435891" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="39" parent="globals/QrView" pc="268435897" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="40" parent="globals/QrView" pc="268435907" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="41" parent="globals/QrView" pc="268435917" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="42" parent="globals/QrView" pc="268435935" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="43" parent="globals/QrView" pc="268435957" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="44" parent="globals/QrView" pc="268435974" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="45" parent="globals/QrView" pc="268436034" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="48" parent="globals/QrView" pc="268436038" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="49" parent="globals/QrView" pc="268436117" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrView.mc" id="14" lineNum="50" parent="globals/QrView" pc="268436134" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppMenu.mc" id="15" lineNum="5" parent="globals/AppMenu" pc="268436158" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppMenu.mc" id="15" lineNum="6" parent="globals/AppMenu" pc="268436160" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppMenu.mc" id="15" lineNum="7" parent="globals/AppMenu" pc="268436216" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="16" lineNum="54" parent="globals/AppController" pc="268436286" symbol="onMenu"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="16" lineNum="55" parent="globals/AppController" pc="268436288" symbol="onMenu"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="16" lineNum="56" parent="globals/AppController" pc="268436295" symbol="onMenu"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="17" lineNum="82" parent="globals/AppController" pc="268436297" symbol="onPreviousPage"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="17" lineNum="83" parent="globals/AppController" pc="268436299" symbol="onPreviousPage"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="17" lineNum="84" parent="globals/AppController" pc="268436306" symbol="onPreviousPage"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="18" lineNum="44" parent="globals/AppController" pc="268436308" symbol="getQrBitmap"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="18" lineNum="45" parent="globals/AppController" pc="268436310" symbol="getQrBitmap"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="19" lineNum="183" parent="globals/AppController" pc="268436316" symbol="postHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="19" lineNum="184" parent="globals/AppController" pc="268436319" symbol="postHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="19" lineNum="185" parent="globals/AppController" pc="268436341" symbol="postHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="19" lineNum="187" parent="globals/AppController" pc="268436345" symbol="postHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="19" lineNum="188" parent="globals/AppController" pc="268436357" symbol="postHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="19" lineNum="189" parent="globals/AppController" pc="268436369" symbol="postHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="19" lineNum="190" parent="globals/AppController" pc="268436381" symbol="postHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="19" lineNum="193" parent="globals/AppController" pc="268436385" symbol="postHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="19" lineNum="194" parent="globals/AppController" pc="268436393" symbol="postHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="19" lineNum="195" parent="globals/AppController" pc="268436399" symbol="postHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="19" lineNum="196" parent="globals/AppController" pc="268436443" symbol="postHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="19" lineNum="197" parent="globals/AppController" pc="268436454" symbol="postHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="19" lineNum="200" parent="globals/AppController" pc="268436458" symbol="postHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="19" lineNum="201" parent="globals/AppController" pc="268436467" symbol="postHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="19" lineNum="202" parent="globals/AppController" pc="268436488" symbol="postHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="20" lineNum="30" parent="globals/AppController" pc="268436521" symbol="getInitialView"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="20" lineNum="31" parent="globals/AppController" pc="268436523" symbol="getInitialView"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="21" lineNum="64" parent="globals/AppController" pc="268436529" symbol="onSwipe"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="21" lineNum="65" parent="globals/AppController" pc="268436532" symbol="onSwipe"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="21" lineNum="66" parent="globals/AppController" pc="268436541" symbol="onSwipe"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="21" lineNum="67" parent="globals/AppController" pc="268436548" symbol="onSwipe"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="21" lineNum="68" parent="globals/AppController" pc="268436555" symbol="onSwipe"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="21" lineNum="70" parent="globals/AppController" pc="268436560" symbol="onSwipe"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="21" lineNum="71" parent="globals/AppController" pc="268436568" symbol="onSwipe"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="21" lineNum="72" parent="globals/AppController" pc="268436575" symbol="onSwipe"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="21" lineNum="74" parent="globals/AppController" pc="268436580" symbol="onSwipe"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="22" lineNum="48" parent="globals/AppController" pc="268436582" symbol="onQrShow"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="22" lineNum="49" parent="globals/AppController" pc="268436584" symbol="onQrShow"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="22" lineNum="50" parent="globals/AppController" pc="268436606" symbol="onQrShow"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="23" lineNum="59" parent="globals/AppController" pc="268436617" symbol="onSelect"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="23" lineNum="60" parent="globals/AppController" pc="268436619" symbol="onSelect"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="23" lineNum="61" parent="globals/AppController" pc="268436626" symbol="onSelect"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="24" lineNum="179" parent="globals/AppController" pc="268436628" symbol="onHeartTimer"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="24" lineNum="180" parent="globals/AppController" pc="268436630" symbol="onHeartTimer"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="25" lineNum="138" parent="globals/AppController" pc="268436638" symbol="ensureSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="25" lineNum="139" parent="globals/AppController" pc="268436640" symbol="ensureSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="25" lineNum="140" parent="globals/AppController" pc="268436653" symbol="ensureSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="25" lineNum="141" parent="globals/AppController" pc="268436660" symbol="ensureSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="25" lineNum="142" parent="globals/AppController" pc="268436667" symbol="ensureSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="25" lineNum="144" parent="globals/AppController" pc="268436671" symbol="ensureSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="26" lineNum="166" parent="globals/AppController" pc="268436679" symbol="startHeartTimer"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="26" lineNum="167" parent="globals/AppController" pc="268436681" symbol="startHeartTimer"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="26" lineNum="168" parent="globals/AppController" pc="268436688" symbol="startHeartTimer"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="26" lineNum="169" parent="globals/AppController" pc="268436717" symbol="startHeartTimer"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="27" lineNum="172" parent="globals/AppController" pc="268436749" symbol="stopHeartTimer"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="27" lineNum="173" parent="globals/AppController" pc="268436751" symbol="stopHeartTimer"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="27" lineNum="174" parent="globals/AppController" pc="268436760" symbol="stopHeartTimer"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="27" lineNum="175" parent="globals/AppController" pc="268436772" symbol="stopHeartTimer"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="28" lineNum="77" parent="globals/AppController" pc="268436784" symbol="onNextPage"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="28" lineNum="78" parent="globals/AppController" pc="268436786" symbol="onNextPage"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="28" lineNum="79" parent="globals/AppController" pc="268436793" symbol="onNextPage"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="29" lineNum="87" parent="globals/AppController" pc="268436795" symbol="showNextScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="29" lineNum="88" parent="globals/AppController" pc="268436797" symbol="showNextScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="29" lineNum="89" parent="globals/AppController" pc="268436807" symbol="showNextScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="29" lineNum="90" parent="globals/AppController" pc="268436817" symbol="showNextScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="29" lineNum="91" parent="globals/AppController" pc="268436828" symbol="showNextScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="29" lineNum="93" parent="globals/AppController" pc="268436838" symbol="showNextScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="30" lineNum="147" parent="globals/AppController" pc="268436846" symbol="resetSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="30" lineNum="148" parent="globals/AppController" pc="268436848" symbol="resetSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="30" lineNum="149" parent="globals/AppController" pc="268436855" symbol="resetSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="30" lineNum="150" parent="globals/AppController" pc="268436866" symbol="resetSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="30" lineNum="151" parent="globals/AppController" pc="268436874" symbol="resetSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="30" lineNum="152" parent="globals/AppController" pc="268436888" symbol="resetSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="30" lineNum="153" parent="globals/AppController" pc="268436902" symbol="resetSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="30" lineNum="154" parent="globals/AppController" pc="268436909" symbol="resetSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="30" lineNum="155" parent="globals/AppController" pc="268436916" symbol="resetSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="31" lineNum="305" parent="globals/AppController" pc="268436928" symbol="handlePostHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="31" lineNum="306" parent="globals/AppController" pc="268436931" symbol="handlePostHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="31" lineNum="307" parent="globals/AppController" pc="268436938" symbol="handlePostHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="31" lineNum="308" parent="globals/AppController" pc="268436965" symbol="handlePostHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="31" lineNum="309" parent="globals/AppController" pc="268436976" symbol="handlePostHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="31" lineNum="311" parent="globals/AppController" pc="268436980" symbol="handlePostHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="31" lineNum="312" parent="globals/AppController" pc="268436998" symbol="handlePostHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="31" lineNum="313" parent="globals/AppController" pc="268437051" symbol="handlePostHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="31" lineNum="314" parent="globals/AppController" pc="268437062" symbol="handlePostHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="31" lineNum="316" parent="globals/AppController" pc="268437066" symbol="handlePostHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="31" lineNum="317" parent="globals/AppController" pc="268437074" symbol="handlePostHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="31" lineNum="318" parent="globals/AppController" pc="268437080" symbol="handlePostHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="31" lineNum="320" parent="globals/AppController" pc="268437098" symbol="handlePostHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="31" lineNum="321" parent="globals/AppController" pc="268437112" symbol="handlePostHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="31" lineNum="322" parent="globals/AppController" pc="268437156" symbol="handlePostHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="32" lineNum="122" parent="globals/AppController" pc="268437168" symbol="showQrScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="32" lineNum="123" parent="globals/AppController" pc="268437170" symbol="showQrScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="32" lineNum="124" parent="globals/AppController" pc="268437180" symbol="showQrScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="32" lineNum="126" parent="globals/AppController" pc="268437184" symbol="showQrScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="32" lineNum="127" parent="globals/AppController" pc="268437192" symbol="showQrScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="271" parent="globals/AppController" pc="268437214" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="272" parent="globals/AppController" pc="268437217" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="273" parent="globals/AppController" pc="268437231" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="274" parent="globals/AppController" pc="268437238" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="275" parent="globals/AppController" pc="268437265" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="276" parent="globals/AppController" pc="268437276" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="278" parent="globals/AppController" pc="268437280" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="279" parent="globals/AppController" pc="268437298" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="280" parent="globals/AppController" pc="268437351" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="281" parent="globals/AppController" pc="268437362" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="283" parent="globals/AppController" pc="268437366" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="284" parent="globals/AppController" pc="268437388" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="285" parent="globals/AppController" pc="268437432" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="286" parent="globals/AppController" pc="268437443" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="288" parent="globals/AppController" pc="268437447" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="289" parent="globals/AppController" pc="268437451" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="290" parent="globals/AppController" pc="268437467" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="291" parent="globals/AppController" pc="268437483" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="292" parent="globals/AppController" pc="268437527" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="293" parent="globals/AppController" pc="268437571" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="294" parent="globals/AppController" pc="268437582" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="296" parent="globals/AppController" pc="268437586" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="297" parent="globals/AppController" pc="268437603" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="298" parent="globals/AppController" pc="268437617" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="299" parent="globals/AppController" pc="268437625" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="300" parent="globals/AppController" pc="268437632" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="33" lineNum="301" parent="globals/AppController" pc="268437639" symbol="handleCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="34" lineNum="255" parent="globals/AppController" pc="268437651" symbol="onHttpResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="34" lineNum="256" parent="globals/AppController" pc="268437654" symbol="onHttpResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="34" lineNum="257" parent="globals/AppController" pc="268437676" symbol="onHttpResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="34" lineNum="258" parent="globals/AppController" pc="268437683" symbol="onHttpResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="34" lineNum="260" parent="globals/AppController" pc="268437691" symbol="onHttpResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="34" lineNum="261" parent="globals/AppController" pc="268437699" symbol="onHttpResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="34" lineNum="262" parent="globals/AppController" pc="268437712" symbol="onHttpResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="34" lineNum="264" parent="globals/AppController" pc="268437716" symbol="onHttpResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="34" lineNum="265" parent="globals/AppController" pc="268437724" symbol="onHttpResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="34" lineNum="266" parent="globals/AppController" pc="268437737" symbol="onHttpResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="35" lineNum="114" parent="globals/AppController" pc="268437742" symbol="showLinkScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="35" lineNum="115" parent="globals/AppController" pc="268437744" symbol="showLinkScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="35" lineNum="116" parent="globals/AppController" pc="268437755" symbol="showLinkScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="35" lineNum="118" parent="globals/AppController" pc="268437759" symbol="showLinkScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="35" lineNum="119" parent="globals/AppController" pc="268437768" symbol="showLinkScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="36" lineNum="107" parent="globals/AppController" pc="268437790" symbol="showMenu"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="36" lineNum="108" parent="globals/AppController" pc="268437792" symbol="showMenu"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="36" lineNum="109" parent="globals/AppController" pc="268437804" symbol="showMenu"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="36" lineNum="111" parent="globals/AppController" pc="268437808" symbol="showMenu"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="37" lineNum="240" parent="globals/AppController" pc="268437861" symbol="onQrImageResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="37" lineNum="241" parent="globals/AppController" pc="268437863" symbol="onQrImageResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="37" lineNum="242" parent="globals/AppController" pc="268437885" symbol="onQrImageResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="37" lineNum="243" parent="globals/AppController" pc="268437899" symbol="onQrImageResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="37" lineNum="244" parent="globals/AppController" pc="268437914" symbol="onQrImageResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="37" lineNum="245" parent="globals/AppController" pc="268437923" symbol="onQrImageResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="37" lineNum="246" parent="globals/AppController" pc="268437940" symbol="onQrImageResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="37" lineNum="247" parent="globals/AppController" pc="268437947" symbol="onQrImageResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="37" lineNum="249" parent="globals/AppController" pc="268437977" symbol="onQrImageResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="37" lineNum="251" parent="globals/AppController" pc="268438030" symbol="onQrImageResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="38" lineNum="34" parent="globals/AppController" pc="268438042" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="38" lineNum="35" parent="globals/AppController" pc="268438044" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="38" lineNum="36" parent="globals/AppController" pc="268438056" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="38" lineNum="37" parent="globals/AppController" pc="268438082" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="38" lineNum="38" parent="globals/AppController" pc="268438108" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="38" lineNum="39" parent="globals/AppController" pc="268438134" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="38" lineNum="40" parent="globals/AppController" pc="268438178" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="38" lineNum="41" parent="globals/AppController" pc="268438185" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="39" lineNum="205" parent="globals/AppController" pc="268438193" symbol="readHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="39" lineNum="207" parent="globals/AppController" pc="268438196" symbol="readHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="39" lineNum="208" parent="globals/AppController" pc="268438208" symbol="readHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="39" lineNum="209" parent="globals/AppController" pc="268438225" symbol="readHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="39" lineNum="210" parent="globals/AppController" pc="268438234" symbol="readHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="39" lineNum="211" parent="globals/AppController" pc="268438250" symbol="readHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="39" lineNum="214" parent="globals/AppController" pc="268438268" symbol="readHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="39" lineNum="216" parent="globals/AppController" pc="268438284" symbol="readHeartRate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="40" lineNum="219" parent="globals/AppController" pc="268438286" symbol="loadQrImage"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="40" lineNum="220" parent="globals/AppController" pc="268438289" symbol="loadQrImage"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="40" lineNum="221" parent="globals/AppController" pc="268438301" symbol="loadQrImage"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="40" lineNum="222" parent="globals/AppController" pc="268438307" symbol="loadQrImage"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="40" lineNum="224" parent="globals/AppController" pc="268438311" symbol="loadQrImage"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="40" lineNum="225" parent="globals/AppController" pc="268438325" symbol="loadQrImage"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="40" lineNum="227" parent="globals/AppController" pc="268438336" symbol="loadQrImage"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="40" lineNum="228" parent="globals/AppController" pc="268438348" symbol="loadQrImage"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="40" lineNum="229" parent="globals/AppController" pc="268438357" symbol="loadQrImage"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="40" lineNum="230" parent="globals/AppController" pc="268438375" symbol="loadQrImage"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="40" lineNum="236" parent="globals/AppController" pc="268438417" symbol="loadQrImage"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="40" lineNum="237" parent="globals/AppController" pc="268438434" symbol="loadQrImage"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="41" lineNum="97" parent="globals/AppController" pc="268438466" symbol="showPreviousScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="41" lineNum="98" parent="globals/AppController" pc="268438468" symbol="showPreviousScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="41" lineNum="99" parent="globals/AppController" pc="268438479" symbol="showPreviousScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="41" lineNum="100" parent="globals/AppController" pc="268438489" symbol="showPreviousScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="41" lineNum="101" parent="globals/AppController" pc="268438500" symbol="showPreviousScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="41" lineNum="103" parent="globals/AppController" pc="268438510" symbol="showPreviousScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="42" lineNum="130" parent="globals/AppController" pc="268438518" symbol="showHeartScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="42" lineNum="131" parent="globals/AppController" pc="268438520" symbol="showHeartScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="42" lineNum="132" parent="globals/AppController" pc="268438531" symbol="showHeartScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="42" lineNum="134" parent="globals/AppController" pc="268438535" symbol="showHeartScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="42" lineNum="135" parent="globals/AppController" pc="268438544" symbol="showHeartScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="43" lineNum="158" parent="globals/AppController" pc="268438566" symbol="beginCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="43" lineNum="159" parent="globals/AppController" pc="268438568" symbol="beginCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="43" lineNum="160" parent="globals/AppController" pc="268438582" symbol="beginCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="43" lineNum="161" parent="globals/AppController" pc="268438593" symbol="beginCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="43" lineNum="162" parent="globals/AppController" pc="268438602" symbol="beginCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppController.mc" id="43" lineNum="163" parent="globals/AppController" pc="268438619" symbol="beginCreateSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="44" lineNum="8" parent="globals/Config" pc="268438646" symbol="baseUrl"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="44" lineNum="10" parent="globals/Config" pc="268438657" symbol="baseUrl"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="44" lineNum="11" parent="globals/Config" pc="268438676" symbol="baseUrl"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="44" lineNum="12" parent="globals/Config" pc="268438697" symbol="baseUrl"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="44" lineNum="13" parent="globals/Config" pc="268438709" symbol="baseUrl"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="44" lineNum="14" parent="globals/Config" pc="268438721" symbol="baseUrl"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="44" lineNum="17" parent="globals/Config" pc="268438747" symbol="baseUrl"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="44" lineNum="19" parent="globals/Config" pc="268438763" symbol="baseUrl"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="45" lineNum="65" parent="globals/Config" pc="268438769" symbol="qrUrl"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="45" lineNum="66" parent="globals/Config" pc="268438779" symbol="qrUrl"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="46" lineNum="22" parent="globals/Config" pc="268438809" symbol="trim"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="46" lineNum="23" parent="globals/Config" pc="268438820" symbol="trim"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="46" lineNum="24" parent="globals/Config" pc="268438823" symbol="trim"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="46" lineNum="25" parent="globals/Config" pc="268438832" symbol="trim"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="46" lineNum="26" parent="globals/Config" pc="268438840" symbol="trim"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="46" lineNum="27" parent="globals/Config" pc="268438858" symbol="trim"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="46" lineNum="28" parent="globals/Config" pc="268438930" symbol="trim"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="46" lineNum="30" parent="globals/Config" pc="268438936" symbol="trim"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="46" lineNum="32" parent="globals/Config" pc="268438946" symbol="trim"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="46" lineNum="33" parent="globals/Config" pc="268438954" symbol="trim"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="46" lineNum="34" parent="globals/Config" pc="268438972" symbol="trim"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="46" lineNum="35" parent="globals/Config" pc="268439044" symbol="trim"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="46" lineNum="37" parent="globals/Config" pc="268439050" symbol="trim"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="46" lineNum="39" parent="globals/Config" pc="268439060" symbol="trim"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="46" lineNum="40" parent="globals/Config" pc="268439080" symbol="trim"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="46" lineNum="42" parent="globals/Config" pc="268439086" symbol="trim"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="47" lineNum="45" parent="globals/Config" pc="268439100" symbol="trimTrailingSlash"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="47" lineNum="46" parent="globals/Config" pc="268439111" symbol="trimTrailingSlash"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="47" lineNum="47" parent="globals/Config" pc="268439115" symbol="trimTrailingSlash"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="47" lineNum="48" parent="globals/Config" pc="268439172" symbol="trimTrailingSlash"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="47" lineNum="50" parent="globals/Config" pc="268439197" symbol="trimTrailingSlash"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="48" lineNum="53" parent="globals/Config" pc="268439200" symbol="sessionCreateUrl"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="48" lineNum="54" parent="globals/Config" pc="268439210" symbol="sessionCreateUrl"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="49" lineNum="57" parent="globals/Config" pc="268439223" symbol="heartUrl"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="49" lineNum="58" parent="globals/Config" pc="268439233" symbol="heartUrl"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="50" lineNum="61" parent="globals/Config" pc="268439255" symbol="viewerUrl"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/Config.mc" id="50" lineNum="62" parent="globals/Config" pc="268439265" symbol="viewerUrl"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="51" lineNum="40" parent="globals/ApiClient" pc="268439281" symbol="postHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="51" lineNum="41" parent="globals/ApiClient" pc="268439292" symbol="postHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="51" lineNum="42" parent="globals/ApiClient" pc="268439307" symbol="postHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="51" lineNum="43" parent="globals/ApiClient" pc="268439319" symbol="postHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="51" lineNum="44" parent="globals/ApiClient" pc="268439335" symbol="postHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="51" lineNum="45" parent="globals/ApiClient" pc="268439354" symbol="postHeart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="52" lineNum="20" parent="globals/ApiClient" pc="268439376" symbol="jsonPostOpts"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="52" lineNum="21" parent="globals/ApiClient" pc="268439387" symbol="jsonPostOpts"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="52" lineNum="22" parent="globals/ApiClient" pc="268439394" symbol="jsonPostOpts"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="52" lineNum="23" parent="globals/ApiClient" pc="268439413" symbol="jsonPostOpts"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="52" lineNum="25" parent="globals/ApiClient" pc="268439439" symbol="jsonPostOpts"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="53" lineNum="9" parent="globals/ApiClient" pc="268439468" symbol="deviceLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="53" lineNum="11" parent="globals/ApiClient" pc="268439479" symbol="deviceLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="53" lineNum="12" parent="globals/ApiClient" pc="268439491" symbol="deviceLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="53" lineNum="13" parent="globals/ApiClient" pc="268439508" symbol="deviceLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="53" lineNum="15" parent="globals/ApiClient" pc="268439528" symbol="deviceLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="53" lineNum="17" parent="globals/ApiClient" pc="268439544" symbol="deviceLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="54" lineNum="32" parent="globals/ApiClient" pc="268439550" symbol="createSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="54" lineNum="33" parent="globals/ApiClient" pc="268439561" symbol="createSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="54" lineNum="34" parent="globals/ApiClient" pc="268439580" symbol="createSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="54" lineNum="35" parent="globals/ApiClient" pc="268439591" symbol="createSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="54" lineNum="36" parent="globals/ApiClient" pc="268439603" symbol="createSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" id="54" lineNum="37" parent="globals/ApiClient" pc="268439622" symbol="createSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="55" lineNum="13" parent="globals/HeartView" pc="268439644" symbol="onShow"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="55" lineNum="14" parent="globals/HeartView" pc="268439646" symbol="onShow"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="56" lineNum="8" parent="globals/HeartView" pc="268439658" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="56" lineNum="9" parent="globals/HeartView" pc="268439660" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="56" lineNum="10" parent="globals/HeartView" pc="268439672" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="17" parent="globals/HeartView" pc="268439682" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="18" parent="globals/HeartView" pc="268439685" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="19" parent="globals/HeartView" pc="268439701" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="20" parent="globals/HeartView" pc="268439709" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="21" parent="globals/HeartView" pc="268439718" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="22" parent="globals/HeartView" pc="268439727" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="24" parent="globals/HeartView" pc="268439734" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="25" parent="globals/HeartView" pc="268439747" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="26" parent="globals/HeartView" pc="268439764" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="27" parent="globals/HeartView" pc="268439794" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="30" parent="globals/HeartView" pc="268439798" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="31" parent="globals/HeartView" pc="268439815" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="33" parent="globals/HeartView" pc="268439864" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="34" parent="globals/HeartView" pc="268439876" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="35" parent="globals/HeartView" pc="268439893" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="36" parent="globals/HeartView" pc="268439906" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="37" parent="globals/HeartView" pc="268439938" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="38" parent="globals/HeartView" pc="268439955" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="40" parent="globals/HeartView" pc="268440013" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="43" parent="globals/HeartView" pc="268440068" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="44" parent="globals/HeartView" pc="268440079" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="45" parent="globals/HeartView" pc="268440098" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="47" parent="globals/HeartView" pc="268440134" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HeartView.mc" id="57" lineNum="48" parent="globals/HeartView" pc="268440151" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="58" lineNum="9" parent="globals/HttpDebug" pc="268440174" symbol="logRequest"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="58" lineNum="10" parent="globals/HttpDebug" pc="268440185" symbol="logRequest"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="58" lineNum="11" parent="globals/HttpDebug" pc="268440189" symbol="logRequest"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="58" lineNum="13" parent="globals/HttpDebug" pc="268440193" symbol="logRequest"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="58" lineNum="14" parent="globals/HttpDebug" pc="268440214" symbol="logRequest"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="58" lineNum="15" parent="globals/HttpDebug" pc="268440220" symbol="logRequest"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="58" lineNum="16" parent="globals/HttpDebug" pc="268440237" symbol="logRequest"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="58" lineNum="17" parent="globals/HttpDebug" pc="268440243" symbol="logRequest"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="58" lineNum="19" parent="globals/HttpDebug" pc="268440273" symbol="logRequest"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="58" lineNum="20" parent="globals/HttpDebug" pc="268440290" symbol="logRequest"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="58" lineNum="21" parent="globals/HttpDebug" pc="268440311" symbol="logRequest"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="58" lineNum="24" parent="globals/HttpDebug" pc="268440346" symbol="logRequest"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="58" lineNum="25" parent="globals/HttpDebug" pc="268440352" symbol="logRequest"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="58" lineNum="27" parent="globals/HttpDebug" pc="268440373" symbol="logRequest"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="59" lineNum="31" parent="globals/HttpDebug" pc="268440403" symbol="communicationsErrorLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="59" lineNum="32" parent="globals/HttpDebug" pc="268440413" symbol="communicationsErrorLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="59" lineNum="33" parent="globals/HttpDebug" pc="268440422" symbol="communicationsErrorLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="59" lineNum="35" parent="globals/HttpDebug" pc="268440431" symbol="communicationsErrorLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="59" lineNum="36" parent="globals/HttpDebug" pc="268440440" symbol="communicationsErrorLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="59" lineNum="38" parent="globals/HttpDebug" pc="268440449" symbol="communicationsErrorLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="59" lineNum="39" parent="globals/HttpDebug" pc="268440458" symbol="communicationsErrorLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="59" lineNum="41" parent="globals/HttpDebug" pc="268440467" symbol="communicationsErrorLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="59" lineNum="42" parent="globals/HttpDebug" pc="268440476" symbol="communicationsErrorLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="59" lineNum="44" parent="globals/HttpDebug" pc="268440485" symbol="communicationsErrorLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="59" lineNum="45" parent="globals/HttpDebug" pc="268440494" symbol="communicationsErrorLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="59" lineNum="47" parent="globals/HttpDebug" pc="268440503" symbol="communicationsErrorLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="59" lineNum="48" parent="globals/HttpDebug" pc="268440512" symbol="communicationsErrorLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="59" lineNum="50" parent="globals/HttpDebug" pc="268440521" symbol="communicationsErrorLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="59" lineNum="51" parent="globals/HttpDebug" pc="268440530" symbol="communicationsErrorLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="59" lineNum="53" parent="globals/HttpDebug" pc="268440539" symbol="communicationsErrorLabel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="60" lineNum="77" parent="globals/HttpDebug" pc="268440553" symbol="formatDictForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="60" lineNum="78" parent="globals/HttpDebug" pc="268440564" symbol="formatDictForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="60" lineNum="79" parent="globals/HttpDebug" pc="268440573" symbol="formatDictForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="60" lineNum="80" parent="globals/HttpDebug" pc="268440580" symbol="formatDictForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="60" lineNum="81" parent="globals/HttpDebug" pc="268440596" symbol="formatDictForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="60" lineNum="82" parent="globals/HttpDebug" pc="268440603" symbol="formatDictForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="60" lineNum="84" parent="globals/HttpDebug" pc="268440616" symbol="formatDictForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="60" lineNum="85" parent="globals/HttpDebug" pc="268440623" symbol="formatDictForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="60" lineNum="86" parent="globals/HttpDebug" pc="268440647" symbol="formatDictForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="60" lineNum="87" parent="globals/HttpDebug" pc="268440660" symbol="formatDictForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="60" lineNum="88" parent="globals/HttpDebug" pc="268440698" symbol="formatDictForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="60" lineNum="90" parent="globals/HttpDebug" pc="268440714" symbol="formatDictForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="60" lineNum="93" parent="globals/HttpDebug" pc="268440760" symbol="formatDictForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="60" lineNum="94" parent="globals/HttpDebug" pc="268440770" symbol="formatDictForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="61" lineNum="57" parent="globals/HttpDebug" pc="268440773" symbol="logResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="61" lineNum="58" parent="globals/HttpDebug" pc="268440784" symbol="logResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="61" lineNum="59" parent="globals/HttpDebug" pc="268440788" symbol="logResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="61" lineNum="61" parent="globals/HttpDebug" pc="268440792" symbol="logResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="61" lineNum="62" parent="globals/HttpDebug" pc="268440827" symbol="logResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="61" lineNum="63" parent="globals/HttpDebug" pc="268440834" symbol="logResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="61" lineNum="65" parent="globals/HttpDebug" pc="268440866" symbol="logResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="61" lineNum="66" parent="globals/HttpDebug" pc="268440872" symbol="logResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="61" lineNum="67" parent="globals/HttpDebug" pc="268440890" symbol="logResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="61" lineNum="69" parent="globals/HttpDebug" pc="268440894" symbol="logResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="61" lineNum="70" parent="globals/HttpDebug" pc="268440903" symbol="logResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="61" lineNum="71" parent="globals/HttpDebug" pc="268440908" symbol="logResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="61" lineNum="72" parent="globals/HttpDebug" pc="268440921" symbol="logResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="61" lineNum="74" parent="globals/HttpDebug" pc="268440944" symbol="logResponse"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="62" lineNum="97" parent="globals/HttpDebug" pc="268440966" symbol="formatHeadersForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="62" lineNum="98" parent="globals/HttpDebug" pc="268440977" symbol="formatHeadersForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="62" lineNum="99" parent="globals/HttpDebug" pc="268440986" symbol="formatHeadersForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="62" lineNum="100" parent="globals/HttpDebug" pc="268440993" symbol="formatHeadersForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="62" lineNum="101" parent="globals/HttpDebug" pc="268441009" symbol="formatHeadersForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="62" lineNum="102" parent="globals/HttpDebug" pc="268441016" symbol="formatHeadersForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="62" lineNum="104" parent="globals/HttpDebug" pc="268441029" symbol="formatHeadersForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="62" lineNum="105" parent="globals/HttpDebug" pc="268441036" symbol="formatHeadersForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="62" lineNum="106" parent="globals/HttpDebug" pc="268441060" symbol="formatHeadersForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="62" lineNum="107" parent="globals/HttpDebug" pc="268441081" symbol="formatHeadersForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="62" lineNum="109" parent="globals/HttpDebug" pc="268441097" symbol="formatHeadersForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="62" lineNum="110" parent="globals/HttpDebug" pc="268441110" symbol="formatHeadersForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="62" lineNum="113" parent="globals/HttpDebug" pc="268441156" symbol="formatHeadersForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/HttpDebug.mc" id="62" lineNum="114" parent="globals/HttpDebug" pc="268441166" symbol="formatHeadersForLog"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="63" lineNum="11" parent="globals/QrLayout" pc="268441169" symbol="maxQrPixelSize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="63" lineNum="13" parent="globals/QrLayout" pc="268441180" symbol="maxQrPixelSize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="63" lineNum="14" parent="globals/QrLayout" pc="268441192" symbol="maxQrPixelSize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="63" lineNum="15" parent="globals/QrLayout" pc="268441200" symbol="maxQrPixelSize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="63" lineNum="16" parent="globals/QrLayout" pc="268441208" symbol="maxQrPixelSize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="63" lineNum="17" parent="globals/QrLayout" pc="268441225" symbol="maxQrPixelSize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="63" lineNum="18" parent="globals/QrLayout" pc="268441235" symbol="maxQrPixelSize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="63" lineNum="20" parent="globals/QrLayout" pc="268441239" symbol="maxQrPixelSize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="63" lineNum="21" parent="globals/QrLayout" pc="268441252" symbol="maxQrPixelSize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="63" lineNum="23" parent="globals/QrLayout" pc="268441265" symbol="maxQrPixelSize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="63" lineNum="26" parent="globals/QrLayout" pc="268441272" symbol="maxQrPixelSize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="63" lineNum="27" parent="globals/QrLayout" pc="268441289" symbol="maxQrPixelSize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="63" lineNum="28" parent="globals/QrLayout" pc="268441297" symbol="maxQrPixelSize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="63" lineNum="30" parent="globals/QrLayout" pc="268441306" symbol="maxQrPixelSize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="63" lineNum="31" parent="globals/QrLayout" pc="268441315" symbol="maxQrPixelSize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="63" lineNum="33" parent="globals/QrLayout" pc="268441325" symbol="maxQrPixelSize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="63" lineNum="34" parent="globals/QrLayout" pc="268441337" symbol="maxQrPixelSize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="63" lineNum="36" parent="globals/QrLayout" pc="268441353" symbol="maxQrPixelSize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="64" lineNum="39" parent="globals/QrLayout" pc="268441357" symbol="isRoundScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="64" lineNum="41" parent="globals/QrLayout" pc="268441368" symbol="isRoundScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="64" lineNum="42" parent="globals/QrLayout" pc="268441387" symbol="isRoundScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="64" lineNum="44" parent="globals/QrLayout" pc="268441403" symbol="isRoundScreen"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="65" lineNum="55" parent="globals/QrLayout" pc="268441405" symbol="hintY"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="65" lineNum="56" parent="globals/QrLayout" pc="268441415" symbol="hintY"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="66" lineNum="47" parent="globals/QrLayout" pc="268441421" symbol="bitmapTop"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="66" lineNum="48" parent="globals/QrLayout" pc="268441432" symbol="bitmapTop"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="66" lineNum="49" parent="globals/QrLayout" pc="268441442" symbol="bitmapTop"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="66" lineNum="50" parent="globals/QrLayout" pc="268441450" symbol="bitmapTop"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/QrLayout.mc" id="66" lineNum="52" parent="globals/QrLayout" pc="268441456" symbol="bitmapTop"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="5" parent="globals/TextLayout" pc="268441468" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="6" parent="globals/TextLayout" pc="268441479" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="7" parent="globals/TextLayout" pc="268441483" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="8" parent="globals/TextLayout" pc="268441502" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="10" parent="globals/TextLayout" pc="268441508" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="11" parent="globals/TextLayout" pc="268441511" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="12" parent="globals/TextLayout" pc="268441524" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="13" parent="globals/TextLayout" pc="268441531" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="14" parent="globals/TextLayout" pc="268441544" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="16" parent="globals/TextLayout" pc="268441556" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="17" parent="globals/TextLayout" pc="268441560" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="18" parent="globals/TextLayout" pc="268441564" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="19" parent="globals/TextLayout" pc="268441572" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="20" parent="globals/TextLayout" pc="268441590" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="21" parent="globals/TextLayout" pc="268441641" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="22" parent="globals/TextLayout" pc="268441645" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="24" parent="globals/TextLayout" pc="268441651" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="26" parent="globals/TextLayout" pc="268441661" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="27" parent="globals/TextLayout" pc="268441669" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="30" parent="globals/TextLayout" pc="268441676" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="31" parent="globals/TextLayout" pc="268441699" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="67" lineNum="33" parent="globals/TextLayout" pc="268441706" symbol="wrapByLength"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="68" lineNum="36" parent="globals/TextLayout" pc="268441709" symbol="maxLinesForHeight"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="68" lineNum="37" parent="globals/TextLayout" pc="268441720" symbol="maxLinesForHeight"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="68" lineNum="38" parent="globals/TextLayout" pc="268441727" symbol="maxLinesForHeight"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="68" lineNum="39" parent="globals/TextLayout" pc="268441741" symbol="maxLinesForHeight"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/TextLayout.mc" id="68" lineNum="41" parent="globals/TextLayout" pc="268441747" symbol="maxLinesForHeight"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="69" lineNum="15" parent="globals/SessionStore" pc="268441753" symbol="safeDel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="69" lineNum="17" parent="globals/SessionStore" pc="268441764" symbol="safeDel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="69" lineNum="18" parent="globals/SessionStore" pc="268441785" symbol="safeDel"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="70" lineNum="22" parent="globals/SessionStore" pc="268441802" symbol="saveSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="70" lineNum="23" parent="globals/SessionStore" pc="268441812" symbol="saveSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="70" lineNum="24" parent="globals/SessionStore" pc="268441832" symbol="saveSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="71" lineNum="37" parent="globals/SessionStore" pc="268441853" symbol="getSecret"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="71" lineNum="38" parent="globals/SessionStore" pc="268441863" symbol="getSecret"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="72" lineNum="9" parent="globals/SessionStore" pc="268441877" symbol="clear"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="72" lineNum="10" parent="globals/SessionStore" pc="268441887" symbol="clear"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="72" lineNum="11" parent="globals/SessionStore" pc="268441901" symbol="clear"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="72" lineNum="12" parent="globals/SessionStore" pc="268441915" symbol="clear"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="73" lineNum="27" parent="globals/SessionStore" pc="268441930" symbol="hasSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="73" lineNum="28" parent="globals/SessionStore" pc="268441941" symbol="hasSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="73" lineNum="29" parent="globals/SessionStore" pc="268441949" symbol="hasSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="73" lineNum="30" parent="globals/SessionStore" pc="268441957" symbol="hasSession"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="74" lineNum="41" parent="globals/SessionStore" pc="268442002" symbol="setLastBpm"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="74" lineNum="42" parent="globals/SessionStore" pc="268442012" symbol="setLastBpm"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="75" lineNum="56" parent="globals/SessionStore" pc="268442033" symbol="readString"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="75" lineNum="58" parent="globals/SessionStore" pc="268442044" symbol="readString"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="75" lineNum="59" parent="globals/SessionStore" pc="268442060" symbol="readString"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="75" lineNum="60" parent="globals/SessionStore" pc="268442081" symbol="readString"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="75" lineNum="62" parent="globals/SessionStore" pc="268442096" symbol="readString"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="75" lineNum="64" parent="globals/SessionStore" pc="268442112" symbol="readString"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="76" lineNum="33" parent="globals/SessionStore" pc="268442114" symbol="getSessionId"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="76" lineNum="34" parent="globals/SessionStore" pc="268442124" symbol="getSessionId"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="77" lineNum="45" parent="globals/SessionStore" pc="268442138" symbol="getLastBpm"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="77" lineNum="47" parent="globals/SessionStore" pc="268442149" symbol="getLastBpm"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="77" lineNum="48" parent="globals/SessionStore" pc="268442168" symbol="getLastBpm"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="77" lineNum="49" parent="globals/SessionStore" pc="268442189" symbol="getLastBpm"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="77" lineNum="51" parent="globals/SessionStore" pc="268442204" symbol="getLastBpm"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/SessionStore.mc" id="77" lineNum="53" parent="globals/SessionStore" pc="268442220" symbol="getLastBpm"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ShareHeartApp.mc" id="78" lineNum="10" parent="globals/ShareHeartApp" pc="268442222" symbol="onStart"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ShareHeartApp.mc" id="79" lineNum="16" parent="globals/ShareHeartApp" pc="268442225" symbol="getInitialView"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ShareHeartApp.mc" id="79" lineNum="17" parent="globals/ShareHeartApp" pc="268442228" symbol="getInitialView"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ShareHeartApp.mc" id="79" lineNum="18" parent="globals/ShareHeartApp" pc="268442248" symbol="getInitialView"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ShareHeartApp.mc" id="80" lineNum="6" parent="globals/ShareHeartApp" pc="268442268" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ShareHeartApp.mc" id="80" lineNum="7" parent="globals/ShareHeartApp" pc="268442270" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/ShareHeartApp.mc" id="81" lineNum="13" parent="globals/ShareHeartApp" pc="268442283" symbol="onStop"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="82" lineNum="13" parent="globals/LinkView" pc="268442286" symbol="onShow"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="82" lineNum="14" parent="globals/LinkView" pc="268442288" symbol="onShow"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="83" lineNum="8" parent="globals/LinkView" pc="268442300" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="83" lineNum="9" parent="globals/LinkView" pc="268442302" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="83" lineNum="10" parent="globals/LinkView" pc="268442314" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="17" parent="globals/LinkView" pc="268442324" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="18" parent="globals/LinkView" pc="268442327" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="19" parent="globals/LinkView" pc="268442343" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="20" parent="globals/LinkView" pc="268442351" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="21" parent="globals/LinkView" pc="268442360" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="22" parent="globals/LinkView" pc="268442369" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="23" parent="globals/LinkView" pc="268442376" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="24" parent="globals/LinkView" pc="268442380" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="25" parent="globals/LinkView" pc="268442384" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="27" parent="globals/LinkView" pc="268442391" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="28" parent="globals/LinkView" pc="268442404" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="29" parent="globals/LinkView" pc="268442421" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="30" parent="globals/LinkView" pc="268442451" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="33" parent="globals/LinkView" pc="268442455" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="34" parent="globals/LinkView" pc="268442472" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="36" parent="globals/LinkView" pc="268442521" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="37" parent="globals/LinkView" pc="268442533" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="38" parent="globals/LinkView" pc="268442552" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="39" parent="globals/LinkView" pc="268442569" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="40" parent="globals/LinkView" pc="268442621" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="43" parent="globals/LinkView" pc="268442625" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="44" parent="globals/LinkView" pc="268442641" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="45" parent="globals/LinkView" pc="268442659" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="46" parent="globals/LinkView" pc="268442677" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="47" parent="globals/LinkView" pc="268442681" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="48" parent="globals/LinkView" pc="268442704" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="49" parent="globals/LinkView" pc="268442711" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="51" parent="globals/LinkView" pc="268442714" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="52" parent="globals/LinkView" pc="268442731" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="53" parent="globals/LinkView" pc="268442758" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="54" parent="globals/LinkView" pc="268442768" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="55" parent="globals/LinkView" pc="268442790" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="58" parent="globals/LinkView" pc="268442807" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="59" parent="globals/LinkView" pc="268442820" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/LinkView.mc" id="84" lineNum="60" parent="globals/LinkView" pc="268442837" symbol="onUpdate"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppMenu.mc" id="85" lineNum="14" parent="globals/AppMenuDelegate" pc="268442863" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppMenu.mc" id="85" lineNum="15" parent="globals/AppMenuDelegate" pc="268442865" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppMenu.mc" id="85" lineNum="16" parent="globals/AppMenuDelegate" pc="268442877" symbol="initialize"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppMenu.mc" id="86" lineNum="19" parent="globals/AppMenuDelegate" pc="268442887" symbol="onSelect"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppMenu.mc" id="86" lineNum="20" parent="globals/AppMenuDelegate" pc="268442890" symbol="onSelect"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppMenu.mc" id="86" lineNum="21" parent="globals/AppMenuDelegate" pc="268442899" symbol="onSelect"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppMenu.mc" id="86" lineNum="22" parent="globals/AppMenuDelegate" pc="268442910" symbol="onSelect"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/AppMenu.mc" id="86" lineNum="24" parent="globals/AppMenuDelegate" pc="268442925" symbol="onSelect"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" id="87" lineNum="10" parent="globals/UiState" pc="268442941" symbol="setLoading"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" id="87" lineNum="11" parent="globals/UiState" pc="268442951" symbol="setLoading"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" id="87" lineNum="12" parent="globals/UiState" pc="268442960" symbol="setLoading"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" id="87" lineNum="13" parent="globals/UiState" pc="268442965" symbol="setLoading"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" id="88" lineNum="17" parent="globals/UiState" pc="268442977" symbol="setError"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" id="88" lineNum="18" parent="globals/UiState" pc="268442987" symbol="setError"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" id="88" lineNum="19" parent="globals/UiState" pc="268442996" symbol="setError"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" id="89" lineNum="26" parent="globals/UiState" pc="268443005" symbol="setQrLoading"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" id="89" lineNum="27" parent="globals/UiState" pc="268443015" symbol="setQrLoading"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" id="89" lineNum="28" parent="globals/UiState" pc="268443024" symbol="setQrLoading"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" id="89" lineNum="29" parent="globals/UiState" pc="268443029" symbol="setQrLoading"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" id="90" lineNum="33" parent="globals/UiState" pc="268443041" symbol="setQrError"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" id="90" lineNum="34" parent="globals/UiState" pc="268443051" symbol="setQrError"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" id="90" lineNum="35" parent="globals/UiState" pc="268443060" symbol="setQrError"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" id="91" lineNum="22" parent="globals/UiState" pc="268443069" symbol="setStatus"/>
+        <entry filename="/home/nickcis/repos/share-heart-rate/garmin/source/UiState.mc" id="91" lineNum="23" parent="globals/UiState" pc="268443079" symbol="setStatus"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="83" method="true" symbol="getSecret"/>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="3" module="true" symbol="globals/Config"/>
+        <entry field="true" id="91" symbol="qrError"/>
+        <entry id="43" method="true" symbol="handleCreateSession"/>
+        <entry id="70" method="true" symbol="postHeart"/>
+        <entry id="45" method="true" symbol="loadQrImage"/>
+        <entry field="true" id="111" symbol="LinkMissing"/>
+        <entry id="27" module="true" symbol="UiState"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="65" method="true" symbol="trim"/>
+        <entry id="54" method="true" symbol="showLinkScreen"/>
+        <entry id="69" method="true" symbol="jsonPostOpts"/>
+        <entry field="true" id="113" symbol="LoadingLabel"/>
+        <entry id="94" method="true" symbol="setLoading"/>
+        <entry field="true" id="116" symbol="QrHint"/>
+        <entry id="72" method="true" symbol="formatDictForLog"/>
+        <entry id="97" method="true" symbol="setStatus"/>
+        <entry id="8389661" symbol="maxWidth"/>
+        <entry field="true" id="36" symbol="_qrBitmap"/>
+        <entry id="86" method="true" symbol="readString"/>
+        <entry id="82" method="true" symbol="getLastBpm"/>
+        <entry id="51" method="true" symbol="readHeartRate"/>
+        <entry id="8390424" module="true" symbol="Storage"/>
+        <entry id="63" method="true" symbol="qrUrl"/>
+        <entry id="84" method="true" symbol="getSessionId"/>
+        <entry id="64" method="true" symbol="sessionCreateUrl"/>
+        <entry id="85" method="true" symbol="hasSession"/>
+        <entry field="true" id="107" symbol="HeartLastSent"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="47" method="true" symbol="onHttpResponse"/>
+        <entry id="8392382" method="true" symbol="reset"/>
+        <entry id="23" object="true" symbol="QrView"/>
+        <entry field="true" id="100" symbol="AppName"/>
+        <entry id="5" module="true" symbol="globals/L10n"/>
+        <entry id="19" module="true" symbol="HttpDebug"/>
+        <entry id="9" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8389594" symbol="headers"/>
+        <entry id="8389080" method="true" symbol="onMenu"/>
+        <entry field="true" id="118" symbol="SettingBaseUrlTitle"/>
+        <entry field="true" id="115" symbol="MenuTitle"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry field="true" id="98" symbol="statusLine"/>
+        <entry id="59" method="true" symbol="startHeartTimer"/>
+        <entry id="71" method="true" symbol="communicationsErrorLabel"/>
+        <entry id="62" method="true" symbol="heartUrl"/>
+        <entry id="8390425" module="true" symbol="Properties"/>
+        <entry id="7" module="true" symbol="globals/Rez"/>
+        <entry id="26" module="true" symbol="TextLayout"/>
+        <entry id="93" method="true" symbol="setError"/>
+        <entry id="58" method="true" symbol="showQrScreen"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="78" method="true" symbol="isRoundScreen"/>
+        <entry field="true" id="92" symbol="qrLoading"/>
+        <entry field="true" id="39" symbol="_screen"/>
+        <entry field="true" id="38" symbol="_qrView"/>
+        <entry id="29" method="true" symbol="tf"/>
+        <entry id="17" module="true" symbol="Config"/>
+        <entry id="21" object="true" symbol="LinkView"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="95" method="true" symbol="setQrError"/>
+        <entry id="8389079" method="true" symbol="onPreviousPage"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="96" method="true" symbol="setQrLoading"/>
+        <entry id="8389657" symbol="maxHeight"/>
+        <entry field="true" id="103" symbol="ErrorInvalidResponse"/>
+        <entry id="40" method="true" symbol="beginCreateSession"/>
+        <entry field="true" id="108" symbol="HeartNone"/>
+        <entry id="15" object="true" symbol="AppMenu"/>
+        <entry id="50" method="true" symbol="postHeartRate"/>
+        <entry field="true" id="34" symbol="_linkView"/>
+        <entry id="56" method="true" symbol="showNextScreen"/>
+        <entry id="55" method="true" symbol="showMenu"/>
+        <entry id="20" module="true" symbol="L10n"/>
+        <entry id="8388637" module="true" symbol="Communications"/>
+        <entry id="8388877" method="true" symbol="createSession"/>
+        <entry id="74" method="true" symbol="logRequest"/>
+        <entry id="42" method="true" symbol="getQrBitmap"/>
+        <entry id="25" object="true" symbol="ShareHeartApp"/>
+        <entry id="8" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="24" module="true" symbol="SessionStore"/>
+        <entry id="52" method="true" symbol="resetSession"/>
+        <entry field="true" id="114" symbol="MenuReset"/>
+        <entry field="true" id="35" symbol="_op"/>
+        <entry id="22" module="true" symbol="QrLayout"/>
+        <entry id="8389177" method="true" symbol="clear"/>
+        <entry id="66" method="true" symbol="trimTrailingSlash"/>
+        <entry id="8389844" symbol="responseType"/>
+        <entry id="76" method="true" symbol="bitmapTop"/>
+        <entry id="53" method="true" symbol="showHeartScreen"/>
+        <entry id="79" method="true" symbol="maxQrPixelSize"/>
+        <entry id="75" method="true" symbol="logResponse"/>
+        <entry id="8388786" method="true" symbol="method"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="44" method="true" symbol="handlePostHeart"/>
+        <entry field="true" id="32" symbol="_heartView"/>
+        <entry id="12" module="true" symbol="globals/UiState"/>
+        <entry id="8389619" method="true" symbol="onSelect"/>
+        <entry field="true" id="105" symbol="ErrorNoSession"/>
+        <entry field="true" id="102" symbol="ErrorHttp"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="2" module="true" symbol="globals/ApiClient"/>
+        <entry id="18" object="true" symbol="HeartView"/>
+        <entry id="46" method="true" symbol="onHeartTimer"/>
+        <entry field="true" id="8388718" method="true" symbol="error"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="90" symbol="loading"/>
+        <entry field="true" id="101" symbol="ErrorComm"/>
+        <entry field="true" id="99" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="13" module="true" symbol="ApiClient"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="48" method="true" symbol="onQrImageResponse"/>
+        <entry id="8388643" module="true" symbol="Sensor"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="14" object="true" symbol="AppController"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry field="true" id="104" symbol="ErrorNoHeartRate"/>
+        <entry field="true" id="109" symbol="HeartTitle"/>
+        <entry id="11" module="true" symbol="globals/TextLayout"/>
+        <entry id="10" module="true" symbol="globals/SessionStore"/>
+        <entry id="89" method="true" symbol="setLastBpm"/>
+        <entry id="57" method="true" symbol="showPreviousScreen"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry field="true" id="37" symbol="_qrSize"/>
+        <entry field="true" id="31" symbol="_heartTimer"/>
+        <entry field="true" id="117" symbol="QrLoading"/>
+        <entry id="49" method="true" symbol="onQrShow"/>
+        <entry id="68" method="true" symbol="deviceLabel"/>
+        <entry id="61" method="true" symbol="baseUrl"/>
+        <entry id="60" method="true" symbol="stopHeartTimer"/>
+        <entry id="67" method="true" symbol="viewerUrl"/>
+        <entry id="87" method="true" symbol="safeDel"/>
+        <entry field="true" id="30" symbol="_controller"/>
+        <entry id="8388646" module="true" object="true" symbol="Timer"/>
+        <entry id="80" method="true" symbol="maxLinesForHeight"/>
+        <entry field="true" id="110" symbol="HeartWaiting"/>
+        <entry id="8389694" symbol="dithering"/>
+        <entry id="6" module="true" symbol="globals/QrLayout"/>
+        <entry id="88" method="true" symbol="saveSession"/>
+        <entry id="16" object="true" symbol="AppMenuDelegate"/>
+        <entry field="true" id="119" symbol="StatusSharing"/>
+        <entry id="77" method="true" symbol="hintY"/>
+        <entry field="true" id="33" symbol="_lastHttpUrl"/>
+        <entry field="true" id="106" symbol="HeartBpmUnit"/>
+        <entry field="true" id="112" symbol="LinkTitle"/>
+        <entry id="41" method="true" symbol="ensureSession"/>
+        <entry id="73" method="true" symbol="formatHeadersForLog"/>
+        <entry id="4" module="true" symbol="globals/HttpDebug"/>
+        <entry id="81" method="true" symbol="wrapByLength"/>
+        <entry id="8389078" method="true" symbol="onNextPage"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry field="true" id="8389642" symbol="title"/>
+        <entry id="28" method="true" symbol="t"/>
+        <entry id="8389101" method="true" symbol="onSwipe"/>
+        <entry id="8389660" symbol="palette"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435619" name="res" stackId="1" startPc="268435585"/>
+        <entry arg="true" endPc="268435619" name="args" stackId="2" startPc="268435585"/>
+        <entry arg="true" endPc="268435644" name="res" stackId="1" startPc="268435620"/>
+        <entry arg="true" endPc="268435694" name="controller" stackId="1" startPc="268435671"/>
+        <entry arg="true" endPc="268436157" name="dc" stackId="1" startPc="268435695"/>
+        <entry endPc="268436156" name="w" stackId="2" startPc="268435698"/>
+        <entry endPc="268436156" name="h" stackId="3" startPc="268435698"/>
+        <entry endPc="268436156" name="cx" stackId="4" startPc="268435698"/>
+        <entry endPc="268436156" name="bitmap" stackId="5" startPc="268435698"/>
+        <entry endPc="268436034" name="bw" stackId="6" startPc="268435897"/>
+        <entry endPc="268436034" name="bh" stackId="7" startPc="268435897"/>
+        <entry endPc="268436034" name="top" stackId="8" startPc="268435897"/>
+        <entry endPc="268436156" name="label" stackId="9" startPc="268435698"/>
+        <entry endPc="268436519" name="sessionId" stackId="1" startPc="268436319"/>
+        <entry endPc="268436519" name="secret" stackId="2" startPc="268436319"/>
+        <entry endPc="268436519" name="bpm" stackId="3" startPc="268436319"/>
+        <entry arg="true" endPc="268436581" name="swipeEvent" stackId="1" startPc="268436529"/>
+        <entry endPc="268436581" name="dir" stackId="2" startPc="268436532"/>
+        <entry arg="true" endPc="268437167" name="code" stackId="1" startPc="268436928"/>
+        <entry arg="true" endPc="268437167" name="data" stackId="2" startPc="268436928"/>
+        <entry endPc="268437166" name="bpm" stackId="3" startPc="268436931"/>
+        <entry arg="true" endPc="268437650" name="code" stackId="1" startPc="268437214"/>
+        <entry arg="true" endPc="268437650" name="data" stackId="2" startPc="268437214"/>
+        <entry endPc="268437649" name="dict" stackId="3" startPc="268437217"/>
+        <entry endPc="268437649" name="id" stackId="4" startPc="268437217"/>
+        <entry endPc="268437649" name="secret" stackId="5" startPc="268437217"/>
+        <entry arg="true" endPc="268437741" name="code" stackId="1" startPc="268437651"/>
+        <entry arg="true" endPc="268437741" name="data" stackId="2" startPc="268437651"/>
+        <entry endPc="268437740" name="op" stackId="3" startPc="268437654"/>
+        <entry arg="true" endPc="268438041" name="code" stackId="1" startPc="268437861"/>
+        <entry arg="true" endPc="268438041" name="data" stackId="2" startPc="268437861"/>
+        <entry endPc="268438261" name="info" stackId="1" startPc="268438196"/>
+        <entry endPc="268438258" name="hr" stackId="2" startPc="268438225"/>
+        <entry endPc="268438278" name="ex" stackId="3" startPc="268438268"/>
+        <entry endPc="268438464" name="sessionId" stackId="1" startPc="268438289"/>
+        <entry endPc="268438464" name="size" stackId="2" startPc="268438289"/>
+        <entry endPc="268438464" name="url" stackId="3" startPc="268438289"/>
+        <entry endPc="268438464" name="options" stackId="4" startPc="268438289"/>
+        <entry endPc="268438740" name="v" stackId="1" startPc="268438657"/>
+        <entry endPc="268438737" name="s" stackId="2" startPc="268438697"/>
+        <entry endPc="268438757" name="ex" stackId="3" startPc="268438747"/>
+        <entry arg="true" endPc="268438808" name="sessionId" stackId="1" startPc="268438769"/>
+        <entry arg="true" endPc="268438808" name="size" stackId="2" startPc="268438769"/>
+        <entry arg="true" endPc="268439099" name="s" stackId="1" startPc="268438809"/>
+        <entry endPc="268439099" name="start" stackId="2" startPc="268438820"/>
+        <entry endPc="268439099" name="end" stackId="3" startPc="268438820"/>
+        <entry endPc="268438942" name="ch" stackId="4" startPc="268438840"/>
+        <entry endPc="268439056" name="ch2" stackId="5" startPc="268438954"/>
+        <entry arg="true" endPc="268439199" name="url" stackId="1" startPc="268439100"/>
+        <entry endPc="268439199" name="s" stackId="2" startPc="268439111"/>
+        <entry arg="true" endPc="268439254" name="sessionId" stackId="1" startPc="268439223"/>
+        <entry arg="true" endPc="268439280" name="sessionId" stackId="1" startPc="268439255"/>
+        <entry arg="true" endPc="268439375" name="sessionId" stackId="1" startPc="268439281"/>
+        <entry arg="true" endPc="268439375" name="secret" stackId="2" startPc="268439281"/>
+        <entry arg="true" endPc="268439375" name="bpm" stackId="3" startPc="268439281"/>
+        <entry arg="true" endPc="268439375" name="callback" stackId="4" startPc="268439281"/>
+        <entry endPc="268439374" name="body" stackId="5" startPc="268439292"/>
+        <entry endPc="268439374" name="opts" stackId="6" startPc="268439292"/>
+        <entry endPc="268439374" name="url" stackId="7" startPc="268439292"/>
+        <entry arg="true" endPc="268439467" name="secret" stackId="1" startPc="268439376"/>
+        <entry endPc="268439467" name="headers" stackId="2" startPc="268439387"/>
+        <entry endPc="268439521" name="info" stackId="1" startPc="268439479"/>
+        <entry endPc="268439538" name="ex" stackId="2" startPc="268439528"/>
+        <entry arg="true" endPc="268439643" name="callback" stackId="1" startPc="268439550"/>
+        <entry endPc="268439642" name="body" stackId="2" startPc="268439561"/>
+        <entry endPc="268439642" name="opts" stackId="3" startPc="268439561"/>
+        <entry endPc="268439642" name="url" stackId="4" startPc="268439561"/>
+        <entry arg="true" endPc="268439681" name="controller" stackId="1" startPc="268439658"/>
+        <entry arg="true" endPc="268440173" name="dc" stackId="1" startPc="268439682"/>
+        <entry endPc="268440172" name="w" stackId="2" startPc="268439685"/>
+        <entry endPc="268440172" name="h" stackId="3" startPc="268439685"/>
+        <entry endPc="268440172" name="cx" stackId="4" startPc="268439685"/>
+        <entry endPc="268440172" name="bpm" stackId="5" startPc="268439685"/>
+        <entry endPc="268440172" name="status" stackId="6" startPc="268439685"/>
+        <entry arg="true" endPc="268440402" name="url" stackId="1" startPc="268440174"/>
+        <entry arg="true" endPc="268440402" name="body" stackId="2" startPc="268440174"/>
+        <entry arg="true" endPc="268440402" name="opts" stackId="3" startPc="268440174"/>
+        <entry endPc="268440342" name="m" stackId="4" startPc="268440220"/>
+        <entry endPc="268440342" name="hdrs" stackId="5" startPc="268440220"/>
+        <entry arg="true" endPc="268440552" name="code" stackId="1" startPc="268440403"/>
+        <entry arg="true" endPc="268440772" name="d" stackId="1" startPc="268440553"/>
+        <entry endPc="268440772" name="keys" stackId="2" startPc="268440564"/>
+        <entry endPc="268440772" name="out" stackId="3" startPc="268440564"/>
+        <entry endPc="268440759" name="i" stackId="4" startPc="268440596"/>
+        <entry endPc="268440749" name="k" stackId="5" startPc="268440596"/>
+        <entry endPc="268440749" name="keyStr" stackId="6" startPc="268440596"/>
+        <entry endPc="268440749" name="v" stackId="7" startPc="268440596"/>
+        <entry arg="true" endPc="268440965" name="url" stackId="1" startPc="268440773"/>
+        <entry arg="true" endPc="268440965" name="code" stackId="2" startPc="268440773"/>
+        <entry arg="true" endPc="268440965" name="data" stackId="3" startPc="268440773"/>
+        <entry endPc="268440964" name="s" stackId="4" startPc="268440784"/>
+        <entry endPc="268440964" name="maxLen" stackId="5" startPc="268440784"/>
+        <entry arg="true" endPc="268441168" name="h" stackId="1" startPc="268440966"/>
+        <entry endPc="268441168" name="keys" stackId="2" startPc="268440977"/>
+        <entry endPc="268441168" name="out" stackId="3" startPc="268440977"/>
+        <entry endPc="268441155" name="i" stackId="4" startPc="268441009"/>
+        <entry endPc="268441145" name="k" stackId="5" startPc="268441009"/>
+        <entry endPc="268441145" name="keyStr" stackId="6" startPc="268441009"/>
+        <entry endPc="268441145" name="v" stackId="7" startPc="268441097"/>
+        <entry endPc="268441330" name="settings" stackId="1" startPc="268441180"/>
+        <entry endPc="268441330" name="w" stackId="2" startPc="268441180"/>
+        <entry endPc="268441330" name="h" stackId="3" startPc="268441180"/>
+        <entry endPc="268441330" name="minSide" stackId="4" startPc="268441180"/>
+        <entry endPc="268441330" name="vertAvail" stackId="5" startPc="268441180"/>
+        <entry endPc="268441330" name="horizMax" stackId="6" startPc="268441180"/>
+        <entry endPc="268441330" name="size" stackId="7" startPc="268441180"/>
+        <entry endPc="268441347" name="ex" stackId="8" startPc="268441337"/>
+        <entry arg="true" endPc="268441404" name="settings" stackId="1" startPc="268441357"/>
+        <entry endPc="268441397" name="ex" stackId="2" startPc="268441387"/>
+        <entry arg="true" endPc="268441420" name="h" stackId="1" startPc="268441405"/>
+        <entry arg="true" endPc="268441467" name="h" stackId="1" startPc="268441421"/>
+        <entry arg="true" endPc="268441467" name="bitmapH" stackId="2" startPc="268441421"/>
+        <entry endPc="268441467" name="areaH" stackId="3" startPc="268441432"/>
+        <entry arg="true" endPc="268441708" name="text" stackId="1" startPc="268441468"/>
+        <entry arg="true" endPc="268441708" name="maxLen" stackId="2" startPc="268441468"/>
+        <entry endPc="268441708" name="lines" stackId="3" startPc="268441479"/>
+        <entry endPc="268441708" name="i" stackId="4" startPc="268441479"/>
+        <entry endPc="268441702" name="end" stackId="5" startPc="268441524"/>
+        <entry endPc="268441675" name="splitAt" stackId="6" startPc="268441556"/>
+        <entry endPc="268441675" name="j" stackId="7" startPc="268441556"/>
+        <entry endPc="268441657" name="ch" stackId="8" startPc="268441572"/>
+        <entry arg="true" endPc="268441752" name="lineHeight" stackId="1" startPc="268441709"/>
+        <entry arg="true" endPc="268441752" name="topY" stackId="2" startPc="268441709"/>
+        <entry arg="true" endPc="268441752" name="bottomY" stackId="3" startPc="268441709"/>
+        <entry endPc="268441752" name="available" stackId="4" startPc="268441720"/>
+        <entry arg="true" endPc="268441801" name="key" stackId="1" startPc="268441753"/>
+        <entry endPc="268441795" name="e" stackId="2" startPc="268441785"/>
+        <entry arg="true" endPc="268441852" name="id" stackId="1" startPc="268441802"/>
+        <entry arg="true" endPc="268441852" name="secret" stackId="2" startPc="268441802"/>
+        <entry endPc="268442001" name="id" stackId="1" startPc="268441941"/>
+        <entry endPc="268442001" name="secret" stackId="2" startPc="268441941"/>
+        <entry arg="true" endPc="268442032" name="bpm" stackId="1" startPc="268442002"/>
+        <entry arg="true" endPc="268442113" name="key" stackId="1" startPc="268442033"/>
+        <entry endPc="268442089" name="v" stackId="2" startPc="268442044"/>
+        <entry endPc="268442106" name="ex" stackId="3" startPc="268442096"/>
+        <entry endPc="268442197" name="v" stackId="1" startPc="268442149"/>
+        <entry endPc="268442214" name="ex" stackId="2" startPc="268442204"/>
+        <entry endPc="268442267" name="controller" stackId="1" startPc="268442228"/>
+        <entry arg="true" endPc="268442323" name="controller" stackId="1" startPc="268442300"/>
+        <entry arg="true" endPc="268442862" name="dc" stackId="1" startPc="268442324"/>
+        <entry endPc="268442861" name="w" stackId="2" startPc="268442327"/>
+        <entry endPc="268442861" name="h" stackId="3" startPc="268442327"/>
+        <entry endPc="268442861" name="cx" stackId="4" startPc="268442327"/>
+        <entry endPc="268442861" name="marginX" stackId="5" startPc="268442327"/>
+        <entry endPc="268442861" name="topY" stackId="6" startPc="268442327"/>
+        <entry endPc="268442861" name="bottomY" stackId="7" startPc="268442327"/>
+        <entry endPc="268442861" name="sessionId" stackId="8" startPc="268442327"/>
+        <entry endPc="268442861" name="url" stackId="9" startPc="268442327"/>
+        <entry endPc="268442861" name="maxChars" stackId="10" startPc="268442327"/>
+        <entry endPc="268442861" name="lines" stackId="11" startPc="268442327"/>
+        <entry endPc="268442861" name="lineHeight" stackId="12" startPc="268442327"/>
+        <entry endPc="268442861" name="maxLines" stackId="13" startPc="268442327"/>
+        <entry endPc="268442861" name="startY" stackId="14" startPc="268442327"/>
+        <entry endPc="268442861" name="shown" stackId="15" startPc="268442327"/>
+        <entry endPc="268442806" name="i" stackId="16" startPc="268442758"/>
+        <entry endPc="268442796" name="y" stackId="17" startPc="268442758"/>
+        <entry arg="true" endPc="268442886" name="controller" stackId="1" startPc="268442863"/>
+        <entry arg="true" endPc="268442940" name="item" stackId="1" startPc="268442887"/>
+        <entry endPc="268442939" name="id" stackId="2" startPc="268442890"/>
+        <entry arg="true" endPc="268442976" name="on" stackId="1" startPc="268442941"/>
+        <entry arg="true" endPc="268443004" name="msg" stackId="1" startPc="268442977"/>
+        <entry arg="true" endPc="268443040" name="on" stackId="1" startPc="268443005"/>
+        <entry arg="true" endPc="268443068" name="msg" stackId="1" startPc="268443041"/>
+        <entry arg="true" endPc="268443088" name="msg" stackId="1" startPc="268443069"/>
+    </localVars>
+    <deviceInfo deviceVersion="5c7ae9cf907f88c116a91dc4ffd75be9b5b7d2e9" partNumber="006-B3905-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LoadingLabel"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="typecheck" class="HttpDebug" module="globals" symbol="logResponse"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="StatusSharing"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ErrorNoHeartRate"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ErrorComm"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="HeartLastSent"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ErrorInvalidResponse"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="MenuReset"/>
+        <annotationEntry annotation="typecheck" class="AppController" module="globals" symbol="handleCreateSession"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="HeartTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LinkMissing"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="HeartWaiting"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ErrorNoSession"/>
+        <annotationEntry annotation="typecheck" class="AppController" module="globals" symbol="onHttpResponse"/>
+        <annotationEntry annotation="typecheck" class="L10n" module="globals" symbol="t"/>
+        <annotationEntry annotation="typecheck" class="L10n" module="globals" symbol="tf"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LinkTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="SettingBaseUrlTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ErrorHttp"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="HeartNone"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="QrLoading"/>
+        <annotationEntry annotation="typecheck" class="AppController" module="globals" symbol="handlePostHeart"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="HeartBpmUnit"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="QrHint"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="MenuTitle"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="121" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/L10n" offset="305" parentId="globals" symbolId="L10n" type="module"/>
+        <dataEntry label="globals/QrView" offset="349" parentId="globals" symbolId="QrView" type="class"/>
+        <dataEntry label="globals/AppMenu" offset="420" parentId="globals" symbolId="AppMenu" type="class"/>
+        <dataEntry label="globals/AppController" offset="464" parentId="globals" symbolId="AppController" type="class"/>
+        <dataEntry label="globals/Config" offset="832" parentId="globals" symbolId="Config" type="module"/>
+        <dataEntry label="globals/Rez" offset="921" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/ApiClient" offset="965" parentId="globals" symbolId="ApiClient" type="module"/>
+        <dataEntry label="globals/HeartView" offset="1027" parentId="globals" symbolId="HeartView" type="class"/>
+        <dataEntry label="globals/HttpDebug" offset="1098" parentId="globals" symbolId="HttpDebug" type="module"/>
+        <dataEntry label="globals/QrLayout" offset="1169" parentId="globals" symbolId="QrLayout" type="module"/>
+        <dataEntry label="globals/TextLayout" offset="1231" parentId="globals" symbolId="TextLayout" type="module"/>
+        <dataEntry label="globals/SessionStore" offset="1275" parentId="globals" symbolId="SessionStore" type="module"/>
+        <dataEntry label="globals/ShareHeartApp" offset="1382" parentId="globals" symbolId="ShareHeartApp" type="class"/>
+        <dataEntry label="globals/LinkView" offset="1453" parentId="globals" symbolId="LinkView" type="class"/>
+        <dataEntry label="globals/AppMenuDelegate" offset="1524" parentId="globals" symbolId="AppMenuDelegate" type="class"/>
+        <dataEntry label="globals/UiState" offset="1586" parentId="globals" symbolId="UiState" type="module"/>
+        <dataEntry label="globals/Rez/Drawables" offset="1702" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="1737" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="L10n">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="QrView" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435483" name="&lt;init&gt;" parent="AppMenu" startPc="268435472">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435504" name="getApp" startPc="268435484">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435516" name="&lt;init&gt;" parent="AppController" startPc="268435505">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Config">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435536" name="&lt;init&gt;" parent="Rez" startPc="268435517">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="ApiClient">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435548" name="&lt;init&gt;" parent="HeartView" startPc="268435537">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="HttpDebug">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="QrLayout">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="TextLayout">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="SessionStore">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435560" name="&lt;init&gt;" parent="ShareHeartApp" startPc="268435549">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435572" name="&lt;init&gt;" parent="LinkView" startPc="268435561">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435584" name="&lt;init&gt;" parent="AppMenuDelegate" startPc="268435573">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="UiState">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435619" name="tf" parent="L10n" startPc="268435585">
+            <param id="res"/>
+            <param id="args"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435644" name="t" parent="L10n" startPc="268435620">
+            <param id="res"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435670" name="onShow" parent="QrView" startPc="268435645">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435694" name="initialize" parent="QrView" startPc="268435671">
+            <param id="controller"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436157" name="onUpdate" parent="QrView" startPc="268435695">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436285" name="initialize" parent="AppMenu" startPc="268436158">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436296" name="onMenu" parent="AppController" startPc="268436286">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436307" name="onPreviousPage" parent="AppController" startPc="268436297">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436315" name="getQrBitmap" parent="AppController" startPc="268436308">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436520" name="postHeartRate" parent="AppController" startPc="268436316">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436528" name="getInitialView" parent="AppController" startPc="268436521">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436581" name="onSwipe" parent="AppController" startPc="268436529">
+            <param id="swipeEvent"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436616" name="onQrShow" parent="AppController" startPc="268436582">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436627" name="onSelect" parent="AppController" startPc="268436617">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436637" name="onHeartTimer" parent="AppController" startPc="268436628">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436678" name="ensureSession" parent="AppController" startPc="268436638">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436748" name="startHeartTimer" parent="AppController" startPc="268436679">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436783" name="stopHeartTimer" parent="AppController" startPc="268436749">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436794" name="onNextPage" parent="AppController" startPc="268436784">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436845" name="showNextScreen" parent="AppController" startPc="268436795">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436927" name="resetSession" parent="AppController" startPc="268436846">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437167" name="handlePostHeart" parent="AppController" startPc="268436928">
+            <param id="code"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437213" name="showQrScreen" parent="AppController" startPc="268437168">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437650" name="handleCreateSession" parent="AppController" startPc="268437214">
+            <param id="code"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437741" name="onHttpResponse" parent="AppController" startPc="268437651">
+            <param id="code"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437789" name="showLinkScreen" parent="AppController" startPc="268437742">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437860" name="showMenu" parent="AppController" startPc="268437790">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438041" name="onQrImageResponse" parent="AppController" startPc="268437861">
+            <param id="code"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438192" name="initialize" parent="AppController" startPc="268438042">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438285" name="readHeartRate" parent="AppController" startPc="268438193">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438465" name="loadQrImage" parent="AppController" startPc="268438286">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438517" name="showPreviousScreen" parent="AppController" startPc="268438466">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438565" name="showHeartScreen" parent="AppController" startPc="268438518">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438645" name="beginCreateSession" parent="AppController" startPc="268438566">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438768" name="baseUrl" parent="Config" startPc="268438646">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438808" name="qrUrl" parent="Config" startPc="268438769">
+            <param id="sessionId"/>
+            <param id="size"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439099" name="trim" parent="Config" startPc="268438809">
+            <param id="s"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439199" name="trimTrailingSlash" parent="Config" startPc="268439100">
+            <param id="url"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439222" name="sessionCreateUrl" parent="Config" startPc="268439200">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439254" name="heartUrl" parent="Config" startPc="268439223">
+            <param id="sessionId"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439280" name="viewerUrl" parent="Config" startPc="268439255">
+            <param id="sessionId"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439375" name="postHeart" parent="ApiClient" startPc="268439281">
+            <param id="sessionId"/>
+            <param id="secret"/>
+            <param id="bpm"/>
+            <param id="callback"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439467" name="jsonPostOpts" parent="ApiClient" startPc="268439376">
+            <param id="secret"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439549" name="deviceLabel" parent="ApiClient" startPc="268439468">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439643" name="createSession" parent="ApiClient" startPc="268439550">
+            <param id="callback"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439657" name="onShow" parent="HeartView" startPc="268439644">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439681" name="initialize" parent="HeartView" startPc="268439658">
+            <param id="controller"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440173" name="onUpdate" parent="HeartView" startPc="268439682">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440402" name="logRequest" parent="HttpDebug" startPc="268440174">
+            <param id="url"/>
+            <param id="body"/>
+            <param id="opts"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440552" name="communicationsErrorLabel" parent="HttpDebug" startPc="268440403">
+            <param id="code"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440772" name="formatDictForLog" parent="HttpDebug" startPc="268440553">
+            <param id="d"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440965" name="logResponse" parent="HttpDebug" startPc="268440773">
+            <param id="url"/>
+            <param id="code"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441168" name="formatHeadersForLog" parent="HttpDebug" startPc="268440966">
+            <param id="h"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441356" name="maxQrPixelSize" parent="QrLayout" startPc="268441169">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441404" name="isRoundScreen" parent="QrLayout" startPc="268441357">
+            <param id="settings"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441420" name="hintY" parent="QrLayout" startPc="268441405">
+            <param id="h"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441467" name="bitmapTop" parent="QrLayout" startPc="268441421">
+            <param id="h"/>
+            <param id="bitmapH"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441708" name="wrapByLength" parent="TextLayout" startPc="268441468">
+            <param id="text"/>
+            <param id="maxLen"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441752" name="maxLinesForHeight" parent="TextLayout" startPc="268441709">
+            <param id="lineHeight"/>
+            <param id="topY"/>
+            <param id="bottomY"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441801" name="safeDel" parent="SessionStore" startPc="268441753">
+            <param id="key"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441852" name="saveSession" parent="SessionStore" startPc="268441802">
+            <param id="id"/>
+            <param id="secret"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441876" name="getSecret" parent="SessionStore" startPc="268441853">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441929" name="clear" parent="SessionStore" startPc="268441877">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442001" name="hasSession" parent="SessionStore" startPc="268441930">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442032" name="setLastBpm" parent="SessionStore" startPc="268442002">
+            <param id="bpm"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442113" name="readString" parent="SessionStore" startPc="268442033">
+            <param id="key"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442137" name="getSessionId" parent="SessionStore" startPc="268442114">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442221" name="getLastBpm" parent="SessionStore" startPc="268442138">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442224" name="onStart" parent="ShareHeartApp" startPc="268442222">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442267" name="getInitialView" parent="ShareHeartApp" startPc="268442225">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442282" name="initialize" parent="ShareHeartApp" startPc="268442268">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442285" name="onStop" parent="ShareHeartApp" startPc="268442283">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442299" name="onShow" parent="LinkView" startPc="268442286">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442323" name="initialize" parent="LinkView" startPc="268442300">
+            <param id="controller"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442862" name="onUpdate" parent="LinkView" startPc="268442324">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442886" name="initialize" parent="AppMenuDelegate" startPc="268442863">
+            <param id="controller"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442940" name="onSelect" parent="AppMenuDelegate" startPc="268442887">
+            <param id="item"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442976" name="setLoading" parent="UiState" startPc="268442941">
+            <param id="on"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268443004" name="setError" parent="UiState" startPc="268442977">
+            <param id="msg"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268443040" name="setQrLoading" parent="UiState" startPc="268443005">
+            <param id="on"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268443068" name="setQrError" parent="UiState" startPc="268443041">
+            <param id="msg"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268443088" name="setStatus" parent="UiState" startPc="268443069">
+            <param id="msg"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

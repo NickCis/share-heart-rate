@@ -1,0 +1,316 @@
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Communications,1,14,28]; ]
+import Toybox.Communications;
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+import Toybox.Lang;
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [System,3,14,20]; ]
+import Toybox.System;
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc"; @line = 5; @symbol_moduledef = [ApiClient,5,7,16]; ]
+module ApiClient {
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc"; @line = 6; @position = 8; @symbol_constdef = [OP_CREATE_SESSION,6,8,25]; ]
+    const OP_CREATE_SESSION = 1;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc"; @line = 7; @position = 8; @symbol_constdef = [OP_POST_HEART,7,8,21]; ]
+    const OP_POST_HEART = 2;
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc"; @line = 9; @symbol_functiondef = [deviceLabel,9,11,22]; @symbol_return<0> = [String,9,28,34]; ]
+    function deviceLabel() as String {
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_9_35_18_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" 10 4 ]
+        try @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_4_16_4_beginTry @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_4_16_4_endTry @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_4_16_4_catch @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_4_16_4_finally;
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_4_16_4_beginTry:
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_8_15_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" 11 6 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_8_15_4_start" "_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_8_15_4_stop" ]
+        %info.1 = local;
+        symbol [ info %info.1 11 10 14 ];
+        symbol [ System %tmp.1 11 17 23 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ getDeviceSettings %tmp.2 11 24 41 ];
+        %tmp.2 = getv function %tmp.1 :getDeviceSettings;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %info.1 %tmp.3;
+        symbol [ info %info.1 11 10 14 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" 12 6 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_12_6_14_6_if_stmt:
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_12_10_12_45_begin:
+        %tmp.4 = lgetv %info.1;
+        symbol [ info %tmp.4 12 10 14 ];
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_12_6_14_6_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_12_26_12_45_true:
+        %tmp.7 = lgetv %info.1;
+        symbol [ info %tmp.7 12 26 30 ];
+        %tmp.8 = as %tmp.7 { (!Null) };
+        symbol [ partNumber %tmp.9 12 31 41 ];
+        %tmp.9 = getv %tmp.8 :partNumber;
+        %tmp.10 = null;
+        %tmp.11 = ne %tmp.9 %tmp.10;
+        push %tmp.11;
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_12_26_12_45_end:
+        %tmp.12 = phi [%tmp.6 @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_12_10_12_45_begin] [%tmp.11 @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_12_26_12_45_true] [%tmp.12 @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_12_26_12_45_end];
+        bf %tmp.12 @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_12_6_14_6_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_12_6_14_6_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_12_51_14_6_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" 13 8 ]
+        %tmp.13 = lgetv %info.1;
+        symbol [ info %tmp.13 13 15 19 ];
+        %tmp.14 = as %tmp.13 { (!Null) };
+        symbol [ partNumber %tmp.15 13 20 30 ];
+        %tmp.15 = getv %tmp.14 :partNumber;
+        jsr @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_4_16_4_finally;
+        ret %tmp.15;
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_12_51_14_6_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_12_6_14_6_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_12_6_14_6_if_end:
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_8_15_4_stop:
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_4_16_4_endTry:
+        jsr @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_4_16_4_finally;
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_4_16_4_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_4_16_4_catch:
+        %tmp.16 = exception;
+        push %tmp.16;
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" 15 6 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_4_16_4_catch" "_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_15_6_16_4_end" ]
+        %ex.2 = local;
+        symbol [ ex %ex.2 15 13 15 ];
+        %tmp.17 = dup %tmp.16;
+        lputv %ex.2 %tmp.17;
+        symbol [ ex %ex.2 15 13 15 ];
+        jsr @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_4_16_4_finally;
+        pop;
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_4_16_4_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_15_6_16_4_end:
+        try @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_4_16_4_catch @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_15_6_16_4_end @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_15_6_16_4_end @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_4_16_4_finally;
+        jsr @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_4_16_4_finally;
+        throw %tmp.16;
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_4_16_4_finally:
+        jsrret;
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_10_4_16_4_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" 17 4 ]
+        %tmp.18 = "unknown";
+        ret %tmp.18;
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_9_35_18_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc"; @line = 20; @symbol_functiondef = [jsonPostOpts,20,11,23]; @symbol_param<0> = [secret,20,24,30]; @symbol_param<0>_type<0> = [String,20,34,40]; @symbol_return<0> = [Lang,20,53,57]; @symbol_return<1> = [Dictionary,20,58,68]; ]
+    function jsonPostOpts(secret as String or Null) as Lang.Dictionary {
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_20_69_30_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" 21 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_20_69_30_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_20_69_30_2_stop" ]
+        %headers.1 = local;
+        symbol [ headers %headers.1 21 8 15 ];
+        %tmp.1 = newd 1;
+        %tmp.2 = "Content-Type";
+        symbol [ Communications %tmp.3 21 38 52 ];
+        %tmp.3 = getm $.Toybox.Communications;
+        symbol [ REQUEST_CONTENT_TYPE_JSON %tmp.4 21 53 78 ];
+        %tmp.4 = getv %tmp.3 :REQUEST_CONTENT_TYPE_JSON;
+        %tmp.5 = dup %tmp.1;
+        %tmp.6 = aputv %tmp.5 %tmp.2 %tmp.4;
+        lputv %headers.1 %tmp.6;
+        symbol [ headers %headers.1 21 8 15 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" 22 4 ]
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_22_4_24_4_if_stmt:
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_22_8_22_44_begin:
+        %tmp.7 = lgetv %secret;
+        symbol [ secret %tmp.7 22 8 14 ];
+        %tmp.8 = null;
+        %tmp.9 = ne %tmp.7 %tmp.8;
+        bf %tmp.9 @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_22_4_24_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_22_26_22_44_true:
+        %tmp.10 = lgetv %secret;
+        symbol [ secret %tmp.10 22 26 32 ];
+        %tmp.11 = as %tmp.10 { (!Null) };
+        symbol [ length %tmp.12 22 33 39 ];
+        %tmp.12 = getv function %tmp.11 :length;
+        %tmp.13 = invoke %tmp.11 %tmp.12();
+        %tmp.14 = 0;
+        %tmp.15 = gt %tmp.13 %tmp.14;
+        push %tmp.15;
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_22_26_22_44_end:
+        %tmp.16 = phi [%tmp.9 @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_22_8_22_44_begin] [%tmp.15 @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_22_26_22_44_true] [%tmp.16 @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_22_26_22_44_end];
+        bf %tmp.16 @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_22_4_24_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_22_4_24_4_if_true:
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_22_47_24_4_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" 23 6 ]
+        %tmp.17 = lgetv %headers.1;
+        symbol [ headers %tmp.17 23 6 13 ];
+        symbol [ put %tmp.18 23 14 17 ];
+        %tmp.18 = getv function %tmp.17 :put;
+        %tmp.19 = "Authorization";
+        %tmp.20 = "Bearer ";
+        %tmp.21 = lgetv %secret;
+        symbol [ secret %tmp.21 23 47 53 ];
+        %tmp.22 = as %tmp.21 { (!Null) };
+        %tmp.23 = add %tmp.20 %tmp.22;
+        invoke %tmp.17 %tmp.18(%tmp.19, %tmp.23);
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_22_47_24_4_stop:
+        goto @_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_22_4_24_4_if_end;
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_22_4_24_4_if_end:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" 25 4 ]
+        %tmp.24 = newd 3;
+        %tmp.26 = const :method;
+        symbol [ method %tmp.26 26 7 13 const ];
+        symbol [ Communications %tmp.27 26 17 31 ];
+        %tmp.27 = getm $.Toybox.Communications;
+        symbol [ HTTP_REQUEST_METHOD_POST %tmp.28 26 32 56 ];
+        %tmp.28 = getv %tmp.27 :HTTP_REQUEST_METHOD_POST;
+        %tmp.29 = dup %tmp.24;
+        %tmp.30 = aputv %tmp.29 %tmp.26 %tmp.28;
+        %tmp.32 = const :headers;
+        symbol [ headers %tmp.32 27 7 14 const ];
+        %tmp.33 = lgetv %headers.1;
+        symbol [ headers %tmp.33 27 18 25 ];
+        %tmp.34 = dup %tmp.30;
+        %tmp.35 = aputv %tmp.34 %tmp.32 %tmp.33;
+        %tmp.37 = const :responseType;
+        symbol [ responseType %tmp.37 28 7 19 const ];
+        symbol [ Communications %tmp.38 28 23 37 ];
+        %tmp.38 = getm $.Toybox.Communications;
+        symbol [ HTTP_RESPONSE_CONTENT_TYPE_JSON %tmp.39 28 38 69 ];
+        %tmp.39 = getv %tmp.38 :HTTP_RESPONSE_CONTENT_TYPE_JSON;
+        %tmp.40 = dup %tmp.35;
+        %tmp.41 = aputv %tmp.40 %tmp.37 %tmp.39;
+        ret %tmp.41;
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_20_69_30_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc"; @line = 32; @symbol_functiondef = [createSession,32,11,24]; @symbol_param<0> = [callback,32,25,33]; @symbol_param<0>_type<0> = [Lang,32,37,41]; @symbol_param<0>_type<1> = [Method,32,42,48]; ]
+    function createSession(callback as Lang.Method) as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_32_58_38_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" 33 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_32_58_38_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_32_58_38_2_stop" ]
+        %body.1 = local;
+        symbol [ body %body.1 33 8 12 ];
+        %tmp.1 = newd 1;
+        %tmp.2 = "device";
+        %tmp.3 = self;
+        symbol [ deviceLabel %tmp.4 33 29 40 ];
+        %tmp.4 = getv function %tmp.3 :deviceLabel;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 %tmp.2 %tmp.5;
+        lputv %body.1 %tmp.7;
+        symbol [ body %body.1 33 8 12 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" 34 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_32_58_38_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_32_58_38_2_stop" ]
+        %opts.2 = local;
+        symbol [ opts %opts.2 34 8 12 ];
+        %tmp.8 = self;
+        symbol [ jsonPostOpts %tmp.9 34 15 27 ];
+        %tmp.9 = getv function %tmp.8 :jsonPostOpts;
+        %tmp.10 = null;
+        %tmp.11 = invoke %tmp.8 %tmp.9(%tmp.10);
+        lputv %opts.2 %tmp.11;
+        symbol [ opts %opts.2 34 8 12 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" 35 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_32_58_38_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_32_58_38_2_stop" ]
+        %url.3 = local;
+        symbol [ url %url.3 35 8 11 ];
+        symbol [ Config %tmp.13 35 14 20 ];
+        %tmp.13 = getv ? :Config;
+        symbol [ sessionCreateUrl %tmp.14 35 21 37 ];
+        %tmp.14 = getv function %tmp.13 :sessionCreateUrl;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        lputv %url.3 %tmp.15;
+        symbol [ url %url.3 35 8 11 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" 36 4 ]
+        symbol [ HttpDebug %tmp.17 36 4 13 ];
+        %tmp.17 = getv ? :HttpDebug;
+        symbol [ logRequest %tmp.18 36 14 24 ];
+        %tmp.18 = getv function %tmp.17 :logRequest;
+        %tmp.19 = lgetv %url.3;
+        symbol [ url %tmp.19 36 25 28 ];
+        %tmp.20 = lgetv %body.1;
+        symbol [ body %tmp.20 36 30 34 ];
+        %tmp.21 = lgetv %opts.2;
+        symbol [ opts %tmp.21 36 36 40 ];
+        invoke %tmp.17 %tmp.18(%tmp.19, %tmp.20, %tmp.21);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" 37 4 ]
+        symbol [ Communications %tmp.22 37 4 18 ];
+        %tmp.22 = getm $.Toybox.Communications;
+        symbol [ makeWebRequest %tmp.23 37 19 33 ];
+        %tmp.23 = getv function %tmp.22 :makeWebRequest;
+        %tmp.24 = lgetv %url.3;
+        symbol [ url %tmp.24 37 34 37 ];
+        %tmp.25 = lgetv %body.1;
+        symbol [ body %tmp.25 37 39 43 ];
+        %tmp.26 = lgetv %opts.2;
+        symbol [ opts %tmp.26 37 45 49 ];
+        %tmp.27 = lgetv %callback;
+        symbol [ callback %tmp.27 37 51 59 ];
+        invoke %tmp.22 %tmp.23(%tmp.24, %tmp.25, %tmp.26, %tmp.27);
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_32_58_38_2_stop:
+    }
+    [ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc"; @line = 40; @symbol_functiondef = [postHeart,40,11,20]; @symbol_param<0> = [sessionId,40,21,30]; @symbol_param<0>_type<0> = [String,40,34,40]; @symbol_param<1> = [secret,40,42,48]; @symbol_param<1>_type<0> = [String,40,52,58]; @symbol_param<2> = [bpm,40,60,63]; @symbol_param<2>_type<0> = [Number,40,67,73]; @symbol_param<3> = [callback,40,75,83]; @symbol_param<3>_type<0> = [Lang,40,87,91]; @symbol_param<3>_type<1> = [Method,40,92,98]; ]
+    function postHeart(sessionId as String, secret as String, bpm as Number, callback as Lang.Method) as Void {
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_40_108_46_2_start:
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" 41 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_40_108_46_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_40_108_46_2_stop" ]
+        %body.1 = local;
+        symbol [ body %body.1 41 8 12 ];
+        %tmp.1 = newd 1;
+        %tmp.2 = "bpm";
+        %tmp.3 = lgetv %bpm;
+        symbol [ bpm %tmp.3 41 26 29 ];
+        %tmp.4 = dup %tmp.1;
+        %tmp.5 = aputv %tmp.4 %tmp.2 %tmp.3;
+        lputv %body.1 %tmp.5;
+        symbol [ body %body.1 41 8 12 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" 42 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_40_108_46_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_40_108_46_2_stop" ]
+        %opts.2 = local;
+        symbol [ opts %opts.2 42 8 12 ];
+        %tmp.6 = self;
+        symbol [ jsonPostOpts %tmp.7 42 15 27 ];
+        %tmp.7 = getv function %tmp.6 :jsonPostOpts;
+        %tmp.8 = lgetv %secret;
+        symbol [ secret %tmp.8 42 28 34 ];
+        %tmp.9 = invoke %tmp.6 %tmp.7(%tmp.8);
+        lputv %opts.2 %tmp.9;
+        symbol [ opts %opts.2 42 8 12 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" 43 4 ]
+        [ "_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_40_108_46_2_start" "_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_40_108_46_2_stop" ]
+        %url.3 = local;
+        symbol [ url %url.3 43 8 11 ];
+        symbol [ Config %tmp.11 43 14 20 ];
+        %tmp.11 = getv ? :Config;
+        symbol [ heartUrl %tmp.12 43 21 29 ];
+        %tmp.12 = getv function %tmp.11 :heartUrl;
+        %tmp.13 = lgetv %sessionId;
+        symbol [ sessionId %tmp.13 43 30 39 ];
+        %tmp.14 = invoke %tmp.11 %tmp.12(%tmp.13);
+        lputv %url.3 %tmp.14;
+        symbol [ url %url.3 43 8 11 ];
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" 44 4 ]
+        symbol [ HttpDebug %tmp.16 44 4 13 ];
+        %tmp.16 = getv ? :HttpDebug;
+        symbol [ logRequest %tmp.17 44 14 24 ];
+        %tmp.17 = getv function %tmp.16 :logRequest;
+        %tmp.18 = lgetv %url.3;
+        symbol [ url %tmp.18 44 25 28 ];
+        %tmp.19 = lgetv %body.1;
+        symbol [ body %tmp.19 44 30 34 ];
+        %tmp.20 = lgetv %opts.2;
+        symbol [ opts %tmp.20 44 36 40 ];
+        invoke %tmp.16 %tmp.17(%tmp.18, %tmp.19, %tmp.20);
+[ "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc" 45 4 ]
+        symbol [ Communications %tmp.21 45 4 18 ];
+        %tmp.21 = getm $.Toybox.Communications;
+        symbol [ makeWebRequest %tmp.22 45 19 33 ];
+        %tmp.22 = getv function %tmp.21 :makeWebRequest;
+        %tmp.23 = lgetv %url.3;
+        symbol [ url %tmp.23 45 34 37 ];
+        %tmp.24 = lgetv %body.1;
+        symbol [ body %tmp.24 45 39 43 ];
+        %tmp.25 = lgetv %opts.2;
+        symbol [ opts %tmp.25 45 45 49 ];
+        %tmp.26 = lgetv %callback;
+        symbol [ callback %tmp.26 45 51 59 ];
+        invoke %tmp.21 %tmp.22(%tmp.23, %tmp.24, %tmp.25, %tmp.26);
+_home_nickcis_repos_share_heart_rate_garmin_source_ApiClient_mc_40_108_46_2_stop:
+    }
+}
+[ @file = "/home/nickcis/repos/share-heart-rate/garmin/source/ApiClient.mc"; @line = 1; ]
+<init> {
+}

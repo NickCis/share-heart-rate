@@ -1,0 +1,34 @@
+{
+  "appName": "Share Heart Rate",
+  "common": {
+    "bpm": "bpm",
+    "home": "Home",
+    "backHome": "Back home"
+  },
+  "landing": {
+    "tagline": "Stream live heart rate from your Garmin watch to anyone with a link.",
+    "watchAppTitle": "Get the watch app",
+    "watchAppDescription": "Install Share Heart on your Garmin watch from Garmin Connect IQ.",
+    "openGarminConnect": "Open in Garmin Connect",
+    "howItWorksTitle": "How it works",
+    "step1": "Open the app on your watch — it creates a sharing session.",
+    "step2": "Scan the QR code on the watch to open the live viewer.",
+    "step3": "Heart rate updates every 30 seconds while the app is running.",
+    "sessionLinkHint": "Already have a session link?",
+    "viewExample": "View example layout"
+  },
+  "session": {
+    "missingId": "Missing session id.",
+    "notFoundTitle": "Session not found",
+    "notFoundDescription": "This session does not exist or has expired.",
+    "liveSession": "Live session",
+    "currentHeartRate": "Current heart rate",
+    "lastUpdated": "Last updated {{time}}",
+    "waitingFirstReading": "Waiting for first reading from the watch",
+    "chartTitle": "Heart rate over time",
+    "chartDescription": "Updates automatically while the watch app is running.",
+    "loadingReadings": "Loading readings...",
+    "noReadings": "No readings yet. Open the app on your watch to start sharing.",
+    "tooltipBpm": "Heart rate"
+  }
+}

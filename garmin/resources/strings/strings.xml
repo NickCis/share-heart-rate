@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+  <string id="AppName">Share Heart</string>
+
+  <string id="SettingBaseUrlTitle">API base URL</string>
+  <string id="LoadingLabel">Loading...</string>
+  <string id="QrLoading">Loading QR...</string>
+  <string id="QrHint">Scan to view live heart rate</string>
+  <string id="HeartTitle">Heart rate</string>
+  <string id="HeartNone">--</string>
+  <string id="HeartBpmUnit">bpm</string>
+  <string id="LinkTitle">Session link</string>
+  <string id="LinkMissing">No session</string>
+  <string id="HeartLastSent">Last sent</string>
+  <string id="HeartWaiting">Waiting for reading</string>
+  <string id="MenuTitle">Options</string>
+  <string id="MenuReset">Reset session</string>
+  <string id="ErrorNoSession">No session</string>
+  <string id="ErrorHttp">HTTP $1$</string>
+  <string id="ErrorComm">$1$</string>
+  <string id="ErrorInvalidResponse">Invalid response</string>
+  <string id="ErrorNoHeartRate">No heart rate</string>
+  <string id="StatusSharing">Sharing every 30s</string>
+</strings>

@@ -1,0 +1,34 @@
+{
+  "appName": "Compartir pulso",
+  "common": {
+    "bpm": "lpm",
+    "home": "Inicio",
+    "backHome": "Volver al inicio"
+  },
+  "landing": {
+    "tagline": "Comparte tu frecuencia cardíaca en vivo desde tu Garmin con quien tenga el enlace.",
+    "watchAppTitle": "Obtén la app del reloj",
+    "watchAppDescription": "Instala Share Heart en tu Garmin desde Garmin Connect IQ.",
+    "openGarminConnect": "Abrir en Garmin Connect",
+    "howItWorksTitle": "Cómo funciona",
+    "step1": "Abre la app en el reloj — crea una sesión de compartición.",
+    "step2": "Escanea el código QR en el reloj para abrir el visor en vivo.",
+    "step3": "La frecuencia cardíaca se actualiza cada 30 segundos mientras la app está abierta.",
+    "sessionLinkHint": "¿Ya tienes un enlace de sesión?",
+    "viewExample": "Ver diseño de ejemplo"
+  },
+  "session": {
+    "missingId": "Falta el id de sesión.",
+    "notFoundTitle": "Sesión no encontrada",
+    "notFoundDescription": "Esta sesión no existe o ha expirado.",
+    "liveSession": "Sesión en vivo",
+    "currentHeartRate": "Frecuencia cardíaca actual",
+    "lastUpdated": "Última actualización {{time}}",
+    "waitingFirstReading": "Esperando la primera lectura del reloj",
+    "chartTitle": "Frecuencia cardíaca en el tiempo",
+    "chartDescription": "Se actualiza automáticamente mientras la app del reloj está en ejecución.",
+    "loadingReadings": "Cargando lecturas...",
+    "noReadings": "Sin lecturas aún. Abre la app en el reloj para empezar a compartir.",
+    "tooltipBpm": "Frecuencia cardíaca"
+  }
+}

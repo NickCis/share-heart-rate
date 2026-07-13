@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+  <string id="AppName">Compartir pulso</string>
+
+  <string id="SettingBaseUrlTitle">URL base de API</string>
+  <string id="LoadingLabel">Cargando...</string>
+  <string id="QrLoading">Cargando QR...</string>
+  <string id="QrHint">Escanea para ver el pulso en vivo</string>
+  <string id="HeartTitle">Frecuencia cardíaca</string>
+  <string id="HeartNone">--</string>
+  <string id="HeartBpmUnit">lpm</string>
+  <string id="LinkTitle">Enlace de sesión</string>
+  <string id="LinkMissing">Sin sesión</string>
+  <string id="HeartLastSent">Último envío</string>
+  <string id="HeartWaiting">Esperando lectura</string>
+  <string id="MenuTitle">Opciones</string>
+  <string id="MenuReset">Reiniciar sesión</string>
+  <string id="ErrorNoSession">Sin sesión</string>
+  <string id="ErrorHttp">HTTP $1$</string>
+  <string id="ErrorComm">$1$</string>
+  <string id="ErrorInvalidResponse">Respuesta inválida</string>
+  <string id="ErrorNoHeartRate">Sin frecuencia cardíaca</string>
+  <string id="StatusSharing">Compartiendo cada 30 s</string>
+</strings>
