@@ -6,10 +6,23 @@ dist/
 .env
 .env.local
 web/dist/
+.DS_Store
+*~
+*.swp
+*.swo
+service-account.json
+
+# Connect IQ build output
 garmin/*.prg
+garmin/*.prg.debug.xml
 garmin/*.iq
 garmin/*-settings.json
+
+# Signing keys (never commit)
 garmin/private_key.der
-.DS_Store
-.vercel
-service-account.json
+garmin/private_key.pem
+
+# Monkey C compiler intermediates
+garmin/gen/
+garmin/internal-mir/
+garmin/external-mir/

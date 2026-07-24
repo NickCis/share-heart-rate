@@ -1,5 +1,5 @@
 # Default SDK path — override: make SDK=/path/to/connectiq-sdk-lin-...
-SDK ?= $(HOME)/.Garmin/ConnectIQ/Sdks/connectiq-sdk-lin-9.1.0-2026-03-09-6a872a80b
+SDK ?= $(HOME)/.Garmin/ConnectIQ/Sdks/connectiq-sdk-lin-9.2.0-2026-06-09-92a1605b2
 MONKEYC := $(SDK)/bin/monkeyc
 MONKEYDO := $(SDK)/bin/monkeydo
 CONNECTIQ := $(SDK)/bin/connectiq
@@ -13,10 +13,13 @@ SETTINGS_SRC := $(patsubst %.prg,%-settings.json,$(OUT))
 APP_BASE := $(basename $(notdir $(OUT)))
 SETTINGS_VPATH := GARMIN/Settings/$(shell echo $(APP_BASE) | tr '[:lower:]' '[:upper:]')-settings.json
 
-.PHONY: build run simulator release
+.PHONY: build run simulator release icons
 
 build:
 	$(MONKEYC) -f monkey.jungle -o $(OUT) -y $(KEY) -d $(DEVICE) -w
+
+icons:
+	python3 scripts/gen_launcher_icons.py
 
 release:
 	$(MONKEYC) -f monkey.jungle -o $(basename $(OUT)).iq -y $(KEY) -e -r -w
