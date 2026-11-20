@@ -2,6 +2,8 @@
 
 Live heart rate sharing from a Garmin watch to a web viewer.
 
+You can install it using [Garmin Connect IQ](https://apps.garmin.com/apps/0f0276c9-a208-449a-a5f4-3fb11a4df526)
+
 ## Stack
 
 - **Garmin Connect IQ** (`garmin/`) — watch app for Forerunner 55 and Fenix 7s
